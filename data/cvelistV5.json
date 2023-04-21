@@ -45,7 +45,7 @@
             "d": 2,
             "c": [
                 {
-                    "v": "<h5>/structured data</h5>",
+                    "v": "<h5>/structured_data</h5>",
                     "d": 3,
                     "c": [
                         {
@@ -73,7 +73,7 @@
             "d": 2,
             "c": [
                 {
-                    "v": "update.py",
+                    "v": "prepare.py",
                     "d": 3
                 },
                 {
