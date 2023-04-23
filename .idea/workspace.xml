@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d71aa27-fd42-4221-8033-338d9c6ecb1f" name="Changes" comment="add">
-      <change afterPath="$PROJECT_DIR$/FuzzTesting.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/FuzzTesting.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/mess.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mindmap.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/cvelistV5.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Provenance.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +93,7 @@
       <workItem from="1682066721328" duration="2540000" />
       <workItem from="1682069433964" duration="168000" />
       <workItem from="1682069761228" duration="116000" />
-      <workItem from="1682069916285" duration="11593000" />
+      <workItem from="1682069916285" duration="13360000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1682062916060</created>
@@ -118,7 +109,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682064495143</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add">
+      <created>1682238511041</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682238511041</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add">
+      <created>1682238619167</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682238619167</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
