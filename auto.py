@@ -5,9 +5,9 @@ from bs4 import BeautifulSoup
 
 
 if __name__ == '__main__':
-    data_file: str = "./data/cvelistV5.json"
-
     html_title: str = input("Please input the theme of the mindmap: ")
+
+    data_file: str = "./data/" + html_title + ".json"
 
     with open("./模板.html") as f:
         soup = BeautifulSoup(f, 'html.parser')

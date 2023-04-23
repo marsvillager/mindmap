@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<title>FuzzTesting</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #mindmap {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+    }
+    </style>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.6.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.6"></script>
+<script>
+    ((getMarkmap, getOptions, data) => {
+        const {
+        Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+    })(() => window.markmap, null, {'v': "<div style='display: flex; justify-content: center; align-items: center;'><img src='img/mess.png' alt='mess' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 20px;'><font color='green'><h3>Fuzz Testing</h3></font></div>", 'd': 1, 'c': [{'v': '<h4>Overview</h4>', 'd': 2, 'c': [{'v': '<h4>Software Analysis</h4>', 'd': 3, 'c': [{'v': '静态分析：不运行程序', 'd': 4, 'c': [{'v': '符号执行：对程序的符号表示进行操作，模拟程序的执行路径', 'd': 5}]}, {'v': '动态分析：执行程序', 'd': 4, 'c': [{'v': '调试器：在源代码级别进行分析，设置断点、单步执行、检查变量值等', 'd': 5}, {'v': '模糊测试：注入恶意或异常输入', 'd': 5}]}]}, {'v': '一种基于缺陷注入的软件安全测试技术', 'd': 3}, {'v': '通过监视非预期输入可能产生的异常结果来发现软件问题', 'd': 3}, {'v': '主要属于黑盒测试和灰盒测试领域', 'd': 3}]}, {'v': "<div style='display: flex; justify-content: center; align-items: center;'><img src='img/hit.png' alt='mess' style='width: 100px; height: 100px;'> <code>contrast</code></div> <h4>Advantages</h4>", 'd': 2, 'c': [{'v': '白盒测试：基于源代码', 'd': 3, 'c': [{'v': '模糊测试的测试目标是<b>二进制可执行代码</b>', 'd': 4}]}, {'v': '静态分析技术：存在大量误报问题（False Positive），精度不高', 'd': 3, 'c': [{'v': '模糊测试是<b>动态执行</b>的', 'd': 4}]}, {'v': '符号执行技术：穷举所有可能的执行路径，比如 if，存在路径状态爆炸的问题', 'd': 3, 'c': [{'v': '模糊测试原理简单，没有大量的理论推导和公式计算', 'd': 4}]}, {'v': '逆向工程：需要大量的人工参与', 'd': 3, 'c': [{'v': '模糊测试自动化程度高', 'd': 4}]}]}, {'v': '<h4>Limitations</h4>', 'd': 2, 'c': [{'v': '<b>访问控制漏洞</b>的发现能力有限', 'd': 3, 'c': [{'v': '模糊测试挖掘出的漏洞大多是传统的溢出类漏洞，由于该技术的逻辑感知能力有限，<br>对于违反权限控制的安全漏洞，如后门、绕过认证等漏洞的发现能力有限', 'd': 4}]}, {'v': '<b>设计逻辑缺陷</b>的发现能力有限', 'd': 3, 'c': [{'v': '糟糕的逻辑往往并不会导致程序崩溃，<br>而模糊测试发现漏洞的一个最重要依据就是监测目标程序的崩溃', 'd': 4}]}, {'v': '<b>多阶段安全漏洞</b>的发现能力有限', 'd': 3, 'c': [{'v': '模糊测试对识别单独的漏洞很有用，<br>但对那些小的漏洞序列构成的高危漏洞的发现能力有限', 'd': 4}]}, {'v': '<b>多点触发漏洞</b>的发现能力有限', 'd': 3}, {'v': '<b>不能保证畸形输入数据能够覆盖到所有的分支代码</b>', 'd': 3}]}, {'v': '<h4>Research Trends</h4>', 'd': 2, 'c': [{'v': '提高代码覆盖率，以提高模糊测试效果', 'd': 3}, {'v': '针对数量巨大的测试用例，引进并行和分布式技术，以有效减少测试时间', 'd': 3}, {'v': '构建通过率更高的测试用例，以避免采用大量纯随机数据来进行模糊测试', 'd': 3}, {'v': '<b>基于知识库构造测试用例，以提高测试数据的针对性</b>', 'd': 3}]}, {'v': '<h4>Steps</h4>', 'd': 2, 'c': [{'v': '<b>1.确定测试目标</b>', 'd': 3}, {'v': '<b>2.确定预期输入</b>', 'd': 3}, {'v': '<b>3.生成模糊测试用例</b>', 'd': 3, 'c': [{'v': '基于<b>变异</b>的方法', 'd': 4, 'c': [{'v': 'bitflip，按位翻转，1 变成 0，0 变成 1', 'd': 5}, {'v': 'arithmetic，整数加/减算算数运算', 'd': 5}, {'v': "interest，把一些特殊内容替换到原文件中 if(x='string')", 'd': 5}, {'v': 'dictionary，把自动生成或用户提供的 token 替换/插入到原文件中', 'd': 5}, {'v': 'havoc，大破坏，前几种变换的组合', 'd': 5}, {'v': 'splice，铰接，将两个文件拼接', 'd': 5}, {'v': '开源工具 <br> AFL (American Fuzzy Lop) <br> AFLgo(AFL 的改进，主要测试 go 语言编写的程序)', 'd': 5}]}, {'v': '基于<b>生成</b>的方法', 'd': 4}]}, {'v': '<b>4.执行模糊测试用例</b>', 'd': 3}, {'v': '<b>5.监视异常</b>', 'd': 3, 'c': [{'v': '基于<b>调试</b>的方法', 'd': 4}, {'v': '基于<b>插桩</b>的方法', 'd': 4, 'c': [{'v': '<b>源代码插桩</b><br>尤其适用于面向切面编程技术（Aspect Oriented Programming）', 'd': 5}, {'v': '<b>静态代码插桩</b><br>无需改变原有程序的源代码，在二进制可执行程序的字节码上，使用特定的工具自动向代码中添加额外的指令或函数<br>工具有 BCEL, Javassit, ASM 等', 'd': 5}, {'v': '<b>二进制代码插桩</b><br>其系统消耗较大，且大部分为商业插桩软件<br>常用的有 DynamoRIO, Dyninst ,Pin 等', 'd': 5}]}]}, {'v': '<b>6.异常分析并确认漏洞</b>', 'd': 3, 'c': [{'v': '常借助 IDA Pro, OIIDbg 和 SoftICE 等二进制分析工具进行人工分析', 'd': 4}]}]}, {'v': '<h4>Application</h4>', 'd': 2, 'c': [{'v': '文字处理软件', 'd': 4, 'c': [{'v': 'FileFuzz', 'd': 5}, {'v': 'SPIKEfile', 'd': 5}, {'v': 'notSPIKEfile', 'd': 5}, {'v': 'PaiMei', 'd': 5}]}, {'v': '网络协议', 'd': 4, 'c': [{'v': 'Sulley', 'd': 5}, {'v': 'SPIKE', 'd': 5}, {'v': 'Peach Fuzzer', 'd': 5}]}, {'v': 'Web 应用程序', 'd': 4, 'c': [{'v': 'Powerfuzzer', 'd': 5}, {'v': 'SPIKE Proxy', 'd': 5}, {'v': 'Web Scarab', 'd': 5}, {'v': 'Web Inspect', 'd': 5}]}, {'v': 'Web 浏览器', 'd': 4, 'c': [{'v': 'COMRaider: ActiveX 控件', 'd': 5}, {'v': 'Mangleme: HTML', 'd': 5}, {'v': 'Hamachi: 动态 HTML(DHTML)', 'd': 5}, {'v': 'CSSDIE: CSS 文件', 'd': 5}]}, {'v': '其它', 'd': 4, 'c': [{'v': 'American Fuzzy Lop', 'd': 5}]}]}]})
+    </script>
+</body>
+</html>
