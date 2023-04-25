@@ -1,5 +1,5 @@
 {
-    "v": "<div style='display: flex; justify-content: center; align-items: center;'><img src='img/mess.png' alt='mess' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 20px;'><font color='green'><h3>Fuzz Testing</h3></font></div>",
+    "v": "<div style='display: flex; justify-content: center; align-items: center;'><img src='img/mess.png' alt='mess' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 20px; text-align: center;'><font color='green'><h3>Fuzz Testing</h3></font></div>",
     "d": 1,
     "c": [
         {

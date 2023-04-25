@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<title>PrivacyComputing</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #mindmap {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+    }
+    </style>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.6.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.6"></script>
+<script>
+    ((getMarkmap, getOptions, data) => {
+        const {
+        Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+    })(() => window.markmap, null, {'v': "<div style='display: flex; justify-content: center; align-items: center;'><img src='img/data-security.png' alt='privacy computing' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 20px;'><font color='steelblue'><h3>Privacy Computing</h3></font></div>", 'd': 1, 'c': [{'v': '<h4>基于密码学技术: 多方安全计算(Secure Multiparty Computation,SMC)<h4>', 'd': 2, 'c': [{'v': '<b>不经意传输(Oblivious Transfer,OT)</b>', 'd': 3}, {'v': '<b>同态加密(Homomorphic Encryption,HE)</b>', 'd': 3}, {'v': '<b>零知识证明(Zero-Knowledge Proof,ZKP)</b>', 'd': 3, 'c': [{'v': '知其然, 更知其所以然 ==> 符号推理, 形式化逻辑的符号系统 ==> 程序, 循环对应归纳, 证明的正确性检查可以机械地由程序完成 <br> ==> <b>交互式证明</b>, 仅向验证者证明且在此过程中不泄露知识', 'd': 4}]}, {'v': '<b>差分隐私(Differential Privacy,DP)</b>', 'd': 3}, {'v': '<b>混淆电路(Garbled Circuit)</b>', 'd': 3}, {'v': '<b>布隆过滤器(Bloom Filter)</b>', 'd': 3}, {'v': '<b>秘密共享(Secret Share)</b> 单个输入方，多个计算方，单个结果使用方', 'd': 3, 'c': [{'v': '只有满足一定数量的参与方把各自的数据凑在一起，才能还原出真实数据', 'd': '3'}]}]}, {'v': '<h4>基于 AI 与分布式计算: 联邦学习(Federated Learning,FL)<h4>', 'd': 2, 'c': [{'v': '分布式的本地建模', 'd': 3}, {'v': '全局模型仅汇总和下发参数', 'd': 3}]}, {'v': '<h4>基于可信硬件技术: 可信执行环境(Trusted Execution Environment,TEE)<h4>', 'd': 2, 'c': [{'v': '隔离机制', 'd': 3}]}]})
+    </script>
+</body>
+</html>
