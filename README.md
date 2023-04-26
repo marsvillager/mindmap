@@ -13,4 +13,4 @@ Please input the theme of the mindmap: name of json file
 
 view at `https://marsvillager.github.io/mindmap/ + generated file`
 
-e.g. https://marsvillager.github.io/mindmap/cvelistV5.html
+e.g. https://marsvillager.github.io/mindmap/FuzzTesting.html
