@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d71aa27-fd42-4221-8033-338d9c6ecb1f" name="Changes" comment="add">
-      <change afterPath="$PROJECT_DIR$/PrivacyComputing.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecGPT.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/PrivacyComputing.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/SecGPT.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/cyber-security.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/data-protection.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/data-security.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/FuzzTesting.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/FuzzTesting.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Provenance.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Provenance.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrivacyComputing.html" beforeDir="false" afterPath="$PROJECT_DIR$/PrivacyComputing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecGPT.html" beforeDir="false" afterPath="$PROJECT_DIR$/SecGPT.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/PrivacyComputing.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/PrivacyComputing.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/SecGPT.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/SecGPT.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +98,7 @@
       <workItem from="1682069433964" duration="168000" />
       <workItem from="1682069761228" duration="116000" />
       <workItem from="1682069916285" duration="15635000" />
-      <workItem from="1682327567371" duration="8191000" />
+      <workItem from="1682327567371" duration="20293000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1682062916060</created>
@@ -140,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682243507231</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add">
+      <created>1682410278529</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682410278529</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +154,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="add" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/mindmap$auto.coverage" NAME="auto Coverage Results" MODIFIED="1682410080737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/mindmap$auto.coverage" NAME="auto Coverage Results" MODIFIED="1682489247620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
