@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<title>SearchAlgorithm</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #mindmap {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+    }
+    </style>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.6.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.6"></script>
+<script>
+    ((getMarkmap, getOptions, data) => {
+        const {
+        Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+    })(() => window.markmap, null, {'v': "<div style='display: flex; justify-content: center; align-items: center;'><img src='img/search.png' alt='security' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 20px; text-align: center;'><font color='steelblue'><h3>Search Algorithm</h3></font>", 'd': 1, 'c': [{'v': '古典搜索方法', 'd': 2, 'c': [{'v': '通过比较目标函数值的大小来移动迭代点', 'd': 3}, {'v': '步长加速法', 'd': 3}, {'v': '旋转方向法', 'd': 3}, {'v': '单纯型调优法', 'd': 3}, {'v': '方向加速法', 'd': 3}, {'v': '枚举法', 'd': 3}, {'v': '随机搜索方法', 'd': 3}]}, {'v': '启发式搜索方法', 'd': 2, 'c': [{'v': '通过比较目标函数的梯度值来移动迭代点', 'd': 3}, {'v': '梯度信息启发下的简单智能搜索', 'd': 3}, {'v': '共轭梯度法', 'd': 3}, {'v': '牛顿型方法', 'd': 3}, {'v': '变尺度法', 'd': 3}]}, {'v': '智能优化方法', 'd': 2, 'c': [{'v': '从随机的可行初始解出发, 通过"邻域搜索"来寻找最优解', 'd': 3}, {'v': '把待求解问题的相关知识隐含地加入到算法中', 'd': 3}, {'v': '与启发式搜索方法相比，智能优化方法能较好地解决大规模复杂系统中出现的组合爆炸问题'}, {'v': '模拟退火算法', 'd': 3}, {'v': '遗传算法', 'd': 3}, {'v': '禁忌搜索', 'd': 3}, {'v': '进化规划', 'd': 3}, {'v': '进化策略', 'd': 3}, {'v': '蚁群算法', 'd': 3}]}]})
+    </script>
+</body>
+</html>
