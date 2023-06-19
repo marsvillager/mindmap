@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<title>TaintAnalysis</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #mindmap {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+    }
+    </style>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.6.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.6"></script>
+<script>
+    ((getMarkmap, getOptions, data) => {
+        const {
+        Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+    })(() => window.markmap, null, {'v': "<div style='display: flex; justify-content: center; align-items: center;'><img src='img/taint.png' alt='taint' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 20px; text-align: center;'><font color='steelblue'><h3>Taint Analysis</h3></font></div>", 'd': 1, 'c': [{'v': '基于静态或动态分析程序源代码和执行过程中的输入、输出参数之间的关系', 'd': 2}, {'v': '<h4>与模糊测试关系</h4>', 'd': 2, 'c': [{'v': '可以使用<b>模糊测试</b>生成大量针对程序不同输入条件和参数的<b>随机测试用例</b>, 然后利用<b>污点分析技术</b>对测试结果进行<b>分析和筛选</b>', 'd': 3}, {'v': '污点分析技术是不是放在模糊测试的监视异常这一步?', 'd': 3, 'c': [{'v': '当模糊测试发现应用程序存在异常时, 这些异常信息可能包含了有关漏洞所在位置和类型的一些线索, 而污点分析技术可以进一步分析这些线索并追踪数据流, 以确定潜在的安全漏洞', 'd': 4}]}]}, {'v': '<h4>方向分类</h4>', 'd': 2, 'c': [{'v': '<h4>传播式污点分析</h4>', 'd': 3, 'c': [{'v': '从一个已知的污点变量开始遍历程序的数据流, 找到所有可能被这个变量污染的变量, 并将它们标记为污点', 'd': 4}]}, {'v': '<h4>推理式污点分析</h4>', 'd': 3, 'c': [{'v': '与传播式污点分析类似, 不过其思路更加侧重于对污点数据的推理和分析', 'd': 4}, {'v': '尝试预测污点数据在程序执行过程中可能产生的结果, 从而评估程序运行的安全性', 'd': 4}, {'v': 'paper', 'd': 4, 'c': [{'v': 'PATA Fuzzing with Path Aware Taint Analysis', 'd': 5}]}]}]}]})
+    </script>
+</body>
+</html>
