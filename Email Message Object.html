@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<title>Email Message Object</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #mindmap {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+    }
+    </style>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.6.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.6"></script>
+<script>
+    ((getMarkmap, getOptions, data) => {
+        const {
+        Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+    })(() => window.markmap, null, {'v': "<div style='display: flex; justify-content: center; align-items: center;'><h3><font color='steelblue'><h3>Email Message Object</h3></font></div>", 'd': 1, 'c': [{'v': '<b>type<b>', 'd': 2, 'c': [{'v': 'string', 'd': 3}]}, {'v': '<b>is_multipart<b>', 'd': 2, 'c': [{'v': 'boolean', 'd': 3}]}, {'v': 'date', 'd': 2, 'c': [{'v': 'timestamp', 'd': 3}]}, {'v': 'content_type', 'd': 2, 'c': [{'v': 'string', 'd': 3}]}, {'v': 'from_ref', 'd': 2, 'c': [{'v': 'identifier', 'd': 3}]}, {'v': 'sender_ref', 'd': 2, 'c': [{'v': 'identifier', 'd': 3}]}, {'v': 'to_refs', 'd': 2, 'c': [{'v': 'list of type identifier', 'd': 3}]}, {'v': 'cc_refs', 'd': 2, 'c': [{'v': 'list of type identifier', 'd': 3}]}, {'v': 'bcc_refs', 'd': 2, 'c': [{'v': 'list of type identifier', 'd': 3}]}, {'v': 'message_id', 'd': 2, 'c': [{'v': 'string', 'd': 3}]}, {'v': 'subject', 'd': 2, 'c': [{'v': 'string', 'd': 3}]}, {'v': 'received_lines', 'd': 2, 'c': [{'v': 'list of type string', 'd': 3}]}, {'v': 'additional_header_fields', 'd': 2, 'c': [{'v': 'dictionary', 'd': 3}]}, {'v': 'body', 'd': 2, 'c': [{'v': 'string', 'd': 3}]}, {'v': 'body_multipart', 'd': 2, 'c': [{'v': 'list of type email-mime-part-type', 'd': 3}]}, {'v': 'raw_email_ref', 'd': 2, 'c': [{'v': 'identifier', 'd': 3}]}]})
+    </script>
+</body>
+</html>
