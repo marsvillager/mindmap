@@ -1,0 +1,86 @@
+{
+    "v": "<div style='display: flex; justify-content: center; align-items: center;'><h3><font color='steelblue'><h3>Relationship Object</h3></font></div>",
+    "d": 1,
+    "c": [
+        {
+            "v": "<b>type<b>",
+            "d": 2,
+            "c": [
+                {
+                    "v": "string",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "<b>relationship_type<b>",
+            "d": 2,
+            "c": [
+                {
+                    "v": "string",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "description",
+            "d": 2,
+            "c": [
+                {
+                    "v": "string",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "source_ref",
+            "d": 2,
+            "c": [
+                {
+                    "v": "identifier",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "target_ref",
+            "d": 2,
+            "c": [
+                {
+                    "v": "identifier",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "start_time",
+            "d": 2,
+            "c": [
+                {
+                    "v": "stop_time",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "stop_time",
+            "d": 2,
+            "c": [
+                {
+                    "v": "stop_time",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "source_ref",
+            "d": 2,
+            "c": [
+                {
+                    "v": "identifier",
+                    "d": 3
+                }
+            ]
+        }
+    ]
+}
