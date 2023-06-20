@@ -1,0 +1,26 @@
+{
+    "v": "<div style='display: flex; justify-content: center; align-items: center;'><h3><font color='steelblue'><h3>Mutex Object</h3></font></div>",
+    "d": 1,
+    "c": [
+        {
+            "v": "<b>type<b>",
+            "d": 2,
+            "c": [
+                {
+                    "v": "string",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "<b>name<b>",
+            "d": 2,
+            "c": [
+                {
+                    "v": "string",
+                    "d": 3
+                }
+            ]
+        }
+    ]
+}
