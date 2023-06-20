@@ -1,0 +1,166 @@
+{
+    "v": "<div style='display: flex; justify-content: center; align-items: center;'><h3><font color='steelblue'><h3>User Account Object</h3></font></div>",
+    "d": 1,
+    "c": [
+        {
+            "v": "<b>type<b>",
+            "d": 2,
+            "c": [
+                {
+                    "v": "string",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "extensions",
+            "d": 2,
+            "c": [
+                {
+                    "v": "dictionary",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "user_id",
+            "d": 2,
+            "c": [
+                {
+                    "v": "string",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "credential",
+            "d": 2,
+            "c": [
+                {
+                    "v": "string",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "account_login",
+            "d": 2,
+            "c": [
+                {
+                    "v": "string",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "account_type",
+            "d": 2,
+            "c": [
+                {
+                    "v": "open-vocab",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "display_name",
+            "d": 2,
+            "c": [
+                {
+                    "v": "string",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "is_service_account",
+            "d": 2,
+            "c": [
+                {
+                    "v": "boolean",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "is_privileged",
+            "d": 2,
+            "c": [
+                {
+                    "v": "boolean",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "can_escalate_privs",
+            "d": 2,
+            "c": [
+                {
+                    "v": "boolean",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "is_disabled",
+            "d": 2,
+            "c": [
+                {
+                    "v": "boolean",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "account_created",
+            "d": 2,
+            "c": [
+                {
+                    "v": "timestamp",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "account_expires",
+            "d": 2,
+            "c": [
+                {
+                    "v": "timestamp",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "credential_last_changed",
+            "d": 2,
+            "c": [
+                {
+                    "v": "timestamp",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "account_first_login",
+            "d": 2,
+            "c": [
+                {
+                    "v": "timestamp",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "account_last_login",
+            "d": 2,
+            "c": [
+                {
+                    "v": "timestamp",
+                    "d": 3
+                }
+            ]
+        }
+    ]
+}
