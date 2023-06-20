@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<title>Process Object</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #mindmap {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+    }
+    </style>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.6.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.6"></script>
+<script>
+    ((getMarkmap, getOptions, data) => {
+        const {
+        Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+    })(() => window.markmap, null, {'v': "<div style='display: flex; justify-content: center; align-items: center;'><h3><font color='steelblue'><h3>Process Object</h3></font></div>", 'd': 1, 'c': [{'v': '<b>type<b>', 'd': 2, 'c': [{'v': 'string', 'd': 3}]}, {'v': 'extensions', 'd': 2, 'c': [{'v': 'dictionary', 'd': 3}]}, {'v': 'is_hidden', 'd': 2, 'c': [{'v': 'boolean', 'd': 3}]}, {'v': 'pid', 'd': 2, 'c': [{'v': 'integer', 'd': 3}]}, {'v': 'created_time', 'd': 2, 'c': [{'v': 'timestamp', 'd': 3}]}, {'v': 'cwd', 'd': 2, 'c': [{'v': 'string', 'd': 3}]}, {'v': 'command_line', 'd': 2, 'c': [{'v': 'string', 'd': 3}]}, {'v': 'environment_variables', 'd': 2, 'c': [{'v': 'dictionary', 'd': 3}]}, {'v': 'opened_connection_refs', 'd': 2, 'c': [{'v': 'list of type identifier', 'd': 3}]}, {'v': 'creator_user_ref', 'd': 2, 'c': [{'v': 'identifier', 'd': 3}]}, {'v': 'image_ref', 'd': 2, 'c': [{'v': 'identifier', 'd': 3}]}, {'v': 'parent_ref', 'd': 2, 'c': [{'v': 'identifier', 'd': 3}]}, {'v': 'child_refs', 'd': 2, 'c': [{'v': 'list of type identifier', 'd': 3}]}]})
+    </script>
+</body>
+</html>
