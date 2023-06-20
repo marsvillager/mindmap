@@ -1,0 +1,76 @@
+{
+    "v": "<div style='display: flex; justify-content: center; align-items: center;'><h3><font color='steelblue'><h3>Directory Object</h3></font></div>",
+    "d": 1,
+    "c": [
+        {
+            "v": "<b>type</b>",
+            "d": 2,
+            "c": [
+                {
+                    "v": "string",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "path",
+            "d": 2,
+            "c": [
+                {
+                    "v": "string",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "path_enc",
+            "d": 2,
+            "c": [
+                {
+                    "v": "string",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "ctime",
+            "d": 2,
+            "c": [
+                {
+                    "v": "timestamp",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "mtime",
+            "d": 2,
+            "c": [
+                {
+                    "v": "timestamp",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "atime",
+            "d": 2,
+            "c": [
+                {
+                    "v": "timestamp",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "contains_refs",
+            "d": 2,
+            "c": [
+                {
+                    "v": "list of type identifier",
+                    "d": 3
+                }
+            ]
+        }
+    ]
+}
