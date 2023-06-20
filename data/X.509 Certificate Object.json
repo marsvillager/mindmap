@@ -1,0 +1,146 @@
+{
+    "v": "<div style='display: flex; justify-content: center; align-items: center;'><h3><font color='steelblue'><h3>X.509 Certificate Object</h3></font></div>",
+    "d": 1,
+    "c": [
+        {
+            "v": "<b>type<b>",
+            "d": 2,
+            "c": [
+                {
+                    "v": "string",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "is_self_signed",
+            "d": 2,
+            "c": [
+                {
+                    "v": "boolean",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "hashes",
+            "d": 2,
+            "c": [
+                {
+                    "v": "hashes",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "version",
+            "d": 2,
+            "c": [
+                {
+                    "v": "string",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "serial_number",
+            "d": 2,
+            "c": [
+                {
+                    "v": "string",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "signature_algorithm",
+            "d": 2,
+            "c": [
+                {
+                    "v": "string",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "issuer",
+            "d": 2,
+            "c": [
+                {
+                    "v": "string",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "validity_not_before",
+            "d": 2,
+            "c": [
+                {
+                    "v": "timestamp",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "validity_not_after",
+            "d": 2,
+            "c": [
+                {
+                    "v": "timestamp",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "subject",
+            "d": 2,
+            "c": [
+                {
+                    "v": "string",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "subject_public_key_algorithm",
+            "d": 2,
+            "c": [
+                {
+                    "v": "string",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "subject_public_key_modulus",
+            "d": 2,
+            "c": [
+                {
+                    "v": "string",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "subject_public_key_exponent",
+            "d": 2,
+            "c": [
+                {
+                    "v": "integer",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "x509_v3_extensions",
+            "d": 2,
+            "c": [
+                {
+                    "v": "x509-v3-extensions-type",
+                    "d": 3
+                }
+            ]
+        }
+    ]
+}

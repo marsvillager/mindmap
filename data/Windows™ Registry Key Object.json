@@ -1,0 +1,66 @@
+{
+    "v": "<div style='display: flex; justify-content: center; align-items: center;'><h3><font color='steelblue'><h3>Windows™ Registry Key Object</h3></font></div>",
+    "d": 1,
+    "c": [
+        {
+            "v": "<b>type<b>",
+            "d": 2,
+            "c": [
+                {
+                    "v": "string",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "key",
+            "d": 2,
+            "c": [
+                {
+                    "v": "string",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "values",
+            "d": 2,
+            "c": [
+                {
+                    "v": "list of type windows-registry-value-type",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "modified_time",
+            "d": 2,
+            "c": [
+                {
+                    "v": "timestamp",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "creator_user_ref",
+            "d": 2,
+            "c": [
+                {
+                    "v": "identifier",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "number_of_subkeys",
+            "d": 2,
+            "c": [
+                {
+                    "v": "integer",
+                    "d": 3
+                }
+            ]
+        }
+    ]
+}
