@@ -1,0 +1,168 @@
+{
+    "v": "<div style='display: flex; justify-content: center; align-items: center;'><img src='img/code-review.png' alt='code review' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 5px; text-align: center;'><font color='green'><h3>Code Review</h3></font></div>",
+    "d": 1,
+    "c": [
+        {
+            "v": "<h4>源代码</h4>",
+            "d": 2
+        },
+        {
+            "v": "<h4>编译表示</h4>",
+            "d": 2,
+            "c": [
+                {
+                    "v": "<b>ASM</b>",
+                    "d": 3,
+                    "c": [
+                        {
+                            "v": "<b>汇编语言（Assembly Language）</b><br>与机器码（二进制指令）一一对应,通常比高级编程语言更接近计算机底层架构",
+                            "d": 4
+                        },
+                        {
+                            "v": "e.g. <b>gcc</b> <code>gcc -S hello.c -o hello.s</code>",
+                            "d": 4
+                        },
+                        {
+                            "v": "e.g. <b>llvm</b> <code>clang -S hello.c -o hello.s</code>",
+                            "d": 4
+                        }
+                    ]
+                },
+                {
+                    "v": "<b>IR</b>",
+                    "d": 3,
+                    "c": [
+                        {
+                            "v": "<b>中间表示（Intermediate Representation）</b><br>介于源代码和目标代码（机器码或汇编代码）之间,是在编译器中用于优化和转换源代码的一种抽象表示<br>",
+                            "d": 4
+                        },
+                        {
+                            "v": "e.g. <b>gcc</b> <code>gcc -fdump-tree-gimple hello.c -o hello</code>",
+                            "d": 4
+                        },
+                        {
+                            "v": "e.g. <b>llvm</b> <code>clang -emit-llvm hello.c -o hello.ll</code>",
+                            "d": 4
+                        }
+                    ]
+                },
+                {
+                    "v": "<b>CFG</b>",
+                    "d": 3,
+                    "c": [
+                        {
+                            "v": "<b>控制流图（Control Flow Graph）</b><br>是表示程序控制流的一种图形化表示方法,<br>节点表示基本块（一组连续的指令序列）,边表示程序执行的跳转和分支情况",
+                            "d": 4
+                        },
+                        {
+                            "v": "常用的将代码转换为控制流图的工具包括 <b>IDA Pro</b>、<b>Ghidra</b>、<b>Radare2</b> 等 ",
+                            "d": 4
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "v": "<h4>可执行文件</h4>",
+            "d": 2,
+            "c": [
+                {
+                    "v": "e.g. Windows PE(Portable Executable), UNIX ELF(Executable and Linking Format), MAC MACH-O(Mach Object)",
+                    "d": 3
+                },
+                {
+                    "v": "<b>静态分析</b>",
+                    "d": 3,
+                    "c": [
+                        {
+                            "v": "反汇编",
+                            "d": 4,
+                            "c": [
+                                {
+                                    "v": "是否区分代码和数据",
+                                    "d": 5,
+                                    "c": [
+                                        {
+                                            "v": "线性扫描反汇编",
+                                            "d": 6,
+                                            "c": [
+                                                {
+                                                    "v": "e.g.GNU 调试器 GDB, 微软的 WinDbg, objdump 实用工具的反汇编引擎",
+                                                    "d": 7
+                                                },
+                                                {
+                                                    "v": "不会进行代码和数据的明确区分,<br>仅按照指定的字节序列长度读取机器码,<br>并根据事先定义的指令集来解析和转换机器码",
+                                                    "d": 7
+                                                },
+                                                {
+                                                    "v": "优点: 能够完全覆盖程序的所有代码段",
+                                                    "d": 7
+                                                },
+                                                {
+                                                    "v": "缺点: 由于某些汇编指令不是固定长度的,<br>这可能导致静态分析无法正确解析程序中混合的数据,<br>比如 jmp 跳转指令<br>ps: MIPS 指令集长度固定, 因此反汇编更容易",
+                                                    "d": 7
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "v": "递归下降反汇编",
+                                            "d": 6,
+                                            "c": [
+                                                {
+                                                    "v": "IDA Pro",
+                                                    "d": 7
+                                                },
+                                                {
+                                                    "v": "一个指令的二进制表示具有特定的模式和结构,<br>可以根据这些特征来判断该二进制序列是否代表有效的指令",
+                                                    "d": 7
+                                                },
+                                                {
+                                                    "v": "递归地调用解析函数,<br>根据当前解析位置的上下文信息来判断当前字节属于哪个指令,<br>并逐步解析指令的各个部分(如操作码、寻址模式、操作数等),<br>直到完成整个指令的解析",
+                                                    "d": 7
+                                                },
+                                                {
+                                                    "v": "优点: 解决指令不定长的问题, 因此能够区分代码和数据",
+                                                    "d": 7
+                                                },
+                                                {
+                                                    "v": "缺点: 无法处理间接代码路径(动态决策), 例如利用指针表来查找目标地址的跳转或调用<br>采用一些用于识别指向代码的指针的启发式(heuristics)方法",
+                                                    "d": 7
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "v": "<b>动态分析</b>",
+                    "d": 3,
+                    "c": [
+                        {
+                            "v": "模糊测试",
+                            "d": 4
+                        },
+                        {
+                            "v": "污点分析",
+                            "d": 4
+                        },
+                        {
+                            "v": "符号执行",
+                            "d": 4
+                        },
+                        {
+                            "v": "代码插桩",
+                            "d": 4
+                        },
+                        {
+                            "v": "……",
+                            "d": 4
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
