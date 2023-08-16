@@ -2,5 +2,43 @@
     "v": "<div style='display: flex; justify-content: center; align-items: center;'><img src='img/intrusion-detection.gif' alt='IntrusionDetection' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 20px; text-align: center;'><font color='green'><h3>Intrusion Detection</h3></font></div>",
     "d": 1,
     "c": [
+        {
+            "v": "<h4>Anomaly-based Intrusion Detection</h4>",
+            "d": 2,
+            "c": [
+                {
+                    "v": "学习历史良性数据",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "<h4>Rule-based Intrusion Detection</h4>",
+            "d": 2,
+            "c": [
+                {
+                    "v": "将多个签名或事件链接起来以创建描述网络攻击的规则(签名或事件组成的子图)",
+                    "d": 3
+                },
+                {
+                    "v": "签名: 对源图中某个节点或边的恶意模式, e,g.恶意文件的哈希值或恶意主机的网络🔗",
+                    "d": 3
+                },
+                {
+                    "v": "事件: 源图中节点或边的良性或恶意模式",
+                    "d": 3
+                }
+            ]
+        },
+        {
+            "v": "<h4>Tag-propagation-based Intrusion Detection</h4>",
+            "d": 2,
+            "c": [
+                {
+                    "v": "将标签分配给源图中的节点或边缘, 并利用标签传播来检测和跟踪源图中的恶意因果关系",
+                    "d": 3
+                }
+            ]
+        }
     ]
 }
