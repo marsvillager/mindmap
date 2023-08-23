@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<title>Provenance</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #mindmap {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+    }
+    </style>
+<link href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/style.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.8.0/styles/default.min.css" rel="stylesheet"/>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/index.js"></script>
+<script>(e => { window.WebFontConfig = { custom: { families: ["KaTeX_AMS", "KaTeX_Caligraphic:n4,n7", "KaTeX_Fraktur:n4,n7", "KaTeX_Main:n4,n7,i4,i7", "KaTeX_Math:i4,i7", "KaTeX_Script", "KaTeX_SansSerif:n4,n7,i4", "KaTeX_Size1", "KaTeX_Size2", "KaTeX_Size3", "KaTeX_Size4", "KaTeX_Typewriter"] }, active: () => { e().refreshHook.call() } } })(() => window.markmap)</script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>(() => { setTimeout(() => { const { markmap: M, mm: ge } = window, me = new M.Toolbar; me.attach(ge); const fe = me.render(); fe.setAttribute("style", "position:absolute;bottom:20px;right:20px"), document.body.append(fe) }) })()</script>
+<script>
+        ((F, I, R, H) => {
+            const X = F();
+            window.mm = X.Markmap.create("svg#mindmap", (I||X.deriveOptions)(H), R)
+        })(()=>window.markmap, null, {'content': "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/black coal ball.jpg' alt='et' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 20px; text-align: center;'><font color='red'><h3>HCY: Hyperconnected Cyber Yo-Yo</h3></font></div>", 'depth': 1, 'children': [{'content': '<h4>/neo4j <a>https://github.com/marsvillager/SecurityGraph.git</a></h4>', 'depth': 2, 'children': [{'content': '<h5>/store</h5>', 'depth': 3}, {'content': '<h5>/show</h5>', 'depth': 3}]}, {'content': '<h4>/kg <code>knowledge graph</code></h4>', 'depth': 2, 'children': [{'content': '<h5>/matrix</h5>', 'depth': 3}, {'content': '<h5>/behavior</h5>', 'depth': 3}]}, {'content': '<h4>/graph</h4>', 'depth': 2, 'children': [{'content': '<h5>/OPM</h5>', 'depth': 3}]}, {'content': '<h4>/data</h4>', 'depth': 2, 'children': [{'content': '<h5>/structured_data</h5>', 'depth': 3, 'children': [{'content': '<h6>/matrix</h6>', 'depth': 4}, {'content': '<h6>/behavior</h6>', 'depth': 4}, {'content': '<h6>/dataset</h6>', 'depth': 4}]}, {'content': '<h5>/realtime_data <a>https://github.com/marsvillager/ProcessLog.git</a></h5>', 'depth': 3}]}, {'content': '<h4>/tools</h4>', 'depth': 2, 'children': [{'content': 'prepare.py', 'depth': 3}, {'content': 'config.py', 'depth': 3}, {'content': 'behavior2matrix.py <code>NLP</code>', 'depth': 3}, {'content': 'provence.py <code>Graph Computing</code>', 'depth': 3}]}, {'content': '<h4>hcy.py</h4>', 'depth': 2, 'children': [{'content': '<h5><i>1.build knowledge graph</i></h5>', 'depth': 3, 'children': [{'content': '<h6><i>1.1.behavior2matrix</i></h6>', 'depth': 4}, {'content': '<h6><i>1.2.data2behavior</i></h6>', 'depth': 4}]}, {'content': '<h5><i>2.data2graph</i></h5>', 'depth': 3, 'children': [{'content': '<h6><i>2.1.match subgraph</i></h6>', 'depth': 4}]}, {'content': '<h5><i>3.show</i></h5>', 'depth': 3}]}]},
+            {"colorFreezeLevel": 2, "initialExpandLevel": 3}
+        )
+    </script>
+</body>
+</html>

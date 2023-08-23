@@ -1,0 +1,136 @@
+{
+    "content": "<div style='display: flex; justify-content: center; align-items: center;'><h3><font color='steelblue'><h3>Process Object</h3></font></div>",
+    "depth": 1,
+    "children": [
+        {
+            "content": "<b>type<b>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "extensions",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "dictionary",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "is_hidden",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "boolean",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "pid",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "integer",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "created_time",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "timestamp",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "cwd",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "command_line",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "environment_variables",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "dictionary",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "opened_connection_refs",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "list of type identifier",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "creator_user_ref",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "identifier",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "image_ref",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "identifier",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "parent_ref",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "identifier",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "child_refs",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "list of type identifier",
+                    "depth": 3
+                }
+            ]
+        }
+    ]
+}

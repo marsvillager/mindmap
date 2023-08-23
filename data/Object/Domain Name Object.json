@@ -1,0 +1,36 @@
+{
+    "content": "<div style='display: flex; justify-content: center; align-items: center;'><h3><font color='steelblue'><h3>Domain Name Object</h3></font></div>",
+    "depth": 1,
+    "children": [
+        {
+            "content": "<b>type<b>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "<b>value<b>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "integer",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "resolves_to_refs",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "list of type identifier",
+                    "depth": 3
+                }
+            ]
+        }
+    ]
+}

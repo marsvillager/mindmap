@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<title>Search Algorithm</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #mindmap {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+    }
+    </style>
+<link href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/style.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.8.0/styles/default.min.css" rel="stylesheet"/>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/index.js"></script>
+<script>(e => { window.WebFontConfig = { custom: { families: ["KaTeX_AMS", "KaTeX_Caligraphic:n4,n7", "KaTeX_Fraktur:n4,n7", "KaTeX_Main:n4,n7,i4,i7", "KaTeX_Math:i4,i7", "KaTeX_Script", "KaTeX_SansSerif:n4,n7,i4", "KaTeX_Size1", "KaTeX_Size2", "KaTeX_Size3", "KaTeX_Size4", "KaTeX_Typewriter"] }, active: () => { e().refreshHook.call() } } })(() => window.markmap)</script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>(() => { setTimeout(() => { const { markmap: M, mm: ge } = window, me = new M.Toolbar; me.attach(ge); const fe = me.render(); fe.setAttribute("style", "position:absolute;bottom:20px;right:20px"), document.body.append(fe) }) })()</script>
+<script>
+        ((F, I, R, H) => {
+            const X = F();
+            window.mm = X.Markmap.create("svg#mindmap", (I||X.deriveOptions)(H), R)
+        })(()=>window.markmap, null, {'content': "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/search.png' alt='security' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 20px; text-align: center;'><font color='steelblue'><h3>Search Algorithm</h3></font>", 'depth': 1, 'children': [{'content': '古典搜索方法', 'depth': 2, 'children': [{'content': '通过比较目标函数值的大小来移动迭代点', 'depth': 3}, {'content': '步长加速法', 'depth': 3}, {'content': '旋转方向法', 'depth': 3}, {'content': '单纯型调优法', 'depth': 3}, {'content': '方向加速法', 'depth': 3}, {'content': '枚举法', 'depth': 3}, {'content': '随机搜索方法', 'depth': 3}]}, {'content': '启发式搜索方法', 'depth': 2, 'children': [{'content': '通过比较目标函数的梯度值来移动迭代点', 'depth': 3}, {'content': '梯度信息启发下的简单智能搜索', 'depth': 3}, {'content': '共轭梯度法', 'depth': 3}, {'content': '牛顿型方法', 'depth': 3}, {'content': '变尺度法', 'depth': 3}]}, {'content': '智能优化方法', 'depth': 2, 'children': [{'content': '从随机的可行初始解出发, 通过"邻域搜索"来寻找最优解', 'depth': 3}, {'content': '把待求解问题的相关知识隐含地加入到算法中', 'depth': 3}, {'content': '与启发式搜索方法相比，智能优化方法能较好地解决大规模复杂系统中出现的组合爆炸问题'}, {'content': '模拟退火算法', 'depth': 3}, {'content': '遗传算法', 'depth': 3}, {'content': '禁忌搜索', 'depth': 3}, {'content': '进化规划', 'depth': 3}, {'content': '进化策略', 'depth': 3}, {'content': '蚁群算法', 'depth': 3}]}]},
+            {"colorFreezeLevel": 2, "initialExpandLevel": 3}
+        )
+    </script>
+</body>
+</html>

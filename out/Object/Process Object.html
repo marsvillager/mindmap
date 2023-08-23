@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<title>Process Object</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #mindmap {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+    }
+    </style>
+<link href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/style.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.8.0/styles/default.min.css" rel="stylesheet"/>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/index.js"></script>
+<script>(e => { window.WebFontConfig = { custom: { families: ["KaTeX_AMS", "KaTeX_Caligraphic:n4,n7", "KaTeX_Fraktur:n4,n7", "KaTeX_Main:n4,n7,i4,i7", "KaTeX_Math:i4,i7", "KaTeX_Script", "KaTeX_SansSerif:n4,n7,i4", "KaTeX_Size1", "KaTeX_Size2", "KaTeX_Size3", "KaTeX_Size4", "KaTeX_Typewriter"] }, active: () => { e().refreshHook.call() } } })(() => window.markmap)</script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>(() => { setTimeout(() => { const { markmap: M, mm: ge } = window, me = new M.Toolbar; me.attach(ge); const fe = me.render(); fe.setAttribute("style", "position:absolute;bottom:20px;right:20px"), document.body.append(fe) }) })()</script>
+<script>
+        ((F, I, R, H) => {
+            const X = F();
+            window.mm = X.Markmap.create("svg#mindmap", (I||X.deriveOptions)(H), R)
+        })(()=>window.markmap, null, {'content': "<div style='display: flex; justify-content: center; align-items: center;'><h3><font color='steelblue'><h3>Process Object</h3></font></div>", 'depth': 1, 'children': [{'content': '<b>type<b>', 'depth': 2, 'children': [{'content': 'string', 'depth': 3}]}, {'content': 'extensions', 'depth': 2, 'children': [{'content': 'dictionary', 'depth': 3}]}, {'content': 'is_hidden', 'depth': 2, 'children': [{'content': 'boolean', 'depth': 3}]}, {'content': 'pid', 'depth': 2, 'children': [{'content': 'integer', 'depth': 3}]}, {'content': 'created_time', 'depth': 2, 'children': [{'content': 'timestamp', 'depth': 3}]}, {'content': 'cwd', 'depth': 2, 'children': [{'content': 'string', 'depth': 3}]}, {'content': 'command_line', 'depth': 2, 'children': [{'content': 'string', 'depth': 3}]}, {'content': 'environment_variables', 'depth': 2, 'children': [{'content': 'dictionary', 'depth': 3}]}, {'content': 'opened_connection_refs', 'depth': 2, 'children': [{'content': 'list of type identifier', 'depth': 3}]}, {'content': 'creator_user_ref', 'depth': 2, 'children': [{'content': 'identifier', 'depth': 3}]}, {'content': 'image_ref', 'depth': 2, 'children': [{'content': 'identifier', 'depth': 3}]}, {'content': 'parent_ref', 'depth': 2, 'children': [{'content': 'identifier', 'depth': 3}]}, {'content': 'child_refs', 'depth': 2, 'children': [{'content': 'list of type identifier', 'depth': 3}]}]},
+            {"colorFreezeLevel": 2, "initialExpandLevel": 3}
+        )
+    </script>
+</body>
+</html>

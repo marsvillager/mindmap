@@ -1,0 +1,46 @@
+{
+    "content": "<div style='display: flex; justify-content: center; align-items: center;'><h3><font color='steelblue'><h3>Autonomous System Object</h3></font></div>",
+    "depth": 1,
+    "children": [
+        {
+            "content": "<b>type<b>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "<b>number<b>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "integer",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "name",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "rir",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        }
+    ]
+}

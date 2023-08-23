@@ -1,0 +1,166 @@
+{
+    "content": "<div style='display: flex; justify-content: center; align-items: center;'><h3><font color='steelblue'><h3>User Account Object</h3></font></div>",
+    "depth": 1,
+    "children": [
+        {
+            "content": "<b>type<b>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "extensions",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "dictionary",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "user_id",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "credential",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "account_login",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "account_type",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "open-vocab",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "display_name",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "is_service_account",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "boolean",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "is_privileged",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "boolean",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "can_escalate_privs",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "boolean",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "is_disabled",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "boolean",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "account_created",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "timestamp",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "account_expires",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "timestamp",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "credential_last_changed",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "timestamp",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "account_first_login",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "timestamp",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "account_last_login",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "timestamp",
+                    "depth": 3
+                }
+            ]
+        }
+    ]
+}

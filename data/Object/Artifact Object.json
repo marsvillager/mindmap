@@ -1,0 +1,76 @@
+{
+    "content": "<div style='display: flex; justify-content: center; align-items: center;'><h3><font color='steelblue'><h3>Artifact Object</h3></font></div>",
+    "depth": 1,
+    "children": [
+        {
+            "content": "<b>type</b>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "mime_type",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "payload_bin",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "binary",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "url",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "hashes",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "hashes",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "encryption_algorithm",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "enum",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "decryption_key",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        }
+    ]
+}

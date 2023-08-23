@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<title>OpenAI Model</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #mindmap {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+    }
+    </style>
+<link href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/style.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.8.0/styles/default.min.css" rel="stylesheet"/>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/index.js"></script>
+<script>(e => { window.WebFontConfig = { custom: { families: ["KaTeX_AMS", "KaTeX_Caligraphic:n4,n7", "KaTeX_Fraktur:n4,n7", "KaTeX_Main:n4,n7,i4,i7", "KaTeX_Math:i4,i7", "KaTeX_Script", "KaTeX_SansSerif:n4,n7,i4", "KaTeX_Size1", "KaTeX_Size2", "KaTeX_Size3", "KaTeX_Size4", "KaTeX_Typewriter"] }, active: () => { e().refreshHook.call() } } })(() => window.markmap)</script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>(() => { setTimeout(() => { const { markmap: M, mm: ge } = window, me = new M.Toolbar; me.attach(ge); const fe = me.render(); fe.setAttribute("style", "position:absolute;bottom:20px;right:20px"), document.body.append(fe) }) })()</script>
+<script>
+        ((F, I, R, H) => {
+            const X = F();
+            window.mm = X.Markmap.create("svg#mindmap", (I||X.deriveOptions)(H), R)
+        })(()=>window.markmap, null, {'content': '<div style=\'display: flex; justify-content: center; align-items: center;\'><img src=\'../img/artificial-intelligence.png\' alt=\'ai\' style=\'width: 100px; height: 100px;\'></div> <div style=\'padding-bottom: 10px;\'><font color=\'steelblue\'><h3><a href="https://learn.microsoft.com/zh-cn/azure/cognitive-services/openai/concepts/models">OpenAI Model</a></h3></font></div>', 'depth': 1, 'children': [{'content': '<h4>Size-based</h4>', 'depth': 2, 'children': [{'content': 'ada 350M or 1.2B ?', 'depth': 3, 'children': [{'content': 'ada', 'depth': 4}, {'content': 'text-embedding-ada-002', 'depth': 4}, {'content': 'text-ada-001', 'depth': 4}, {'content': 'text-similarity-ada-001', 'depth': 4}, {'content': 'ada-code-search-code', 'depth': 4}, {'content': 'ada-similarity', 'depth': 4}, {'content': 'code-search-ada-text-001', 'depth': 4}, {'content': 'text-search-ada-query-001', 'depth': 4}, {'content': 'ada-code-search-text', 'depth': 4}, {'content': 'text-search-ada-doc-001', 'depth': 4}, {'content': 'code-search-ada-code-001', 'depth': 4}, {'content': 'ada-search-query', 'depth': 4}, {'content': 'ada-search-document', 'depth': 4}]}, {'content': 'babbage 1.3B or 1.5B ?', 'depth': 3, 'children': [{'content': 'babbage', 'depth': 4}, {'content': 'babbage-code-search-code', 'depth': 4}, {'content': 'text-similarity-babbage-001', 'depth': 4}, {'content': 'babbage-code-search-text', 'depth': 4}, {'content': 'babbage-similarity', 'depth': 4}, {'content': 'code-search-babbage-text-001', 'depth': 4}, {'content': 'code-search-babbage-code-001', 'depth': 4}, {'content': 'babbage-search-document', 'depth': 4}, {'content': 'text-search-babbage-doc-001', 'depth': 4}, {'content': 'babbage-search-query', 'depth': 4}, {'content': 'text-babbage-001', 'depth': 4}, {'content': 'text-search-babbage-query-001', 'depth': 4}]}, {'content': 'curie 6.7B', 'depth': 3, 'children': [{'content': 'curie', 'depth': 4}, {'content': 'text-curie-001', 'depth': 4}, {'content': 'curie-instruct-beta', 'depth': 4}, {'content': 'text-similarity-curie-001', 'depth': 4}, {'content': 'curie-search-query', 'depth': 4}, {'content': 'text-search-curie-query-001', 'depth': 4}, {'content': 'curie-search-document', 'depth': 4}, {'content': 'text-search-curie-doc-001', 'depth': 4}, {'content': 'curie-similarity', 'depth': 4}]}, {'content': 'davinci 175B', 'depth': 3, 'children': [{'content': 'davinci', 'depth': 4}, {'content': 'text-davinci-edit-001', 'depth': 4}, {'content': 'code-davinci-edit-001', 'depth': 4}, {'content': 'text-davinci-001', 'depth': 4}, {'content': 'davinci-search-document', 'depth': 4}, {'content': 'davinci-instruct-beta', 'depth': 4}, {'content': 'text-search-davinci-query-001', 'depth': 4}, {'content': 'davinci-search-query', 'depth': 4}, {'content': 'text-search-davinci-doc-001', 'depth': 4}, {'content': 'text-similarity-davinci-001', 'depth': 4}, {'content': 'text-davinci-002', 'depth': 4}, {'content': 'text-davinci-003', 'depth': 4}, {'content': 'davinci-similarity', 'depth': 4}]}, {'content': 'gpt-3.5 17.5B', 'depth': 3, 'children': [{'content': 'gpt-3.5-turbo', 'depth': 4}, {'content': 'gpt-3.5-turbo-0301', 'depth': 4}, {'content': 'gpt-3.5-turbo-0613', 'depth': 4}, {'content': 'gpt-3.5-turbo-16k', 'depth': 4}, {'content': 'gpt-3.5-turbo-16k-0613', 'depth': 4}]}, {'content': 'others', 'depth': 3, 'children': [{'content': 'whisper-1', 'depth': 4}]}]}, {'content': '<h4>Function-based</h4>', 'depth': 2, 'children': [{'content': '<b>Embeddings</b>', 'depth': 3, 'children': [{'content': '不同维数的嵌入', 'depth': 4, 'children': [{'content': '1536维: text-embedding-ada-002', 'depth': 5}, {'content': '1024维: text-embedding-ada-001', 'depth': 5}, {'content': '2048维: Babbage', 'depth': 5}, {'content': '4096维: Curie', 'depth': 5}, {'content': '12288维: Davinci', 'depth': 5}]}, {'content': '相似度: 聚类分析、回归、异常情况检测、可视化', 'depth': 4, 'children': [{'content': 'text-similarity-ada-001', 'depth': 5}, {'content': 'text-similarity-babbage-001', 'depth': 5}, {'content': 'text-similarity-curie-001', 'depth': 5}, {'content': 'text-similarity-davinci-001', 'depth': 5}]}, {'content': '文本搜索: 搜索、上下文相关性、信息检索 <br> 支持两种输入类型：doc（用于嵌入要检索的文档）和 query（用于嵌入搜索查询）', 'depth': 4, 'children': [{'content': 'text-search-ada-doc-001', 'depth': 5}, {'content': 'text-search-ada-query-001', 'depth': 5}, {'content': 'text-search-babbage-doc-001', 'depth': 5}, {'content': 'text-search-babbage-query-001', 'depth': 5}, {'content': 'text-search-curie-doc-001', 'depth': 5}, {'content': 'text-search-curie-query-001', 'depth': 5}, {'content': 'text-search-davinci-doc-001', 'depth': 5}, {'content': 'text-search-davinci-query-001', 'depth': 5}]}, {'content': '代码搜索: 代码搜索和相关性 <br> 支持两种输入类型：code（用于嵌入要检索的代码片段）和 text（用于嵌入自然语言搜索查询）', 'depth': 4, 'children': [{'content': 'code-search-ada-code-001', 'depth': 5}, {'content': 'code-search-ada-text-001', 'depth': 5}, {'content': 'code-search-babbage-code-001', 'depth': 5}, {'content': 'code-search-babbage-text-001', 'depth': 5}]}]}, {'content': '<b>GPT: 理解和生成自然语言</b>', 'depth': 3, 'children': [{'content': 'GPT-3', 'depth': 4, 'children': [{'content': 'text-davinci-003', 'depth': 5}, {'content': 'text-curie-001', 'depth': 5}, {'content': 'text-babbage-001', 'depth': 5}, {'content': 'text-ada-001', 'depth': 5}]}, {'content': 'GPT-3.5', 'depth': 4, 'children': [{'content': 'gpt-3.5-turbo', 'depth': 4}, {'content': 'gpt-3.5-turbo-0301', 'depth': 4}, {'content': 'gpt-3.5-turbo-0613', 'depth': 4}, {'content': 'gpt-3.5-turbo-16k', 'depth': 4}, {'content': 'gpt-3.5-turbo-16k-0613', 'depth': 4}]}, {'content': 'GPT-4', 'depth': 4, 'children': [{'content': '8192 个输入令牌: gpt-4', 'depth': 5}, {'content': '32,768 个令牌: gpt-4-32k', 'depth': 5}]}]}, {'content': '<b>对现有文本进行修订</b>', 'depth': 4, 'children': [{'content': 'text-davinci-edit-001', 'depth': 5}]}, {'content': '<b>Codex: 理解和生成代码</b>', 'depth': 3, 'children': [{'content': 'code-davinci-002', 'depth': 4}, {'content': 'code-cushman-001', 'depth': 4}]}, {'content': '<b>对现有代码进行修订</b>', 'depth': 4, 'children': [{'content': 'code-davinci-edit-001', 'depth': 5}]}, {'content': '<b>Audio: Transcriptions and Translations</b>', 'depth': 4, 'children': [{'content': 'whisper-1', 'depth': 5}]}]}]},
+            {"colorFreezeLevel": 2, "initialExpandLevel": 3}
+        )
+    </script>
+</body>
+</html>

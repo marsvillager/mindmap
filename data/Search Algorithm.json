@@ -1,0 +1,107 @@
+{
+    "content": "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/search.png' alt='security' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 20px; text-align: center;'><font color='steelblue'><h3>Search Algorithm</h3></font>",
+    "depth": 1,
+    "children": [
+        {
+            "content": "古典搜索方法",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "通过比较目标函数值的大小来移动迭代点",
+                    "depth": 3
+                },
+                {
+                    "content": "步长加速法",
+                    "depth": 3
+                },
+                {
+                    "content": "旋转方向法",
+                    "depth": 3
+                },
+                {
+                    "content": "单纯型调优法",
+                    "depth": 3
+                },
+                {
+                    "content": "方向加速法",
+                    "depth": 3
+                },
+                {
+                    "content": "枚举法",
+                    "depth": 3
+                },
+                {
+                    "content": "随机搜索方法",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "启发式搜索方法",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "通过比较目标函数的梯度值来移动迭代点",
+                    "depth": 3
+                },
+                {
+                    "content": "梯度信息启发下的简单智能搜索",
+                    "depth": 3
+                },
+                {
+                    "content": "共轭梯度法",
+                    "depth": 3
+                },
+                {
+                    "content": "牛顿型方法",
+                    "depth": 3
+                },
+                {
+                    "content": "变尺度法",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "智能优化方法",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "从随机的可行初始解出发, 通过\"邻域搜索\"来寻找最优解",
+                    "depth": 3
+                },
+                {
+                    "content": "把待求解问题的相关知识隐含地加入到算法中",
+                    "depth": 3
+                },
+                {
+                    "content": "与启发式搜索方法相比，智能优化方法能较好地解决大规模复杂系统中出现的组合爆炸问题"
+                },
+                {
+                    "content": "模拟退火算法",
+                    "depth": 3
+                },
+                {
+                    "content": "遗传算法",
+                    "depth": 3
+                },
+                {
+                    "content": "禁忌搜索",
+                    "depth": 3
+                },
+                {
+                    "content": "进化规划",
+                    "depth": 3
+                },
+                {
+                    "content": "进化策略",
+                    "depth": 3
+                },
+                {
+                    "content": "蚁群算法",
+                    "depth": 3
+                }
+            ]
+        }
+    ]
+}

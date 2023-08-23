@@ -1,0 +1,146 @@
+{
+    "content": "<div style='display: flex; justify-content: center; align-items: center;'><h3><font color='steelblue'><h3>X.509 Certificate Object</h3></font></div>",
+    "depth": 1,
+    "children": [
+        {
+            "content": "<b>type<b>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "is_self_signed",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "boolean",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "hashes",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "hashes",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "version",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "serial_number",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "signature_algorithm",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "issuer",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "validity_not_before",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "timestamp",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "validity_not_after",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "timestamp",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "subject",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "subject_public_key_algorithm",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "subject_public_key_modulus",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "subject_public_key_exponent",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "integer",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "x509_v3_extensions",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "x509-v3-extensions-type",
+                    "depth": 3
+                }
+            ]
+        }
+    ]
+}

@@ -4,13 +4,13 @@
 2. **auto generate**
 
 ```sh
-python auto.py
-
+(venv) ➜  mindmap git:(main) ✗ python auto.py
+Please input the directory of the mindmap: directory of json file
 Please input the theme of the mindmap: name of json file
 ```
 
 ## show
 
-view at `https://marsvillager.github.io/mindmap/ + generated file`
+view at `https://marsvillager.github.io/mindmap/out/ + generated file`
 
-e.g. https://marsvillager.github.io/mindmap/FuzzTesting.html
+e.g. https://marsvillager.github.io/mindmap/out/Fuzz%20Testing.html

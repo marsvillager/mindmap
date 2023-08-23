@@ -1,0 +1,86 @@
+{
+    "content": "<div style='display: flex; justify-content: center; align-items: center;'><h3><font color='steelblue'><h3>Relationship Object</h3></font></div>",
+    "depth": 1,
+    "children": [
+        {
+            "content": "<b>type<b>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "<b>relationship_type<b>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "description",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "source_ref",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "identifier",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "target_ref",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "identifier",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "start_time",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "stop_time",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "stop_time",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "stop_time",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "source_ref",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "identifier",
+                    "depth": 3
+                }
+            ]
+        }
+    ]
+}

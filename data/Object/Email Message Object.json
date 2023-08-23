@@ -1,0 +1,166 @@
+{
+    "content": "<div style='display: flex; justify-content: center; align-items: center;'><h3><font color='steelblue'><h3>Email Message Object</h3></font></div>",
+    "depth": 1,
+    "children": [
+        {
+            "content": "<b>type<b>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "<b>is_multipart<b>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "boolean",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "date",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "timestamp",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "content_type",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "from_ref",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "identifier",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "sender_ref",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "identifier",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "to_refs",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "list of type identifier",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "cc_refs",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "list of type identifier",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "bcc_refs",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "list of type identifier",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "message_id",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "subject",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "received_lines",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "list of type string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "additional_header_fields",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "dictionary",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "body",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "string",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "body_multipart",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "list of type email-mime-part-type",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "raw_email_ref",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "identifier",
+                    "depth": 3
+                }
+            ]
+        }
+    ]
+}

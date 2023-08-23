@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<title>Data Collection</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #mindmap {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+    }
+    </style>
+<link href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/style.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.8.0/styles/default.min.css" rel="stylesheet"/>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/index.js"></script>
+<script>(e => { window.WebFontConfig = { custom: { families: ["KaTeX_AMS", "KaTeX_Caligraphic:n4,n7", "KaTeX_Fraktur:n4,n7", "KaTeX_Main:n4,n7,i4,i7", "KaTeX_Math:i4,i7", "KaTeX_Script", "KaTeX_SansSerif:n4,n7,i4", "KaTeX_Size1", "KaTeX_Size2", "KaTeX_Size3", "KaTeX_Size4", "KaTeX_Typewriter"] }, active: () => { e().refreshHook.call() } } })(() => window.markmap)</script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>(() => { setTimeout(() => { const { markmap: M, mm: ge } = window, me = new M.Toolbar; me.attach(ge); const fe = me.render(); fe.setAttribute("style", "position:absolute;bottom:20px;right:20px"), document.body.append(fe) }) })()</script>
+<script>
+        ((F, I, R, H) => {
+            const X = F();
+            window.mm = X.Markmap.create("svg#mindmap", (I||X.deriveOptions)(H), R)
+        })(()=>window.markmap, null, {'content': "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/data-collection.png' alt='DataCollection' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 20px; text-align: center;'><font color='green'><h3>Data Collection</h3></font></div>", 'depth': 1, 'children': [{'content': 'System-level, 系统级', 'depth': 2, 'children': [{'content': '<b>system calls(syscalls)</b> in the <b>User Space</b> / <b>Kernel Space</b>', 'depth': 3}, {'content': 'Platforms', 'depth': 3, 'children': [{'content': 'Windows', 'depth': 4, 'children': [{'content': 'Event Tracing for Windows(ETW, 2000, Kernel)', 'depth': 7, 'children': [{'content': 'log kernel or application-defined events', 'depth': 8}, {'content': '(1)启动和停止事件跟踪会话的控制器', 'depth': 8}, {'content': '(2)创建事件并在会话中发布事件的提供者', 'depth': 8}, {'content': '(3)从会话中消费事件的消费者', 'depth': 8}]}]}, {'content': 'Linux', 'depth': 4, 'children': [{'content': '<del>Lineage File System(2005, Kernel)</del>', 'depth': 7}, {'content': '<del>Hi-Fi(2012, Kernel)</del>', 'depth': 7}, {'content': '<del>Provmon(Hi-Fi 的一个端口, 2015, Kernel)</del>', 'depth': 7}, {'content': 'CamFlow(2017, Kernel)', 'depth': 7}]}, {'content': 'macOS', 'depth': 4, 'children': [{'content': '<a href="https://man.freebsd.org/cgi/man.cgi?query=auditpipe&apropos=0&sektion=0&manpath=FreeBSD+6.2-RELEASE&arch=default&format=html">AuditPipe(2006, Kernel)</a>', 'depth': 7}]}, {'content': 'Cross-platform', 'depth': 4, 'children': [{'content': 'Dtrace(2005, User/Kernel)', 'depth': 7}, {'content': 'SPADE(2012, User)', 'depth': 7}]}]}, {'content': 'Major Problem: 生成的来源图可能过于粗糙, 长时间运行的进程也会导致<b>依赖关系爆炸</b>的问题', 'depth': 3}]}, {'content': 'Unit-level, 单元级', 'depth': 2, 'children': [{'content': '将<b>系统实体</b>划分为<b>单元</b>来描述更细粒度的信息流, 从而拓展了系统级数据来源', 'depth': 3, 'children': [{'content': '解决依赖爆炸问题: 将长时间运行的进程划分为单元、将文件划分为数据单元', 'depth': 4}]}, {'content': '<del>Binary-based ExEcution Partition(BEEP, 2013, User)</del>', 'depth': 3, 'children': [{'content': '长时间运行的流程具有由外部请求驱动并由事件处理循环主导的特征', 'depth': 4}, {'content': '通过对应用程序的二进制文件进行逆向工程来检测这些事件处理循环及其因果关系', 'depth': 4, 'children': [{'content': '使用二进制文件的符号表和调试信息来确定函数的入口点和参数,<br>然后通过分析函数的汇编代码来确定函数的行为', 'depth': 7}, {'content': '使用动态二进制插桩技术来监视进程的执行,<br>并记录进程执行的系统调用和文件访问等操作的数据溯源', 'depth': 7}]}]}, {'content': '<del>LogGC(拓展 BEEP, 2013, User)</del>', 'depth': 3, 'children': [{'content': '将文件分割为逻辑数据单元, 并使用垃圾收集算法来删除冗余和不可达节点, 从而减少审计日志的大小', 'depth': 4}]}, {'content': '<del>ProTracer(2016, Kernel)</del>', 'depth': 3, 'children': [{'content': 'BEEP 和 LogGC 都有很高的运行时开销和空间开销, 因为它们将每个事件处理循环(甚至鼠标单击)划分为单元', 'depth': 4}, {'content': '通过分析内核空间中的系统调用来检测事件处理循环, 只将关键操作(如文件写入、网络连接)的长时间运行进程划分为单元', 'depth': 4}]}, {'content': '<del>Multiple Perspective attack Investigation(MPI, 2017, User)</del>', 'depth': 3, 'children': [{'content': '基于用户定义的任务对长时间运行的进程进行分区, 任务表示用户的不同视角, 例如 Web 浏览器中的选项卡', 'depth': 4}, {'content': '可以通过在可执行文件的源代码中添加注释来标识任务', 'depth': 4}]}, {'content': '<del>LPROV(2018, User/Kernel)</del>', 'depth': 3, 'children': [{'content': '拓展了 ProTracer 来跟踪库调用并将它们与系统调用关联起来', 'depth': 4}, {'content': '因此 LPROV 可以跟踪恶意库攻击和库漏洞利用的数据来源', 'depth': 4}]}]}, {'content': 'Instruction-level, 指令级', 'depth': 2, 'children': [{'content': '<del>Panorama(Windows, 2007, User)</del>', 'depth': 3}, {'content': '<a href="https://github.com/m000/dtracker">DataTracker(Linux, 2015, User)</a>', 'depth': 3, 'children': [{'content': 'Taint Analysis', 'depth': 4}]}, {'content': '<a href="https://github.com/Mic92/inspector">INSPECTOR(Linux, 2016, User)</a>', 'depth': 3, 'children': [{'content': 'Panorama 和 DataTracker 运行时开销很高', 'depth': 4}, {'content': '利用并行算法使用并发处理图(Concurrent Provenance Graph, CPG)来监视多线程应用程序的指令级数据出处', 'depth': 4}]}, {'content': '<a href="https://github.com/m000/panda/tree/prov_tracer">PROV-Tracer(Linux, 2015, User)</a>', 'depth': 3, 'children': [{'content': 'Panorama、DataTracker 和 INSPECTOR 都不能监控全系统', 'depth': 4}, {'content': '全系统逆向工程工具, 利用 QEMU 仿真器来支持不同的体系结构', 'depth': 4}]}, {'content': '<del>RAIN(Linux, 2017, User/Kernel)</del>', 'depth': 3, 'children': [{'content': '基于图的可达性分析来过滤不相关的进程以减少需要重放的进程数量', 'depth': 4}]}]}, {'content': "<img src='../img/DataCollection.png' alt='DataCollection' style='width: 907px; height: 649px;'>", 'depth': 2}]},
+            {"colorFreezeLevel": 2, "initialExpandLevel": 3}
+        )
+    </script>
+</body>
+</html>
