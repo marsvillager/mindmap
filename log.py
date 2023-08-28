@@ -44,7 +44,21 @@ class ColoredFormatter(logging.Formatter):
             f"[{Fore.CYAN}{self.formatTime(record, self.datefmt)}{Style.RESET_ALL}]"
             f"[{back_color}{level_color}{record.levelname}{Style.RESET_ALL}]"
         )
-        return log_format + " " + record.getMessage()
+
+        message_colors = {
+            logging.DEBUG: Fore.GREEN,
+            logging.WARNING: Fore.YELLOW,
+            logging.ERROR: Fore.RED,
+            logging.CRITICAL: Fore.MAGENTA
+        }
+
+        message_color = message_colors.get(record.levelno, Fore.RESET)
+
+        message = (
+            f"{message_color}{record.getMessage()}{Style.RESET_ALL}"
+        )
+
+        return log_format + " " + message
 
 
 # 创建一个自定义的日志格式
