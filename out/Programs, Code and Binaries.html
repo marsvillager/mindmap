@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<title>Programs, Code and Binaries</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #mindmap {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+    }
+    </style>
+<link href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/style.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.8.0/styles/default.min.css" rel="stylesheet"/>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/index.js"></script>
+<script>(e => { window.WebFontConfig = { custom: { families: ["KaTeX_AMS", "KaTeX_Caligraphic:n4,n7", "KaTeX_Fraktur:n4,n7", "KaTeX_Main:n4,n7,i4,i7", "KaTeX_Math:i4,i7", "KaTeX_Script", "KaTeX_SansSerif:n4,n7,i4", "KaTeX_Size1", "KaTeX_Size2", "KaTeX_Size3", "KaTeX_Size4", "KaTeX_Typewriter"] }, active: () => { e().refreshHook.call() } } })(() => window.markmap)</script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>(() => { setTimeout(() => { const { markmap: M, mm: ge } = window, me = new M.Toolbar; me.attach(ge); const fe = me.render(); fe.setAttribute("style", "position:absolute;bottom:20px;right:20px"), document.body.append(fe) }) })()</script>
+<script>
+        ((F, I, R, H) => {
+            const X = F();
+            window.mm = X.Markmap.create("svg#mindmap", (I||X.deriveOptions)(H), R)
+        })(()=>window.markmap, null, {'content': "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/code-review.png' alt='code review' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 5px; text-align: center;'><font color='green'><h3>Programs, Code and Binaries</h3></font></div>", 'depth': 1, 'children': [{'content': '<h4>源代码</h4>', 'depth': 2}, {'content': '<h4>编译表示</h4>', 'depth': 2, 'children': [{'content': '<b>ASM</b>', 'depth': 3, 'children': [{'content': '<b>汇编语言（Assembly Language）</b><br>与机器码（二进制指令）一一对应,通常比高级编程语言更接近计算机底层架构', 'depth': 4}, {'content': 'e.g. <b>gcc</b> <code>gcc -S hello.c -o hello.s</code>', 'depth': 4}, {'content': 'e.g. <b>llvm</b> <code>clang -S hello.c -o hello.s</code>', 'depth': 4}]}, {'content': '<b>IR</b>', 'depth': 3, 'children': [{'content': '<b>中间表示（Intermediate Representation）</b><br>介于源代码和目标代码（机器码或汇编代码）之间,是在编译器中用于优化和转换源代码的一种抽象表示<br>', 'depth': 4}, {'content': 'e.g. <b>gcc</b> <code>gcc -fdump-tree-gimple hello.c -o hello</code>', 'depth': 4}, {'content': 'e.g. <b>llvm</b> <code>clang -emit-llvm hello.c -o hello.ll</code>', 'depth': 4}]}, {'content': '<b>CFG</b>', 'depth': 3, 'children': [{'content': '<b>控制流图（Control Flow Graph）</b><br>是表示程序控制流的一种图形化表示方法,<br>节点表示基本块（一组连续的指令序列）,边表示程序执行的跳转和分支情况', 'depth': 4}, {'content': '常用的将代码转换为控制流图的工具包括 <b>IDA Pro</b>、<b>Ghidra</b>、<b>Radare2</b> 等 ', 'depth': 4}]}]}, {'content': '<h4>可执行文件</h4>', 'depth': 2, 'children': [{'content': 'e.g. Windows PE(Portable Executable), UNIX ELF(Executable and Linking Format), MAC MACH-O(Mach Object)', 'depth': 3}, {'content': '<b>静态分析</b>', 'depth': 3, 'children': [{'content': '反汇编', 'depth': 4, 'children': [{'content': '是否区分代码和数据', 'depth': 5, 'children': [{'content': '线性扫描反汇编', 'depth': 6, 'children': [{'content': 'e.g.GNU 调试器 GDB, 微软的 WinDbg, objdump 实用工具的反汇编引擎', 'depth': 7}, {'content': '不会进行代码和数据的明确区分,<br>仅按照指定的字节序列长度读取机器码,<br>并根据事先定义的指令集来解析和转换机器码', 'depth': 7}, {'content': '优点: 能够完全覆盖程序的所有代码段', 'depth': 7}, {'content': '缺点: 由于某些汇编指令不是固定长度的,<br>这可能导致静态分析无法正确解析程序中混合的数据,<br>比如 jmp 跳转指令<br>ps: MIPS 指令集长度固定, 因此反汇编更容易', 'depth': 7}]}, {'content': '递归下降反汇编', 'depth': 6, 'children': [{'content': 'IDA Pro', 'depth': 7}, {'content': '一个指令的二进制表示具有特定的模式和结构,<br>可以根据这些特征来判断该二进制序列是否代表有效的指令', 'depth': 7}, {'content': '递归地调用解析函数,<br>根据当前解析位置的上下文信息来判断当前字节属于哪个指令,<br>并逐步解析指令的各个部分(如操作码、寻址模式、操作数等),<br>直到完成整个指令的解析', 'depth': 7}, {'content': '优点: 解决指令不定长的问题, 因此能够区分代码和数据', 'depth': 7}, {'content': '缺点: 无法处理间接代码路径(动态决策), 例如利用指针表来查找目标地址的跳转或调用<br>采用一些用于识别指向代码的指针的启发式(heuristics)方法', 'depth': 7}]}]}, {'content': '静态二进制插桩', 'depth': 5}]}]}, {'content': '<b>动态分析</b>', 'depth': 3, 'children': [{'content': "<a href='https://marsvillager.github.io/mindmap/out/Fuzz%20Testing.html'>模糊测试</a>", 'depth': 4}, {'content': "<a href='https://marsvillager.github.io/mindmap/out/Taint%20Analysis.html'>污点分析</a>", 'depth': 4}, {'content': '符号执行', 'depth': 4}, {'content': '动态二进制插桩', 'depth': 4}, {'content': '……', 'depth': 4}]}]}]},
+            {"colorFreezeLevel": 2, "initialExpandLevel": 3}
+        )
+    </script>
+</body>
+</html>

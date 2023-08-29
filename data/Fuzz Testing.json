@@ -235,19 +235,23 @@
                             "depth": 4,
                             "children": [
                                 {
-                                    "content": "<b>源代码插桩(Source Code Instrumentation)</b><br>要求你掌握软件应用程序的源代码, 否则无法进行插桩, 尤其适用于面向切面编程技术(Aspect Oriented Programming)",
+                                    "content": "<b>源代码插桩(Source Code Instrumentation)</b><br>要求掌握软件应用程序的源代码(或逆向工程), 否则无法进行插桩, 尤其适用于面向切面编程技术(Aspect Oriented Programming)",
                                     "depth": 5
                                 },
                                 {
-                                    "content": "二进制插桩(Binary Instrumentation)",
+                                    "content": "<b>二进制插桩(Binary Instrumentation)</b>",
                                     "depth": 5,
                                     "children": [
                                         {
-                                            "content": "<b>静态二进制插桩</b><br>无需改变原有程序的源代码, 在二进制可执行程序的字节码上, 使用特定的工具自动向代码中添加额外的指令或函数<br>工具有 BCEL, Javassit, ASM 等",
+                                            "content": "<b>静态二进制插桩(Static Binary Rewriting)</b>(可能涉及逆向工程)<br>在编译时对二进制文件进行修改，将附加代码嵌入到生成的二进制文件中<br>工具有 BCEL, Javassit, ASM 等",
                                             "depth": 6
                                         },
                                         {
-                                            "content": "<b>动态二进制插桩</b><br>其系统消耗较大, 且大部分为商业插桩软件<br>常用的有 DynamoRIO, Dyninst ,Pin 等",
+                                            "content": "<b>动态二进制插桩(Dynamic Binary Translation)</b>(不涉及逆向工程, 运行时)<br>在程序<b>运行时</b>进行的, 通过在内存中注入附加代码来实现, 其系统消耗较大<br>常用的有 DynamoRIO, Dyninst ,Pin 等",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "<a href='https://marsvillager.github.io/mindmap/out/Injection.html'>代码注入</a>",
                                             "depth": 6
                                         }
                                     ]

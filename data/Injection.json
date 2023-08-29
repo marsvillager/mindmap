@@ -160,6 +160,170 @@
                     "depth": 3
                 }
             ]
+        },
+        {
+            "content": "<h4>Code Injection</h4>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "不同于基于源代码的插桩, 侧重于二进制插桩",
+                    "depth": 3
+                },
+                {
+                    "content": "<a href='https://www.youtube.com/watch?v=8Z-5aTpk_l0'>Consideration</a>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "<b>1. Code Insertion</b>",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "<del>Dynamic Binary Translation</del>",
+                                    "depth": 5,
+                                    "children": [
+                                        {
+                                            "content": "Analyse/Instrument <b>during runtime</b>",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "Repeatedly pay translation cost",
+                                            "depth": 6
+                                        }
+                                    ]
+                                },
+                                {
+                                    "content": "Static Binary Rewriting",
+                                    "depth": 5,
+                                    "children": [
+                                        {
+                                            "content": "Perform all tasks <b>prior to runtime</b>",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "Analogous to compiler(e.g. LLVM IR)",
+                                            "depth": 6
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "content": "<b>2. Code Invocation</b>",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "<del>Trampolined Invocation</del>",
+                                    "depth": 5,
+                                    "children": [
+                                        {
+                                            "content": "在目标函数的汇编代码中插入一些跳转指令, 将控制流引导到附加的代码段, 然后再跳回到原始函数继续执行<br>这种技术通常需要考虑目标函数的堆栈帧、参数传递方式以及控制流的管理"
+                                        },
+                                        {
+                                            "content": "Transfer to/from 'payload' function",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "Repeatedly pay CF(control flow) redirection cost",
+                                            "depth": 6
+                                        }
+                                    ]
+                                },
+                                {
+                                    "content": "Inline Invocation(内联)",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "<b>3. Register Usage(活跃度)</b>",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "<del>Liveness Unaware</del>",
+                                    "depth": 5,
+                                    "children": [
+                                        {
+                                            "content": "Reset all regs around instrumentation",
+                                            "depth": 5
+                                        },
+                                        {
+                                            "content": "Cost of saving and restoring adds up",
+                                            "depth": 5
+                                        }
+                                    ]
+                                },
+                                {
+                                    "content": "Liveness Aware",
+                                    "depth": 5,
+                                    "children": [
+                                        {
+                                            "content": "track register liveness for Code Optimization",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "track liveness to prioritize dead reg(因为某些寄存器的保存和恢复成本更高)",
+                                            "depth": 6
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "content": "<b>4. Scalability</b>",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "Common Platforms(Linux x86-64, Windows PE32+)",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "Common Characteristics(C, C++, PIE and non-PIE, Stripped of debug symbols)",
+                                    "depth": 5
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "content": "Taxnonmy",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "<b>Static Binary Rewriting</b>(源代码)",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "Unit Instrumentation 单元级插桩",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "<b>Dynamic Binary Translation</b>(运行时)",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "Instruction Instrumentation 指令级插桩",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "动态链接库(DLL)注入",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+
+                        {
+                            "content": "<b>堆栈注入</b>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<b>内存注入</b>",
+                            "depth": 4
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
