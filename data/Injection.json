@@ -289,7 +289,7 @@
                     "depth": 3,
                     "children": [
                         {
-                            "content": "<b>Static Binary Rewriting</b>(源代码)",
+                            "content": "<b>Static Binary Rewriting</b>(逆向)",
                             "depth": 4,
                             "children": [
                                 {
@@ -311,15 +311,6 @@
                                     "depth": 5
                                 }
                             ]
-                        },
-
-                        {
-                            "content": "<b>堆栈注入</b>",
-                            "depth": 4
-                        },
-                        {
-                            "content": "<b>内存注入</b>",
-                            "depth": 4
                         }
                     ]
                 }
