@@ -1,0 +1,94 @@
+{
+    "content": "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/logic.png' alt='Modeling' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 5px; text-align: center;'><font color='teal'><h3>Mathematical Modeling</h3></font></div>",
+    "depth": 1,
+    "children": [
+        {
+            "content": "<h4>对变化进行建模</h4>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "<b>Difference Equations(差分方程)</b>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "Linear Difference Equations",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "e.g. 一阶差分方程",
+                                    "depth": 5
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "content": "<h4>模型拟合</h4>",
+            "depth": 2,
+            "children": [
+            ]
+        },
+        {
+            "content": "<h4>实验建模</h4>",
+            "depth": 2,
+            "children": [
+            ]
+        },
+        {
+            "content": "<h4>模拟方法建模</h4>",
+            "depth": 2,
+            "children": [
+            ]
+        },
+        {
+            "content": "<h4>离散概率模型</h4>",
+            "depth": 2,
+            "children": [
+            ]
+        },
+        {
+            "content": "<h4>离散模型的优化</h4>",
+            "depth": 2,
+            "children": [
+            ]
+        },
+        {
+            "content": "<h4>图论建模</h4>",
+            "depth": 2,
+            "children": [
+            ]
+        },
+        {
+            "content": "<h4>决策论建模</h4>",
+            "depth": 2,
+            "children": [
+            ]
+        },
+        {
+            "content": "<h4>博奕论</h4>",
+            "depth": 2,
+            "children": [
+            ]
+        },
+        {
+            "content": "<h4>用微分方程建模</h4>",
+            "depth": 2,
+            "children": [
+            ]
+        },
+        {
+            "content": "<h4>用微分方程组建模</h4>",
+            "depth": 2,
+            "children": [
+            ]
+        },
+        {
+            "content": "<h4>连续模型的优化</h4>",
+            "depth": 2,
+            "children": [
+            ]
+        }
+    ]
+}

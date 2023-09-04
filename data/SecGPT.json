@@ -1,5 +1,5 @@
 {
-    "content": "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/cyber-security.png' alt='security' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 20px; text-align: center;'><font color='green'><h3>Security: 数据敏感性<br>(chatGPT 会将数据当作训练材料, e.g.SAMSUNG)</h3></font>",
+    "content": "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/cyber-security.png' alt='security' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 5px; text-align: center;'><font color='teal'><h3>Security: 数据敏感性<br>(chatGPT 会将数据当作训练材料, e.g.SAMSUNG)</h3></font>",
     "depth": 1,
     "children": [
         {

@@ -1,5 +1,5 @@
 {
-    "content": "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/graph-summarization.png' alt='GraphSummarization' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 20px; text-align: center;'><font color='green'><h3>Graph Summarization</h3></font></div>",
+    "content": "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/graph-summarization.png' alt='GraphSummarization' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 5px; text-align: center;'><font color='teal'><h3>Graph Summarization</h3></font></div>",
     "depth": 1,
     "children": [
         {

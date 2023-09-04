@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<title>Formal Methods</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #mindmap {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+    }
+    </style>
+<link href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/style.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.8.0/styles/default.min.css" rel="stylesheet"/>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/index.js"></script>
+<script>(e => { window.WebFontConfig = { custom: { families: ["KaTeX_AMS", "KaTeX_Caligraphic:n4,n7", "KaTeX_Fraktur:n4,n7", "KaTeX_Main:n4,n7,i4,i7", "KaTeX_Math:i4,i7", "KaTeX_Script", "KaTeX_SansSerif:n4,n7,i4", "KaTeX_Size1", "KaTeX_Size2", "KaTeX_Size3", "KaTeX_Size4", "KaTeX_Typewriter"] }, active: () => { e().refreshHook.call() } } })(() => window.markmap)</script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>(() => { setTimeout(() => { const { markmap: M, mm: ge } = window, me = new M.Toolbar; me.attach(ge); const fe = me.render(); fe.setAttribute("style", "position:absolute;bottom:20px;right:20px"), document.body.append(fe) }) })()</script>
+<script>
+        ((F, I, R, H) => {
+            const X = F();
+            window.mm = X.Markmap.create("svg#mindmap", (I||X.deriveOptions)(H), R)
+        })(()=>window.markmap, null, {'content': "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/shirt.png' alt='Formalized' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 5px; text-align: center;'><font color='teal'><h3>Formal Methods</h3></font></div>", 'depth': 1, 'children': [{'content': '<b>形式化</b>与<b>公理化</b>不同, 但在近代数学中, 形式系统大多都是形式化的公理系统', 'depth': 2}, {'content': '形式系统由<b>形式语言</b>和<b>定义于其上的演绎结构</b>组成', 'depth': 2, 'children': [{'content': '（1）初始符号', 'depth': 3}, {'content': '（2）形式规则', 'depth': 3}, {'content': '（3）公理', 'depth': 3}, {'content': '（4）变形规则', 'depth': 3}]}, {'content': '形式系统的<b>基本特点</b>', 'depth': 2, 'children': [{'content': '（1）严格性', 'depth': 3}, {'content': '（2）抽象性', 'depth': 3}]}, {'content': '形式系统的<b>局限性</b>', 'depth': 2, 'children': [{'content': '（1）不完备性', 'depth': 3, 'children': [{'content': '1931 年, 哥德尔提出的关于形式系统的“不完备性定理”指出: <br>如果一个形式的数学理论是足够复杂的（复杂到所有的递归函数在其中都能够表示）, 而且它是无矛盾的,<br>那么在这一理论中存在一个语句, 而这一语句在这一理论中是既不能证明也不能否证的', 'depth': 4}]}, {'content': '（2）不可判定性', 'depth': 3, 'children': [{'content': '如果对一类语句 C 而言, 存在一个算法 AL, 使得对 C 中的任一语句 S 而言,<br>可以利用算法 AL 来判定其是否成立，则 C 称为可判定的, 否则称为不可判定的', 'depth': 4}, {'content': 'e.g. 停机问题（Halting Problem）无法通过算法或程序来确定是否正确', 'depth': 4, 'children': [{'content': '关键: 能否找到这样一个测试程序, 这个测试程序能判定任何一个程序在给定的输入下能否终止', 'depth': 5}, {'content': '反证法', 'depth': 5}]}]}, {'content': '计算机系统就是一种形式系统, 因此, 计算机系统一样也具有形式系统的局限性', 'depth': 3}]}, {'content': '系统构建的关键: 系统的<b>形式化规格</b>', 'depth': 2, 'children': [{'content': '计算机系统就是一种形式系统, 因此, 计算机系统一样也具有形式系统的局限性', 'depth': 3}]}]},
+            {"colorFreezeLevel": 2, "initialExpandLevel": 3}
+        )
+    </script>
+</body>
+</html>
