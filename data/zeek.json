@@ -1,0 +1,188 @@
+{
+    "content": "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/server.png' alt='zeek' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 5px; text-align: center;'><font color='teal'><h3>zeek</h3></font></div>",
+    "depth": 1,
+    "children": [
+        {
+            "content": "command",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "<code><b>zeek</b></code>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "<code>-a|--parse-only</code> 脚本解析后直接退出",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>-b|--bare-mode</code> 不载入内置的协议分析脚本",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>-e|--exec <zeek code></code> 执行脚本 e.g. 'print \"Hello World!\";'",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>-f|--filter <filter> 过滤规则 e.g. 'port 80'</code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>-i|--iface <interface></code> 网络接口",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>-p|--prefix <prefix></code> 同时加载前缀为 prefix. 的文件",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>-r|--readfile <readfile></code> 读取 pcap 文件",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>-s|--rulefile <rulefile></code> 特征文件(signature, .sig 文件)",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "<code>e.g.<br>signature test-signature {<br>&nbsp;&nbsp;ip-proto == tcp<br>&nbsp;&nbsp;dst-port = 80<br>&nbsp;&nbsp;payload .*passwd/ <br>&nbsp;&nbsp;event \"payload of dst-port=80/tcp contains 'passwd'\"<br>}</code>",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "<code>-v|--version</code> 版本号",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>-w|--writefile <writefile></code> 分析流量的同时将流量数据包写入文件",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>-C|--no-checksums</code> 关闭对数据包校验和的检查",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>-D|--deterministic</code> 关闭随时生成 uid 的功能",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>-G|--load-seeds <file></code> 载入随机数种子文件",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>-H|--save-seeds <file></code> 保存随机数种子文件",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>-I|--print-id <ID name></code> 某个脚本变量的类型定义",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>-N|--print-plugins</code> 已加载的插件信息",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>-X|--zeekygen</code> 生成 zeek 脚本相关注释",
+                            "depth": 4
+                        }
+                    ]
+                },
+                {
+                    "content": "<code><b>zeekctl</b></code>",
+                    "depth": 3
+                }
+            ]
+        },
+        {
+            "content": "<h4>发现网络资产</h4>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "script",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "<code><PREFIX>/share/zeek/policy/protocols/conn/known-hosts.zeek</code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><PREFIX>/share/zeek/policy/protocols/conn/known-services.zeek</code>",
+                            "depth": 4
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "content": "<h4>网络扫描</h4>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "script",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "<code><PREFIX>/share/zeek/policy/misc/scan.zeek</code>",
+                            "depth": 4
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "content": "<h4>SSH 暴力破解</h4>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "script",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "<code></code>",
+                            "depth": 4
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "content": "<h4>SQL 注入</h4>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "script",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "<code></code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code></code>",
+                            "depth": 4
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "content": "<h4>文件解析</h4>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "script",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "<code></code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code></code>",
+                            "depth": 4
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -21,6 +21,10 @@
                                 {
                                     "content": "Data Sources: <b>Network Packets</b>",
                                     "depth": 5
+                                },
+                                {
+                                    "content": "e.g. <b><a href='https://github.com/zeek/zeek'>zeek</a></b>、<b><a href='https://github.com/OISF/suricata'>suricata</a></b>",
+                                    "depth": 5
                                 }
                             ]
                         },
@@ -36,14 +40,18 @@
                                             "content": "<b>Provenance-based Intrusion Detection Systems(PIDS)</b>",
                                             "depth": 6
                                         },
-                                    {
-                                        "content": "Data Sources: <b>Information Flow between System Entities</b>",
-                                        "depth": 5
-                                    }
+                                        {
+                                            "content": "Data Sources: <b>Information Flow between System Entities</b>",
+                                            "depth": 5
+                                        }
                                     ]
                                 },
                                 {
                                     "content": "Data Sources: <b>System Entities</b>, e.g.Processes, Files, Host",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "e.g. <b><a href='https://github.com/ossec/ossec-hids'>ossec</a></b>、<b><a href='https://github.com/Tripwire/tripwire-open-source'>Tripwire</a></b>、<b><a href='https://github.com/wazuh/wazuh'>Wazuh</a></b>",
                                     "depth": 5
                                 }
                             ]
