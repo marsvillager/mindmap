@@ -1,13 +1,67 @@
 {
-    "content": "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/server.png' alt='zeek' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 5px; text-align: center;'><font color='teal'><h3>zeek</h3></font></div>",
+    "content": "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/server.png' alt='zeek' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 5px; text-align: center;'><font color='teal'><h3>Zeek</h3></font></div>",
     "depth": 1,
     "children": [
+        {
+            "content": "<h4>开源的网络流量分析工具</h4>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "区别于传统防火墙、IDS、IPS, Zeek 更聚焦在为用户提供对网络流量的获取、表达及分析的能力上",
+                    "depth": 3
+                },
+                {
+                    "content": "将获取到的网络流量转化成格式化的文本, 即 Zeek 日志",
+                    "depth": 3
+                },
+                {
+                    "content": "提供一套具有图灵完备性的编程语言—— Zeek 脚本",
+                    "depth": 3
+                },
+                {
+                    "content": "主要提供对 OSI 中网络层至应用层协议的流量分析能力",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "4.0 即之后的版本新增了包分析框架, 从而使得 Zeek 具有了分析数据链路层数据帧的能力",
+                            "depth": 3
+                        },
+                        {
+                            "content": "但相关的内置分析脚本还不丰富, 分析手段也较为简单",
+                            "depth": 3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "content": "<h4>部署使用</h4>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "基于标准 libpcap 接口获取流量包",
+                    "depth": 3
+                },
+                {
+                    "content": "核心代码: C++",
+                    "depth": 3
+                },
+                {
+                    "content": "仅支持在类 UNIX 操作系统中（包括 Linux、FreeBSD 及 macOS）运行",
+                    "depth": 3
+                },
+                {
+                    "content": "支持单点部署及集群式部署, 并提供配套的集群管理工具 ZeekControl",
+                    "depth": 3
+                }
+            ]
+        },
         {
             "content": "command",
             "depth": 2,
             "children": [
                 {
-                    "content": "<code><b>zeek</b></code>",
+                    "content": "<code><b>Zeek</b></code>",
                     "depth": 3,
                     "children": [
                         {
@@ -81,7 +135,7 @@
                             "depth": 4
                         },
                         {
-                            "content": "<code>-X|--zeekygen</code> 生成 zeek 脚本相关注释",
+                            "content": "<code>-X|--zeekygen</code> 生成 Zeek 脚本相关注释",
                             "depth": 4
                         }
                     ]
@@ -137,7 +191,7 @@
                     "depth": 3,
                     "children": [
                         {
-                            "content": "<code></code>",
+                            "content": "<code>><PREFIX>/share/zeek/policy/protocols/ssh/detect-bruteforcing.zeek</code>",
                             "depth": 4
                         }
                     ]
@@ -153,11 +207,7 @@
                     "depth": 3,
                     "children": [
                         {
-                            "content": "<code></code>",
-                            "depth": 4
-                        },
-                        {
-                            "content": "<code></code>",
+                            "content": "<code>><PREFIX>/share/zeek/policy/protocols/http/detect-sqli.zeel</code>",
                             "depth": 4
                         }
                     ]
