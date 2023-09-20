@@ -237,7 +237,7 @@
                             "depth": 4
                         },
                         {
-                            "content": "visit: <code>http://ip:port</code>(监听地址、端口、elasticsearch 在 config 中设置, port 默认 5601)",
+                            "content": "visit: <code>http://ip:port</code>(监听地址、端口在 config 中设置, port 默认 5601)",
                             "depth": 4
                         },
                         {
