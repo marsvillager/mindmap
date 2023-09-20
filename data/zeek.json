@@ -61,7 +61,7 @@
             "depth": 2,
             "children": [
                 {
-                    "content": "<code><b>Zeek</b></code>",
+                    "content": "<code><b>zeek [options] [file ...]</b></code>",
                     "depth": 3,
                     "children": [
                         {
@@ -73,27 +73,27 @@
                             "depth": 4
                         },
                         {
-                            "content": "<code>-e|--exec <zeek code></code> 执行脚本 e.g. 'print \"Hello World!\";'",
+                            "content": "<code>-e|--exec [zeek code]</code> 执行脚本 e.g. 'print \"Hello World!\";'",
                             "depth": 4
                         },
                         {
-                            "content": "<code>-f|--filter <filter> 过滤规则 e.g. 'port 80'</code>",
+                            "content": "<code>-f|--filter [filter] 过滤规则 e.g. 'port 80'</code>",
                             "depth": 4
                         },
                         {
-                            "content": "<code>-i|--iface <interface></code> 网络接口",
+                            "content": "<code>-i|--iface [interface]</code> 网络接口",
                             "depth": 4
                         },
                         {
-                            "content": "<code>-p|--prefix <prefix></code> 同时加载前缀为 prefix. 的文件",
+                            "content": "<code>-p|--prefix [prefix]</code> 同时加载前缀为 prefix. 的文件",
                             "depth": 4
                         },
                         {
-                            "content": "<code>-r|--readfile <readfile></code> 读取 pcap 文件",
+                            "content": "<code>-r|--readfile [readfile]</code> 读取 pcap 文件",
                             "depth": 4
                         },
                         {
-                            "content": "<code>-s|--rulefile <rulefile></code> 特征文件(signature, .sig 文件)",
+                            "content": "<code>-s|--rulefile [rulefile]</code> 特征文件(signature, .sig 文件)",
                             "depth": 4,
                             "children": [
                                 {
@@ -107,7 +107,7 @@
                             "depth": 4
                         },
                         {
-                            "content": "<code>-w|--writefile <writefile></code> 分析流量的同时将流量数据包写入文件",
+                            "content": "<code>-w|--writefile [writefile]</code> 分析流量的同时将流量数据包写入文件",
                             "depth": 4
                         },
                         {
@@ -119,15 +119,15 @@
                             "depth": 4
                         },
                         {
-                            "content": "<code>-G|--load-seeds <file></code> 载入随机数种子文件",
+                            "content": "<code>-G|--load-seeds [file]</code> 载入随机数种子文件",
                             "depth": 4
                         },
                         {
-                            "content": "<code>-H|--save-seeds <file></code> 保存随机数种子文件",
+                            "content": "<code>-H|--save-seeds [file]</code> 保存随机数种子文件",
                             "depth": 4
                         },
                         {
-                            "content": "<code>-I|--print-id <ID name></code> 某个脚本变量的类型定义",
+                            "content": "<code>-I|--print-id [ID name]</code> 某个脚本变量的类型定义",
                             "depth": 4
                         },
                         {
@@ -143,25 +143,143 @@
                 {
                     "content": "<code><b>zeekctl</b></code>",
                     "depth": 3
+                },
+                {
+                    "content": "<code><b>zeek-cut [options] [columns]</b></code>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "<code>-c</code> 显示日志文件头部以 # 开头的日志元数据部分",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>-C</code> 显示日志文件所有以 # 开头的日志元数据部分",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>-d</code> 将时间字段 ts 转换为易于阅读的格式并显示",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>-D [fmt]</code> 将时间字段 ts 转换为 [fmt] 指定的格式(参考 strftime())并显示",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "e.g. %Y-%m-%d",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "<code>-F [ofs]</code> 将日志中字段间的分隔符转换为参数给定的符号",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>-h</code> 帮助信息",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>-n</code> 显示日志中除给定字段外的其它所有字段",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>-u</code> 与 <code>-d</code> 相似, 但采用 UTC 时间",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>-U [fmt]</code>, 与 <code>-D</code> 相似, 但采用 UTC 时间",
+                            "depth": 4
+                        }
+                    ]
                 }
             ]
         },
         {
-            "content": "<h4>发现网络资产</h4>",
+            "content": "<h4>可视化方案(Ubuntu) ELK</h4>",
             "depth": 2,
             "children": [
                 {
-                    "content": "script",
+                    "content": "<b>Elasticsearch 8.X</b>",
                     "depth": 3,
                     "children": [
                         {
-                            "content": "<code><PREFIX>/share/zeek/policy/protocols/conn/known-hosts.zeek</code>",
+                            "content": "code: <code>/usr/share/elasticsearch</code><br> service: <code>/lib/systemd/system/elasticsearch.service</code>",
                             "depth": 4
                         },
                         {
-                            "content": "<code><PREFIX>/share/zeek/policy/protocols/conn/known-services.zeek</code>",
+                            "content": "data: <code>/var/lib/elasticsearch</code><br> logs: <code>/var/log/elasticsearch</code><br> config: <code>/etc/elasticsearch</code>",
                             "depth": 4
                         }
+                    ]
+                }
+            ]
+        },
+        {
+            "content": "<h4>发现网络资产(<code>[PREFIX]/share/zeek/policy/</code> 下以 <code>know</code> 开头的脚本) </h4>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "主机 <code>[PREFIX]/share/zeek/policy/protocols/conn/known-hosts.zeek</code>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "主机地址:<br>· <code>ALL_HOSTS</code> 所有地址 <br>· <code>LOCAL_HOSTS</code> 本地地址(可在 <code>[PREFIX]/etc/networks.cfg</code> 中自定义) <br>· <code>REMOTE_HOSTS</code> 除本地地址外的所有地址 <br>· <code>NO_HOSTS<code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>sudo bin/zeek -b -i ens33 -C share/zeek/policy/protocols/conn/known-hosts.zeek -e 'redef Known::host_tracking = ALL_HOSTS;'</code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "字段: ts, host",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>cat known_hosts.log | zeek-cut -d</code>",
+                            "depth": 4
+                        }
+                    ]
+                },
+                {
+                    "content": "服务 <code>[PREFIX]/share/zeek/policy/protocols/conn/known-services.zeek</code>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "<code>sudo bin/zeek -i ens33 -C share/zeek/policy/protocols/conn/known-services.zeek -e 'redef Known::service_tracking = ALL_HOSTS;'</code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "字段: ts, host, port_num, port_proto, service",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>cat known_services.log | zeek-cut -d</code>",
+                            "depth": 4
+                        }
+                    ]
+                },
+                {
+                    "content": "流量中传输的证书 <code>[PREFIX]/share/zeek/policy/protocols/ssl/known-certs.zeek</code>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "<code>sudo bin/zeek -i ens33 -C share/zeek/policy/protocols/ssl/known-certs.zeek</code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "字段: ts, uid, id.orig_h, id.orig_p, id.resp_h, id.resp_p, version, cipher, curve, server_name, resumed last_alert, next_protocol, established, ssl_history, cert_chain_fps, client_cert_chain_fps, sni_matches_cert",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>cat ssl.log | zeek-cut -d</code>",
+                            "depth": 4
+                        }
+                    ]
+                },
+                {
+                    "content": "Modbus 协议中 Master 节点及 Slave 节点 <code>[PREFIX]/share/zeek/policy/protocols/modbus/known-master-slaves.zeek</code>",
+                    "depth": 3,
+                    "children": [
                     ]
                 }
             ]
@@ -175,7 +293,7 @@
                     "depth": 3,
                     "children": [
                         {
-                            "content": "<code><PREFIX>/share/zeek/policy/misc/scan.zeek</code>",
+                            "content": "<code>[PREFIX]/share/zeek/policy/misc/scan.zeek</code>",
                             "depth": 4
                         }
                     ]
@@ -191,7 +309,7 @@
                     "depth": 3,
                     "children": [
                         {
-                            "content": "<code>><PREFIX>/share/zeek/policy/protocols/ssh/detect-bruteforcing.zeek</code>",
+                            "content": "<code>>[PREFIX]/share/zeek/policy/protocols/ssh/detect-bruteforcing.zeek</code>",
                             "depth": 4
                         }
                     ]
