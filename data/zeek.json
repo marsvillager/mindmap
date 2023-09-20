@@ -203,11 +203,37 @@
                     "depth": 3,
                     "children": [
                         {
-                            "content": "code: <code>/usr/share/elasticsearch</code><br> service: <code>/lib/systemd/system/elasticsearch.service</code>",
+                            "content": "home: <code>/usr/share/elasticsearch</code><br> service: <code>/lib/systemd/system/elasticsearch.service</code> (其中设置了环境变量, <code>sudo systemctl start elasticsearch</code>)",
                             "depth": 4
                         },
                         {
                             "content": "data: <code>/var/lib/elasticsearch</code><br> logs: <code>/var/log/elasticsearch</code><br> config: <code>/etc/elasticsearch</code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "visit: <code>https://ip:port</code>(ip 和 port 在 config 中设置, port 默认 9200, 超级用户为 elastic, 密码在安装时自动生成)",
+                            "depth": 4
+                        },
+                        {
+                            "content": "Reset the password of the elastic built-in superuser with <code>/usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic</code>",
+                            "depth": 4
+                        }
+                    ]
+                },
+                {
+                    "content": "<b>Kibana 8.X</b>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "home: <code>/usr/share/kibana</code><br> service: <code>/lib/systemd/system/kibana.service</code> (其中设置了环境变量, <code>sudo systemctl start kibana</code>)",
+                            "depth": 4
+                        },
+                        {
+                            "content": "data: <code>/var/lib/kibana</code><br> logs: <code>/var/log/kibana</code><br> config: <code>/etc/kibana</code><br>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "visit: <code>http://ip:port</code>(监听地址、端口、elasticsearch 在 config 中设置, port 默认 5601)",
                             "depth": 4
                         }
                     ]
