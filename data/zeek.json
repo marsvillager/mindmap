@@ -217,6 +217,10 @@
                         {
                             "content": "Reset the password of the elastic built-in superuser with <code>/usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic</code>",
                             "depth": 4
+                        },
+                        {
+                            "content": "查看索引: <code>https://ip:port/_cat/indices</code>",
+                            "depth": 4
                         }
                     ]
                 },
@@ -234,6 +238,46 @@
                         },
                         {
                             "content": "visit: <code>http://ip:port</code>(监听地址、端口、elasticsearch 在 config 中设置, port 默认 5601)",
+                            "depth": 4
+                        },
+                        {
+                            "content": "汉化: 在 kibana.yml 中加入 <code>i18n.locale: \"zh-CN\"</code>",
+                            "depth": 4
+                        }
+                    ]
+                },
+                {
+                    "content": "<b>Filebeat 8.X</b>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "home: <code>/usr/share/filebeat</code><br> service: <code>/lib/systemd/system/filebeat.service</code> (其中设置了环境变量, <code>sudo systemctl start filebeat</code>)",
+                            "depth": 4
+                        },
+                        {
+                            "content": "data: <code>/var/lib/filebeat</code><br> config: <code>/etc/filebeat</code><br> model: <code>/etc/filebeat/modules.d</code> (e.g. zeek.yml)",
+                            "depth": 4
+                        },
+                        {
+                            "content": "启动 zeek 模块 <br><code>sudo filebeat modules enable zeek</code><br><code>sudo filebeat setup</code>",
+                            "depth": 4
+                        }
+                    ]
+                },
+                {
+                    "content": "<b>Logstash 8.X (Filebeat 8.X 默认直接传输到 ES, 难以改为通过 Logstash 再传输到 ES)</b>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "home: <code>/usr/share/logstash</code><br> service: <code>/lib/systemd/system/logstash.service</code> (其中设置了环境变量, <code>sudo systemctl start logstash</code>)",
+                            "depth": 4
+                        },
+                        {
+                            "content": "data: <code>/var/lib/logstash</code><br> logs: <code>/var/log/logstash</code><br> config: <code>/etc/logstash</code>)",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>[PREFIX]/bin/logstash -f /etc/filebeat/filebeat.conf</code>(默认端口 5044)",
                             "depth": 4
                         }
                     ]

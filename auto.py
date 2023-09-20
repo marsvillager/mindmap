@@ -15,7 +15,7 @@ if __name__ == '__main__':
     logger.debug("Directory of data file: %s", data_file)
 
     try:
-        with open("./模板.html") as f:
+        with open('./模板.html', 'r', encoding='utf-8') as f:
             soup = BeautifulSoup(f, 'html.parser')
 
             # 1. 修改 title 标签
@@ -27,7 +27,7 @@ if __name__ == '__main__':
             # script_text = content.string
 
             # 3. 以 JSON 格式填写
-            with open(data_file) as json_file:
+            with open(data_file, 'r', encoding='utf-8') as json_file:
                 data = json.load(json_file)
 
             pattern = r'{\s*"content":\s*"markmap",\s*"depth":\s*\d+,\s*"children":\s*\[\s*\]\s*}'
@@ -46,7 +46,7 @@ if __name__ == '__main__':
     if not os.path.exists(os.path.dirname(file_path)):
         os.makedirs(os.path.dirname(file_path))
 
-    with open(file_path, 'w') as file:
+    with open(file_path, 'w', encoding='utf-8') as file:
         file.write(str(soup))
 
     logger.info("HTML file saved to: %s", file_path)
