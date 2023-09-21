@@ -265,7 +265,7 @@
                     ]
                 },
                 {
-                    "content": "<b>Logstash 8.X (Filebeat 8.X 默认直接传输到 ES, 难以改为通过 Logstash 再传输到 ES)</b>",
+                    "content": "<b>Logstash 8.X (Filebeat 8.X 直接传输到 ES, 难以改为通过 Logstash 再传输到 ES)</b>",
                     "depth": 3,
                     "children": [
                         {
