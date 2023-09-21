@@ -285,6 +285,40 @@
             ]
         },
         {
+            "content": "<h4>打流</h4>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "<b><a href='https://github.com/esnet/iperf'>iperf</a></b>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "QA",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "Q1: error - unable to connect to server - server may have stopped running or use a different port, firewall issue, etc.: Connection refused",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "A1: 更新防火墙设置, 打开对应的端口, 使得对应的流量可以通过网关到达服务器 <code>sudo ufw allow [端口号]/[协议]</code>",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "Server: <code>iperf3 -s -p [port]</code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "Client: <code>iperf3 -c [ip] -p [port]</code>",
+                            "depth": 4
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "content": "<h4>发现网络资产(<code>[PREFIX]/share/zeek/policy/</code> 下以 <code>know</code> 开头的脚本) </h4>",
             "depth": 2,
             "children": [
