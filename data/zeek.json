@@ -247,7 +247,176 @@
                             "depth": 4
                         },
                         {
-                            "content": "zeek 命令更适合短时的任务场景, zeekctl 命令则更适合长时间运行不间断的流量分析任务"
+                            "content": "zeek 命令更适合短时的任务场景, zeekctl 命令则更适合长时间运行不间断的流量分析任务",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>[PREFIX]/etc/node.cfg</b></code>",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "配置 Zeek 节点的文件, 每个 Zeek 节点都应该有一个对应的 node.cfg 文件, 用于指定节点的配置信息",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "<code>type</code> 指定节点的类型, 可以是 manager、logger、worker 等",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "<code>host</code> 指定节点所在的主机名或 IP 地址",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "<code>interface</code> 指定节点监听的网络接口",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "<code>lb_method</code> 指定负载平衡方法, 例如 custom、pf_ring 等",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "<code>lb_procs</code> 指定节点的负载平衡进程数",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "<code>global</code> 用于设置全局选项, 例如日志格式等",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "<code><b>[PREFIX]/etc/zeekctl.cfg</b></code>",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "<code>LogRotationInterval</code> 默认 3600, 日志归档时间间隔（s）, 设置为 0 则关闭日志归档功能",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "<code>LogExpireInterval</code> 默认 0, 日志自动清理时间, 可通过数字加 day、hr、min 三种单位来指定具体时间, 设置为 0 则关闭日志自动清理功能",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "<code>StatsLogEnable</code> 默认 1, 设置为 1 则 zeekctl 会生成 stats.log 统计流量分析的基本情况, 设置为 0 则此功能",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "<code>StatsLogExpireInterval</code> 默认 0, 与 LogExpireInterval 功能相似, 但只适用于 stats.log",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "<code>LogDir = /usr/local/zeek/logs</code>",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "<code>SpoolDir = /usr/local/zeek/spool</code>",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "<code>BrokerDBDir = /usr/local/zeek/spool/brokerstore</code>",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "<code>CfgDir = /usr/local/zeek/etc</code>",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "<code><b>capstats [nodes] [secs]</b></code> Report interface statistics with capstats",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>check [nodes]</b></code> Check configuration before installing it",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>cleanup [--all][nodes]</b></code> Deleting working dirs(flush state) on nodes",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>config</b></code> Print zeekctl configuration",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>cron [--no-watch]</b></code> Perform jobs intended to run from cron",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>cron enable|disable|?</b></code> Enable/disable \"cron\" jobs",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>deploy</b></code> Check, install, and restart",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>df [nodes]</b></code> Print nodes' current disk usage",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>diag [nodes]</b></code> Output diagnostics for nodes",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>exec [shell cmd]</b></code> Execute shell command on all hosts",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>exit</b></code> Exit shell",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>install</b></code> Update zeekctl installation/configuration",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>netstats [nodes]</b></code> Print nodes' current packet connections",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>nodes</b></code> Print node configuration",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>peerstatus [nodes]</b></code> Print status of nodes' remote connections",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>print [id] [nodes]</b></code> Print values of script variable at nodes",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>process [trace] [op] [--[src]]</b></code> Run Zeek with options and scripts on trace",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>quit</b></code> Exit shell",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>restart [--clean] [nodes]</b></code> Stop and then restart processing",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>scripts [-c] [nodes]</b></code> List the Zeek scripts the nodes will load",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>start [nodes]</b></code> Start processing",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>status [nodes]</b></code> Summarize node status",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>stop [nodes]</b></code> Stop processing",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code><b>top [nodes]</b></code> Show Zeek processes ala top",
+                            "depth": 4
                         }
                     ]
                 },
