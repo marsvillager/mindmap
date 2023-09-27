@@ -259,7 +259,7 @@
                                     "depth": 5
                                 },
                                 {
-                                    "content": "<code>type</code> 指定节点的类型, 可以是 manager、logger、worker 等",
+                                    "content": "<code>type</code> 指定节点的类型: <a href='https://betheme.net/xiaochengxu/71557.html?action=onClick'>manager、proxy、worker（前三个必须设置）、logger（若未设置则 manager 作为 logger）</a>",
                                     "depth": 5
                                 },
                                 {
@@ -479,7 +479,7 @@
                     "depth": 3,
                     "children": [
                         {
-                            "content": "<b><i>conn.log</i></b>  TCP/UDP/ICMP 连接日志",
+                            "content": "<b><i>conn.log</i></b>  TCP/UDP/ICMP 连接日志（connection）",
                             "depth": 4
                         },
                         {
@@ -496,6 +496,10 @@
                         },
                         {
                             "content": "<b><i>dns.log</i></b>  DNS 日志",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<b><i>dpd.log</i></b>  DPD 日志",
                             "depth": 4
                         },
                         {
@@ -523,7 +527,15 @@
                             "depth": 4
                         },
                         {
+                            "content": "<b><i>ntp.log</i></b>  Network Time Protocol(NTP) 协议日志",
+                            "depth": 4
+                        },
+                        {
                             "content": "<b><i>ntlm.log</i></b>  NT Lan Manager(NTLM) 协议日志",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<b><i>ocsp.log</i></b>  Online Certificate Status Protocol(OCSP) 协议日志",
                             "depth": 4
                         },
                         {
@@ -606,6 +618,36 @@
                         },
                         {
                             "content": "<b><i>x509.log</i></b>  流量中传输的 X.509 证书文件日志",
+                            "depth": 4
+                        }
+                    ]
+                },
+                {
+                    "content": "<b>others</b>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "<b><i>analyzer.log</i></b>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<b><i>capture_loss.log</i></b>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<b><i>notice.log</i></b> 安全相关",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<b><i>signature.log(?)</i></b>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<b><i>stats.log</i></b>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<b><i>traceroute.log(?)</i></b>",
                             "depth": 4
                         }
                     ]
