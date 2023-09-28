@@ -49,4 +49,5 @@ if __name__ == '__main__':
     with open(file_path, 'w', encoding='utf-8') as file:
         file.write(str(soup))
 
+    logger.info(f"Congratulations! Task completed 🎉🎉🎉")
     logger.info("HTML file saved to: %s", file_path)

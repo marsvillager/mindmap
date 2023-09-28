@@ -1,0 +1,13 @@
+{
+    "tr": ["Attribute No.", "Attribute Name", "Description", "Sample Data"],
+    "tr1": ["32", "dst_host_count", "Number of connections having the same destination host IP address", "150"],
+    "tr2": ["33", "dst_host_srv_count", "Number of connections having the same port number", "25"],
+    "tr3": ["34", "dst_host_same_srv_rate", "The percentage of connections that were to the same service, among the connections aggregated in dst_host_count(32)", "0.17"],
+    "tr4": ["35", "dst_host_diff_srv_rate", "The percentage of connections that were to different services, among the connections aggregated in dst_host_count(32)", "0.03"],
+    "tr5": ["36", "dst_host_same_src_port_rate", "The percentage of connections that were to the same source port, among the connections aggregated in dst_host_count(32)", "0.17"],
+    "tr6": ["37", "dst_host_srv_diff_host_rate", "The percentage of connections that were to different destination machines, among the connections aggregated in dst_host_srv_count(33)", "0"],
+    "tr7": ["38", "dst_host_serror_rate", "The percentage of connections that have activated the flag(4) s0, s1, s2 or s3, among the connections aggregated in dst_host_count(32)", "0"],
+    "tr8": ["39", "dst_host_srv_serror_rate", "The percentage of connections that have activated the flag(4) s0, s1, s2 or s3, among the connections aggregated in dst_host_srv_count(33)", "0"],
+    "tr9": ["40", "dst_host_rerror_rate", "The percentage of connections that ave activated the flag(4) REJ, among the connections aggregated in dst_host_count(32)", "0.05"],
+    "tr10": ["41", "dst_host_srv_rerror_rate", "The percentage of connections that ave activated the flag(4) REJ, among the connections aggregated in dst_host_srv_count(33)", "0"]
+}

@@ -1,0 +1,12 @@
+{
+    "tr": ["Attribute No.", "Attribute Name", "Description", "Sample Data"],
+    "tr1": ["1", "duration", "Length of time duration of the connection", "0"],
+    "tr2": ["2", "protocol_type", "Protocol used in the connection", "{'tcp','udp', 'icmp'}"],
+    "tr3": ["3", "service", "Destination network service used", "<details><summary>e.g. ftp_data</summary>{'aol', 'auth', 'bgp', 'courier', 'csnet_ns', 'ctf', 'daytime', 'discard', 'domain', 'domain_u', 'echo', 'eco_i', 'ecr_i', 'efs', 'exec', 'finger', 'ftp', 'ftp_data', 'gopher', 'harvest', 'hostnames', 'http', 'http_2784', 'http_443', 'http_8001', 'imap4', 'IRC', 'iso_tsap', 'klogin', 'kshell', 'ldap', 'link', 'login', 'mtp', 'name', 'netbios_dgm', 'netbios_ns', 'netbios_ssn', 'netstat', 'nnsp', 'nntp', 'ntp_u', 'other', 'pm_dump', 'pop_2', 'pop_3', 'printer', 'private', 'red_i', 'remote_job', 'rje', 'shell', 'smtp', 'sql_net', 'ssh', 'sunrpc', 'supdup', 'systat', 'telnet', 'tftp_u', 'tim_i', 'time', 'urh_i', 'urp_i', 'uucp', 'uucp_path', 'vmnet', 'whois', 'X11', 'Z39_50'}</details>"],
+    "tr4": ["4", "flag", "Status of the connection —— Normal or Error", "{'OTH', 'REJ', 'RSTO', 'RSTOS0', 'RSTR', 'S0', 'S1', 'S2', 'S3', 'SF', 'SH'}"],
+    "tr5": ["5", "src_bytes", "Number of data bytes transferred from source to destination in single connection", "491"],
+    "tr6": ["6", "dst_bytes", "Number of data bytes transferred from destination to source in single connection", "0"],
+    "tr7": ["7", "land", "If source and destination IP addresses and port numbers are equal then, this variable tables value 1 else 0", "{'0', '1'}"],
+    "tr8": ["8", "wrong_fragment", "Total number of wrong fragments in this connection", "0"],
+    "tr9": ["9", "urgent", "Number of urgent packets in this connection. Urgent packets are packets with the urgent bit activated", "0"]
+}

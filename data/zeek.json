@@ -555,7 +555,7 @@
                             "depth": 4
                         },
                         {
-                            "content": "<b><i>smb.log</i></b>  Server Message Block Protocol(SMB) 日志",
+                            "content": "<b><i>smb_cmd.log, smb_files.log, smb_mapping.log</i></b>  Server Message Block Protocol(SMB) 日志",
                             "depth": 4
                         },
                         {
@@ -613,7 +613,15 @@
                             "depth": 4
                         },
                         {
+                            "content": "<b><i>intel.log</i></b>",
+                            "depth": 4
+                        },
+                        {
                             "content": "<b><i>pe.log</i></b>  流量中传输的 Portable Executable(PE) 文件日志",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<b><i>software.log</i></b>",
                             "depth": 4
                         },
                         {
@@ -635,11 +643,23 @@
                             "depth": 4
                         },
                         {
+                            "content": "<b><i>known_certs.log</i></b>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<b><i>known_hosts.log</i></b>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<b><i>known_services.log</i></b>",
+                            "depth": 4
+                        },
+                        {
                             "content": "<b><i>notice.log</i></b> 安全相关",
                             "depth": 4
                         },
                         {
-                            "content": "<b><i>signature.log(?)</i></b>",
+                            "content": "<b><i>signature.log</i></b>",
                             "depth": 4
                         },
                         {
@@ -647,7 +667,11 @@
                             "depth": 4
                         },
                         {
-                            "content": "<b><i>traceroute.log(?)</i></b>",
+                            "content": "<b><i>traceroute.log</i></b>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<b><i>weird.log</i></b>",
                             "depth": 4
                         }
                     ]

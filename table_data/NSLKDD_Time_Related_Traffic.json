@@ -1,0 +1,12 @@
+{
+    "tr": ["Attribute No.", "Attribute Name", "Description", "Sample Data"],
+    "tr1": ["23", "count", "Number of connections to the same destination host as the current connection in the past two seconds", "2"],
+    "tr2": ["24", "srv_count", "Number of connections to the same service(port number) as the current connection in the past two seconds", "2"],
+    "tr3": ["25", "serror_rate", "The percentage of connections that have activated the flag(4) s0, s1, s2, or s3, among the connections aggregated in count(23)", "0"],
+    "tr4": ["26", "srv_serror_rate", "The percentage of connections that have activated the flag(4) s0, s1, s2, or s3, among the connections aggregated in srv_count(24)", "0"],
+    "tr5": ["27", "rerror_rate", "The percentage of connections that have activated the flag(4) REJ, among the connections aggregated in count(23)", "0"],
+    "tr6": ["28", "srv_rerror_rate", "The percentage of connections that have activated the flag(4) REJ, among the connections aggregated in srv_count(24)", "0"],
+    "tr7": ["29", "same_srv_rate", "The percentage of connections that were to the same service, among the connections aggregated in count(23)", "1"],
+    "tr8": ["30", "diff_srv_rate", "The percentage of connections that were to the different services, among the connections aggregated in count(23)", "0"],
+    "tr9": ["31", "srv_diff_host_rate", "The percentage of connections that were to different destination machines among the connections aggregated in srv_count(24)", "0"]
+}

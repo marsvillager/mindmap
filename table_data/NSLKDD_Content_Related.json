@@ -1,0 +1,16 @@
+{
+    "tr": ["Attribute No.", "Attribute Name", "Description", "Sample Data"],
+    "tr1": ["10", "hot", "Number of 'hot' indicators in the content such as: entering a system directory, creating programs and executing programs", "0"],
+    "tr2": ["11", "num_failed_logins", "Count of failed login attempts", "0"],
+    "tr3": ["12", "logged_in", "Login Status: 1 if successfully logged in; 0 otherwise", "{'0', '1'}"],
+    "tr4": ["13", "num_compromised", "Number of ``compromised`` conditions", "0"],
+    "tr5": ["14", "root_shell", "1 if root shell is obtained; 0 otherwise", "{'0', '1'}"],
+    "tr6": ["15", "su_attempted", "1 if ``su root`` command attempted or used; 0 otherwise", "{'0', '1'}"],
+    "tr7": ["16", "num_root", "Number of ``root`` accesses or number of operations performed as a root in the connection", "0"],
+    "tr8": ["17", "num_file_creations", "Number of file creation operations in the connection", "0"],
+    "tr9": ["18", "num_shells", "Number of shell prompts", "0"],
+    "tr10": ["19", "num_access_files", "Number of operations on access control files", "0"],
+    "tr11": ["20", "num_outbound_cmds", "Number of outbound commands in an ftp session", "0"],
+    "tr12": ["21", "is_host_login", "1 if the login belongs to the ``hot`` list i.e., root or admin; 0 otherwise", "{'0', '1'}"],
+    "tr13": ["22", "is_guest_login", "1 if the login is a ``guest`` login; 0 otherwise", "{'0', '1'}"]
+}
