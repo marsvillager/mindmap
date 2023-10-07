@@ -257,15 +257,19 @@
                             "depth": 4,
                             "children": [
                                 {
-                                    "content": "不同类型的网络流量之中有特定的字符流(也称之为指纹), 只需要在数据包的任意位置匹配这些字符流, 就可以进行分类",
+                                    "content": "涵盖了 OSI 模型中的多个层次, 使其能够提供更全面的网络流量分析和识别能力",
                                     "depth": 5
                                 },
                                 {
-                                    "content": "简单快速, 只需要检测网络流的前几个数据包",
+                                    "content": "不同类型的网络流量包含特定的字符序列，这些序列可以作为网络流量的指纹用来对流量进行分类",
                                     "depth": 5
                                 },
                                 {
-                                    "content": "缺点: 方法仅适用于未加密的流量, 且计算开销较大",
+                                    "content": "<a href='https://marsvillager.github.io/mindmap/out/Pattern Matching.html'>模式匹配</a>",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "但检测载荷而非仅报文头部意味着 DPI 最适用于非加密的流量",
                                     "depth": 5
                                 }
                             ]

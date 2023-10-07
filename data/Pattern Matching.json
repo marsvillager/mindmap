@@ -83,7 +83,23 @@
                     "depth": 3,
                     "children": [
                         {
-                            "content": "",
+                            "content": "具体实现",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "<a href='https://github.com/zeek/paraglob'>Zeek 的子模块之一 Parablog</a>",
+                                    "depth": 4
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "content": "<b>Wu-Manber 算法</b>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "将模式分成不同的块, 然后对每个块使用一个散列函数生成散列值,<br>这些散列值用于快速过滤掉不匹配的位置, 再对可能匹配的位置进行详细的匹配",
                             "depth": 4
                         }
                     ]
