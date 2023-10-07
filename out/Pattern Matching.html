@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<title>Pattern Matching</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #mindmap {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+<link href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/style.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.8.0/styles/default.min.css" rel="stylesheet"/>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/index.js"></script>
+<script>(e => {
+    window.WebFontConfig = {
+        custom: {families: ["KaTeX_AMS", "KaTeX_Caligraphic:n4,n7", "KaTeX_Fraktur:n4,n7", "KaTeX_Main:n4,n7,i4,i7", "KaTeX_Math:i4,i7", "KaTeX_Script", "KaTeX_SansSerif:n4,n7,i4", "KaTeX_Size1", "KaTeX_Size2", "KaTeX_Size3", "KaTeX_Size4", "KaTeX_Typewriter"]},
+        active: () => {
+            e().refreshHook.call()
+        }
+    }
+})(() => window.markmap)</script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>(() => {
+    setTimeout(() => {
+        const {markmap: M, mm: ge} = window, me = new M.Toolbar;
+        me.attach(ge);
+        const fe = me.render();
+        fe.setAttribute("style", "position:absolute;bottom:20px;right:20px"), document.body.append(fe)
+    })
+})()</script>
+<script>
+    ((F, I, R, H) => {
+        const X = F();
+        window.mm = X.Markmap.create("svg#mindmap", (I || X.deriveOptions)(H), R)
+    })(() => window.markmap, null, {'content': "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/puzzle.png' alt='match' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 5px; text-align: center;'><font color='teal'><h3>Pattern Matching</h3></font></div>", 'depth': 1, 'children': [{'content': '<h4>String Matching</h4>', 'depth': 2, 'children': [{'content': '<b>正则表达式</b>', 'depth': 3, 'children': [{'content': '用于描述搜索需求的语法, 它可以用来定义要在文本中查找的模式或规则', 'depth': 4}, {'content': '正则表达式可以包含单字符、多字符和模糊匹配等不同的元素, 以满足特定搜索需求', 'depth': 4}]}, {'content': '<b>单字符串匹配</b>', 'depth': 3, 'children': [{'content': '<b>BF(Brute-Force, 暴力检索) O(mn)</b>', 'depth': 4}, {'content': '<b>KMP(Knuth-Morris-Pratt)</b>', 'depth': 4, 'children': [{'content': '通过预处理模式串, 在匹配过程中利用已经匹配过的信息来跳过尽可能多的文本字符, 减少不必要的比较次数, 提高匹配效率', 'depth': 5}]}, {'content': '<b>RK(Robin-Karp, 哈希检索) O(m+n)</b>', 'depth': 4, 'children': [{'content': '使用哈希函数来计算滑动窗口中文本串的哈希值, 以快速检查是否存在匹配', 'depth': 5}, {'content': "<img src='../img/RK.png' alt='RK'>", 'depth': 5}]}, {'content': '<b>BM(Boyer-Moore, 启发式策略) 最好 O(m+n) 最差 O(mn)</b>', 'depth': 4, 'children': [{'content': '根据模式串的信息来跳过尽可能多的字符, 以减少比较次数', 'depth': 5}]}]}, {'content': '<b>多字符串匹配</b>', 'depth': 3}, {'content': '<b>近似匹配</b>', 'depth': 3}]}, {'content': '<h4>多模式匹配</h4>', 'depth': 2, 'children': [{'content': '<b>Aho-Corasic automaton(AC 自动机)</b>', 'depth': 3, 'children': [{'content': '', 'depth': 4}]}]}]},
+        {"colorFreezeLevel": 2, "initialExpandLevel": 3}
+    )
+</script>
+</body>
+</html>

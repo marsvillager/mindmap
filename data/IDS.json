@@ -205,16 +205,122 @@
             "depth": 2,
             "children": [
                 {
-                    "content": "网络流量统计特征",
+                    "content": "<b>流量特征</b>",
                     "depth": 3,
                     "children": [
                         {
-                            "content": "基于时间的网络流量统计特征",
+                            "content": "<b>时间序列(Time Series)</b>: 报文长度、到达时间和连续报文的方向等等",
                             "depth": 4
                         },
                         {
-                            "content": "基于主机的网络流量统计特征",
+                            "content": "<b>头部(Header)</b>",
                             "depth": 4
+                        },
+                        {
+                            "content": "<b>负载数据(Payload Data)</b>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<b>统计特征(Statistical Features)</b>: 平均包长度、最大包长度、最小到达间隔时间等等",
+                            "depth": 4
+                        }
+                    ]
+                },
+                {
+                    "content": "<b>流量分类</b>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "<del><b>port-based method</b></del>",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "提取过程简单, 端口号不受加密方案的影响",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "只能识别端口级别的应用程序或服务, 无法提供关于应用程序内部行为的详细信息, 也无法对非标准或动态分配的端口号进行分类",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "即使是特定的应用程序也未必会使用标准的注册端口号, 可以通过 NAT 或代理服务器来掩盖内部网络的端口号",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "采取随机或动态端口号策略的应用程序, 比如 P2P 由于其对等节点通常需要直接通信, 可以通过频繁更改端口号以防止被识别或封锁",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "<b>payload-based method(DPI, deep packet inspection)</b>",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "不同类型的网络流量之中有特定的字符流(也称之为指纹), 只需要在数据包的任意位置匹配这些字符流, 就可以进行分类",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "简单快速, 只需要检测网络流的前几个数据包",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "缺点: 方法仅适用于未加密的流量, 且计算开销较大",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "<b>Statistical classification</b>",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "依赖于流量的统计或时间序列特性, 能够处理加密和未加密的流量",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "可以用于加密流量, 不需解密",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "缺点: 依赖于人类的特征提取工程, 开销大, 耗时长",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "<b>Behavior based classification</b>",
+                            "depth": 4,
+                            "children": [
+                            ]
+                        },
+                        {
+                            "content": "基于<b>深度学习</b>",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "可以通过训练自动选择特征, 消除领域专家选择特征的需要, 并且具有相当高的学习能力, 因此可以学习高度复杂的模式,<br>能够学习原始输入和相应输出之间的非线性关系, 而不需要将问题分解为特征选择和分类的子问题",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "缺点: 黑盒子, 可解释性弱",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "References",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "Cao Z, Xiong G, Zhao Y, et al. A survey on encrypted traffic classification[C]//Applications and Techniques in Information Security: 5th International Conference, ATIS 2014, Melbourne, VIC, Australia, November 26-28, 2014. Proceedings 5. Springer Berlin Heidelberg, 2014: 73-81.",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "",
+                                    "depth": 5
+                                }
+                            ]
                         }
                     ]
                 },
@@ -224,55 +330,203 @@
                     "children": [
                         {
                             "content": "Signature-based/Misuse detection",
-                            "depth": 4
-                        },
-                        {
-                            "content": "Anomaly detection",
                             "depth": 4,
                             "children": [
                                 {
-                                    "content": "寻找目标: <b><i>PROBING(surveillance and probing)</i></b>, 端口监视或扫描, e.g. port-scan, ping-sweep",
-                                    "depth": 5
-                                },
-                                {
-                                    "content": "远程->本地, 入侵过程: <b><i>R2L, REMOTE-TO-LOCAL(unauthorized access from a remote machine to a local machine)</i></b>, 来自远程主机的未授权访问, e.g. guessing password",
-                                    "depth": 5
-                                },
-                                {
-                                    "content": "提权: <b><i>U2R, USER-TO-ROOT(unauthorized access to local superuser privileges by a local unprivileged user)</i></b>, 未授权的本地超级用户特权访问, e,g, buffer overflow attacks",
-                                    "depth": 5
+                                    "content": "寻找目标: <b><i>PROBING(surveillance and probing)</i></b>, 端口监视或扫描",
+                                    "depth": 5,
+                                    "children": [
+                                        {
+                                            "content": "1. ipsweep",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "2. mscan",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "3. nmap",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "4. portsweep",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "5. saint",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "6. satan",
+                                            "depth": 6
+                                        }
+                                    ]
                                 },
                                 {
                                     "content": "资源消耗: <b><i>DOS(denial-of-service)</i></b>, 拒绝服务攻击",
                                     "depth": 5,
                                     "children": [
                                         {
-                                            "content": "neptune attack(SYN Flood)",
+                                            "content": "1. apache2",
                                             "depth": 6
                                         },
                                         {
-                                            "content": "smurf",
+                                            "content": "2. back",
                                             "depth": 6
                                         },
                                         {
-                                            "content": "Ping-Of-Death (POD)",
+                                            "content": "3. land (Local Area Network Denial)",
                                             "depth": 6
                                         },
                                         {
-                                            "content": "back",
+                                            "content": "4. neptune (SYN Flood)",
                                             "depth": 6
                                         },
                                         {
-                                            "content": "teardrop",
+                                            "content": "5. mailbomb",
                                             "depth": 6
                                         },
                                         {
-                                            "content": "LAND (Local Area Network Denial)",
+                                            "content": "6. pod",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "7. processtable",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "8. smurf",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "9. teardrop",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "10. udpstorm",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "11. worm",
+                                            "depth": 6
+                                        }
+                                    ]
+                                },
+                                {
+                                    "content": "远程->本地, 入侵过程: <b><i>R2L, REMOTE-TO-LOCAL(unauthorized access from a remote machine to a local machine)</i></b>, 来自远程主机的未授权访问",
+                                    "depth": 5,
+                                    "children": [
+                                        {
+                                            "content": "1. frp_write",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "2. guess_passwd",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "3. httptunnel",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "4. imap",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "5. multihop",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "6. named",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "7. phf",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "8. sendmail",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "9. Snmpgetattack",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "10. spy",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "11. snmpguess",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "12. warezclient",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "13. warezmaster",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "14. xclock",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "15. xsnopp",
+                                            "depth": 6
+                                        }
+                                    ]
+                                },
+                                {
+                                    "content": "提权: <b><i>U2R, USER-TO-ROOT(unauthorized access to local superuser privileges by a local unprivileged user)</i></b>, 未授权的本地超级用户特权访问",
+                                    "depth": 5,
+                                    "children": [
+                                        {
+                                            "content": "1. buffer_overflow",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "2. loadmodule",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "3. perl",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "4. ps",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "5. rootkit",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "6. sqlattack",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "7. xterm",
+                                            "depth": 6
+                                        }
+                                    ]
+                                },
+                                {
+                                    "content": "后渗透: <b><i>Post-compromise</i></b>, 横向移动、数据窃取、持续访问、恶意操作",
+                                    "depth": 5,
+                                    "children": [
+                                        {
+                                            "content": "Data Compromise 非法访问或修改本地/远程主机的数据",
                                             "depth": 6
                                         }
                                     ]
                                 }
                             ]
+                        },
+                        {
+                            "content": "Anomaly detection",
+                            "depth": 4
                         }
                     ]
                 },
@@ -281,17 +535,20 @@
                     "depth": 3,
                     "children": [
                         {
-                            "content": "<a href='https://archive.ics.uci.edu/dataset/129/kdd+cup+1998+data'>KDDCup 98(1998)</a>",
+                            "content": "<a href='http://kdd.ics.uci.edu/databases/kddcup98/kddcup98.html'>KDDCup 98(1998)</a>",
                             "depth": 4
                         },
                         {
-                            "content": "<a href='https://archive.ics.uci.edu/dataset/130/kdd+cup+1999+data'>KDDCup 99(1999)</a>",
+                            "content": "<a href='http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html'>KDDCup 99(1999)</a>",
                             "depth": 4
                         },
                         {
                             "content": "<a href='https://www.unb.ca/cic/datasets/nsl.html'>NSL-KDD(2009, Improvements to the KDD'99 dataset)</a>",
                             "depth": 4,
                             "children": [
+                                {
+                                    "content": "在<b>训练集</b>中出现了 <i><b>24</b></i> 种攻击类型，在<b>测试集</b>中出现了 <i><b>38</b></i> 种攻击类型"
+                                },
                                 {
                                     "content": "Formats",
                                     "depth": 5,
@@ -311,7 +568,33 @@
                                     "depth": 5,
                                     "children": [
                                         {
-                                            "content": "<b>Basic Features</b>",
+                                            "content": "<a href='https://docs.google.com/spreadsheets/d/1oAx320Vo9Z6HrBrL6BcfLH6sh2zIk9EKCv2OlaMGmwY/edit?pli=1#gid=0'>Table of NSL-KDD Features</a>",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "4 types",
+                                            "depth": 6,
+                                            "children": [
+                                                {
+                                                    "content": "4 Categorical (Features: 2, 3, 4, 42)",
+                                                    "depth": 7
+                                                },
+                                                {
+                                                    "content": "6 Binary (Features: 7, 12, 14, 20, 21, 22)",
+                                                    "depth": 7
+                                                },
+                                                {
+                                                    "content": "23 Discrete (Features: 8, 9, 15, 23–41, 43)",
+                                                    "depth": 7
+                                                },
+                                                {
+                                                    "content": "10 Continuous (Features: 1, 5, 6, 10, 11, 13, 16, 17, 18, 19)",
+                                                    "depth": 7
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "content": "<b>Basic Features</b>(数据包的头部信息而非负载)",
                                             "depth": 6,
                                             "children": [
                                                 {
@@ -331,7 +614,7 @@
                                             ]
                                         },
                                         {
-                                            "content": "<b>Time Related Traffic Features</b>",
+                                            "content": "<b>Time Related Traffic Features</b>(在一个两秒的时间窗口内分析流量输入)",
                                             "depth": 6,
                                             "children": [
                                                 {
@@ -341,7 +624,7 @@
                                             ]
                                         },
                                         {
-                                            "content": "<b>Host Based Traffic Features</b>",
+                                            "content": "<b>Host Based Traffic Features</b>(在一系列建立连接的情况下进行分析, 检测跨越两秒窗口时间跨度的攻击)",
                                             "depth": 6,
                                             "children": [
                                                 {
@@ -357,6 +640,14 @@
                         {
                             "content": "<a href='https://www.kaggle.com/datasets/mrwellsdavid/unsw-nb15'>UNSW-NB15(2015)</a> <del><a href='https://research.unsw.edu.au/projects/unsw-nb15-dataset'>official</a></del>",
                             "depth": 4
+                        },
+                        {
+                            "content": "<a href='https://aistudio.baidu.com/datasetdetail/58344'>CIC-IDS-2017</a>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<a href='https://aistudio.baidu.com/datasetdetail/60692'>CIC-IDS-2018</a>",
+                            "depth": 4
                         }
                     ]
                 },
@@ -366,6 +657,10 @@
                     "children": [
                         {
                             "content": "https://github.com/vinayakumarr/Network-Intrusion-Detection",
+                            "depth": 4
+                        },
+                        {
+                            "content": "https://towardsdatascience.com/a-deeper-dive-into-the-nsl-kdd-data-set-15c753364657",
                             "depth": 4
                         },
                         {
