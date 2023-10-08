@@ -205,24 +205,60 @@
             "depth": 2,
             "children": [
                 {
-                    "content": "<b>流量特征</b>",
+                    "content": "<b>流量特征选取</b>",
                     "depth": 3,
                     "children": [
                         {
-                            "content": "<b>时间序列(Time Series)</b>: 报文长度、到达时间和连续报文的方向等等",
+                            "content": "<b>侧信道特征</b>: 不检查加密流量内容而直接观测到的数据, 包括数据包长度特征、时间特征及相关统计特征",
                             "depth": 4
                         },
                         {
-                            "content": "<b>头部(Header)</b>",
+                            "content": "<b>明文特征</b>: 从数据包中直接获取的密码套件、扩展信息等明文信息及其统计信息特征",
                             "depth": 4
                         },
                         {
-                            "content": "<b>负载数据(Payload Data)</b>",
+                            "content": "<b>原始流量</b>: 深度学习应用的发展为加密恶意流量检测提供了新的方向, 能够直接处理更高维度的原始流量",
                             "depth": 4
+                        }
+                    ]
+                },
+                {
+                    "content": "<b>加密流量检测</b>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "<b>常规加密流量检测</b>",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "SSH、TLS 等",
+                                    "depth": 5
+                                }
+                            ]
                         },
                         {
-                            "content": "<b>统计特征(Statistical Features)</b>: 平均包长度、最大包长度、最小到达间隔时间等等",
-                            "depth": 4
+                            "content": "<b>加密恶意流量检测</b>",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "有些通过私有加密协议逃脱监管部门的监察",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "<b>特殊加密流量检测</b>",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "VPN",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "Tor",
+                                    "depth": 5
+                                }
+                            ]
                         }
                     ]
                 },
@@ -257,20 +293,44 @@
                             "depth": 4,
                             "children": [
                                 {
-                                    "content": "涵盖了 OSI 模型中的多个层次, 使其能够提供更全面的网络流量分析和识别能力",
-                                    "depth": 5
+                                    "content": "DPI(Deep Packet Inspection, 深度数据包检测)",
+                                    "depth": 5,
+                                    "children": [
+                                        {
+                                            "content": "涵盖了 OSI 模型中的多个层次, 使其能够提供更全面的网络流量分析和识别能力",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "不同类型的网络流量包含特定的字符序列，这些序列可以作为网络流量的指纹用来对流量进行分类",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "<a href='https://marsvillager.github.io/mindmap/out/Pattern Matching.html'>模式匹配</a>",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "但检测载荷而非仅报文头部意味着 DPI 最适用于非加密的流量",
+                                            "depth": 6
+                                        }
+                                    ]
                                 },
                                 {
-                                    "content": "不同类型的网络流量包含特定的字符序列，这些序列可以作为网络流量的指纹用来对流量进行分类",
-                                    "depth": 5
-                                },
-                                {
-                                    "content": "<a href='https://marsvillager.github.io/mindmap/out/Pattern Matching.html'>模式匹配</a>",
-                                    "depth": 5
-                                },
-                                {
-                                    "content": "但检测载荷而非仅报文头部意味着 DPI 最适用于非加密的流量",
-                                    "depth": 5
+                                    "content": "SPI(Stochastic Packet Inspection, 随机数据包检测)",
+                                    "depth": 5,
+                                    "children": [
+                                        {
+                                            "content": "解决 DPI 无法对加密数据进行分类的问题",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "不直接使用数据包的内容, 而是利用负载的统计信息自动生成协议签名来识别不同的协议",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "虽然 SPI 可以对加密数据进行分类, 但仍然面临计算成本过高的问题",
+                                            "depth": 6
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -279,23 +339,44 @@
                             "depth": 4,
                             "children": [
                                 {
-                                    "content": "依赖于流量的统计或时间序列特性, 能够处理加密和未加密的流量",
+                                    "content": "监督学习",
+                                    "depth": 5,
+                                    "children": [
+                                        {
+                                            "content": "LR(Logistic Regression, 逻辑回归)",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "NB(Naive Bayes, 朴素贝叶斯)",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "KNN(K-Nearest Neighbors, K 近邻)",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "DT(Decision Tree, 决策树)",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "RF(Random Forest, 随机森林)",
+                                            "depth": 6
+                                        },
+
+                                        {
+                                            "content": "AB(Adaptive Boosting, 自适应增强)",
+                                            "depth": 6
+                                        }
+                                    ]
+                                },
+                                {
+                                    "content": "半监督",
                                     "depth": 5
                                 },
                                 {
-                                    "content": "可以用于加密流量, 不需解密",
-                                    "depth": 5
-                                },
-                                {
-                                    "content": "缺点: 依赖于人类的特征提取工程, 开销大, 耗时长",
+                                    "content": "无监督",
                                     "depth": 5
                                 }
-                            ]
-                        },
-                        {
-                            "content": "<b>Behavior based classification</b>",
-                            "depth": 4,
-                            "children": [
                             ]
                         },
                         {

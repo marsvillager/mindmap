@@ -83,11 +83,23 @@
                     "depth": 3,
                     "children": [
                         {
+                            "content": "通过构建一个 FSM 来表示多种状态, 并在状态之间进行转移, 每个状态代表一个可能的匹配状态, 状态之间的转移由字符触发",
+                            "depth": 4
+                        },
+                        {
+                            "content": "为了节省匹配次数, 不放弃已匹配过的部分, AC 自动机之中加入了 fail 路径, 又叫失配路径(指针),<br>它能够在节点无法匹配下个字符的时候, 转向其他节点",
+                            "depth": 4
+                        },
+                        {
                             "content": "具体实现",
                             "depth": 4,
                             "children": [
                                 {
                                     "content": "<a href='https://github.com/zeek/paraglob'>Zeek 的子模块之一 Parablog</a>",
+                                    "depth": 4
+                                },
+                                {
+                                    "content": "支持两种 FSM, DFA(Deterministic Finite Automaton, 确定性有限状态自动机)和 NFA(Nondeterministic Finite Automaton, 非确定性有限状态自动机),<br<DFA 中的每个状态都有确定性的转移，而 NFA 中的每个状态可以具有多个可能的转移",
                                     "depth": 4
                                 }
                             ]
