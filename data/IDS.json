@@ -362,20 +362,43 @@
                                             "content": "RF(Random Forest, 随机森林)",
                                             "depth": 6
                                         },
-
                                         {
                                             "content": "AB(Adaptive Boosting, 自适应增强)",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "SVM(Support Vector Machine, 支持向量机)",
                                             "depth": 6
                                         }
                                     ]
                                 },
                                 {
                                     "content": "半监督",
-                                    "depth": 5
+                                    "depth": 5,
+                                    "children": [
+                                        {
+                                            "content": "为解决监督学习需要大量标签数据的难题, 半监督学习也被广泛应用于流量分类的研究",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "使用 GAN 来生成大量的伪标签数据",
+                                            "depth": 6
+                                        }
+                                    ]
                                 },
                                 {
                                     "content": "无监督",
-                                    "depth": 5
+                                    "depth": 5,
+                                    "children": [
+                                        {
+                                            "content": "K-means(K 均值)",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "AE(Auto-Encoder, 自动编码器)",
+                                            "depth": 6
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -388,7 +411,7 @@
                                     "depth": 5
                                 },
                                 {
-                                    "content": "缺点: 黑盒子, 可解释性弱",
+                                    "content": "黑盒子, 可解释性弱",
                                     "depth": 5
                                 }
                             ]
