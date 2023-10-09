@@ -24,11 +24,35 @@
                     "children": [
                         {
                             "content": "4.0 即之后的版本新增了包分析框架, 从而使得 Zeek 具有了分析数据链路层数据帧的能力",
-                            "depth": 3
+                            "depth": 4
                         },
                         {
                             "content": "但相关的内置分析脚本还不丰富, 分析手段也较为简单",
-                            "depth": 3
+                            "depth": 4
+                        }
+                    ]
+                },
+                {
+                    "content": "流量分类原理",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "签名",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "位于 <code>[PREFIX]/share/zeek/base/</code>",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "协议 <code>[PREFIX]/share/zeek/base/policy/*.sig & *.zeek</code>",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "支持的文件类型 <code>[PREFIX]/share/zeek/base/frameworks/files/magic/*.sig</code>",
+                                    "depth": 5
+                                }
+                            ]
                         }
                     ]
                 }
@@ -53,6 +77,42 @@
                 {
                     "content": "支持单点部署及集群式部署, 并提供配套的集群管理工具 ZeekControl",
                     "depth": 3
+                },
+                {
+                    "content": "<b>加载脚本</b>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "内置脚本在 <code>[PREFIX]/share/zeek</code> 目录下",
+                            "depth": 4
+                        },
+                        {
+                            "content": "并通过 <br><code>[PREFIX]/share/zeek/base/init-bare.zeek</code>,<br><code>[PREFIX]/share/zeek/base/init-frameworks-and-bifs.zeek</code>,<br><code>[PREFIX]/share/zeek/base/init-default.zeek</code><br>依次完成所有 Zeek 默认脚本的加载工作",
+                            "depth": 4
+                        },
+                        {
+                            "content": "除默认内置脚本外, 用户自行开发的脚本均需要在使用命令时明确指定路径载入,<br>也可在 Zeek 提供的脚本文件 [PREFIX]/share/zeek/site/local.zeek 中加入可自定义的脚本加载点实现",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "⭐️kibana 的 discover 是通过 json 格式匹配字段的, 需要<b>以 json 格式将记录保存在 *.log 文件中</b>",
+                                    "depth": 4
+                                },
+                                {
+                                    "content": "⭐️<code>[PREFIX]/share/zeek/policy/tuning/json-logs.zeek</code> 是 Zeek 提供的输出转 json 格式的脚本",
+                                    "depth": 4
+                                },
+                                {
+                                    "content": "⭐️将该脚本加入 <code>[PREFIX]/share/zeek/site/local.zeek</code>: @load policy/tuning/json-logs.zeek",
+                                    "depth": 4
+                                }
+                            ]
+                        },
+                        {
+                            "content": "Zeek 提供了 4 个默认的脚本搜索路径, 分别是 <code>./</code>, <code>[PREFIX]/share/zeek/</code>, <code>[PREFIX]/share/zeek/policy</code>, <code>[PREFIX]/share/zeek/site</code>",
+                            "depth": 4
+                        }
+                    ]
                 }
             ]
         },
@@ -249,6 +309,20 @@
                         {
                             "content": "zeek 命令更适合短时的任务场景, zeekctl 命令则更适合长时间运行不间断的流量分析任务",
                             "depth": 4
+                        },
+                        {
+                            "content": "<code><b>[PREFIX]/etc/network.cfg</b></code>",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "本地网络的 IP 地址段配置文件",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "默认配置了三个私有网段: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16",
+                                    "depth": 5
+                                }
+                            ]
                         },
                         {
                             "content": "<code><b>[PREFIX]/etc/node.cfg</b></code>",
@@ -787,15 +861,33 @@
             ]
         },
         {
-            "content": "<h4>网络扫描</h4>",
+            "content": "<del><h4>网络扫描</h4></del>",
             "depth": 2,
             "children": [
                 {
-                    "content": "script",
+                    "content": "<code>[PREFIX]/share/zeek/policy/misc/scan.zeek</code>",
                     "depth": 3,
                     "children": [
                         {
-                            "content": "<code>[PREFIX]/share/zeek/policy/misc/scan.zeek</code>",
+                            "content": "The ``misc/scan.zeek`` script has been marked for removal in Zeek 6.1.  Use https://github.com/ncsa/bro-simple-scan instead.",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>sudo bin/zeek -b -i ens33 -C share/zeek/policy/misc/scan.zeek</code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "工具 nmap",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "e.g. <code>nmap -sT [IP]</code>",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "<code>cat notice.log | zeek-cut -d</code>",
                             "depth": 4
                         }
                     ]
@@ -807,12 +899,48 @@
             "depth": 2,
             "children": [
                 {
-                    "content": "script",
+                    "content": "<code>[PREFIX]/share/zeek/policy/protocols/ssh/detect-bruteforcing.zeek</code>",
                     "depth": 3,
                     "children": [
                         {
-                            "content": "<code>>[PREFIX]/share/zeek/policy/protocols/ssh/detect-bruteforcing.zeek</code>",
+                            "content": "<code>sudo bin/zeek -b -i ens33 -C share/zeek/policy/protocols/ssh/detect-bruteforcing.zeek</code>",
                             "depth": 4
+                        },
+                        {
+                            "content": "工具 ssh, crunch(产生暴力破解所需字典), hydra(执行暴力破解任务)",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "<code>sudo apt install openssh-server crunch hydra</code>",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "<code>crunch [最小密码长度] [最大密码长度] [字符集] [-o file] <br> e.g.crunch 6 6 123456 -o passwd.txt</code>",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "<code>hydra [-l 用户名|-L 用户名文件] [-p 密码|-P 密码文件] [service://IP]<br> e.g.hydra -l zeek -P ./passwd.txt ssh://[IP]</code>",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "字段: ts, id.orig_h, id.orig_p, id.resp_h, id.resp_p, auth_success(失败为 F)",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>cat ssh.log | zeek-cut -d</code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "detect-bruteforcing.zeek 中可自定义以下阈值 <br><code>password_guesses_limit = 30 <br> guessing_timeout = 30 mins <br> 代表 30min 内有 30 个连接出现登录失败则判定为密码猜测行为</code>",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "e.g. <code>sudo bin/zeek -b -i ens33 -C share/zeek/policy/protocols/ssh/detect-bruteforcing.zeek -e 'redef SSH::password_guesses_limit=10; redef SSH::guessing_timeout=10mins'</code>",
+                                    "depth": 5
+                                }
+                            ]
                         }
                     ]
                 }
@@ -823,11 +951,37 @@
             "depth": 2,
             "children": [
                 {
-                    "content": "script",
+                    "content": "<code>[PREFIX]/share/zeek/policy/protocols/http/detect-sqli.zeek</code>",
                     "depth": 3,
                     "children": [
                         {
-                            "content": "<code>><PREFIX>/share/zeek/policy/protocols/http/detect-sqli.zeel</code>",
+                            "content": "通过对 URL 进行正则匹配来识别是否包含注入攻击, 由 detect-sqli.zeek 脚本中的 match_sql_injection_url 变量定义",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>sudo bin/zeek -b -i ens33 -C share/zeek/policy/protocols/http/detect-sqli.zeek</code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "工具 nc(netcat)",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "<code>sudo nc -l [IP] [port]</code> e.g. <code>sudo nc -l 192.168.1.121 80</code> 让主机的 80 端口能够顺利完成握手过程从而建立 TCP 连接",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "攻击者发送包含注入内容的 HTTP 请求 <code>curl \"http://192.168.1.121/login.asp?pass=admin&name=admin'%20select%20--\"</code> <br>%20 作为空格, 不然可能报错 <code>curl: (3) URL rejected: Malformed input to a URL function</code>",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "<code>cat http.log | zeek-cut -d</code> uri 显示请求内容, tags 记录 HTTP::URI_SQLI 即 SQL 注入",
+                            "depth": 4
+                        },
+                        {
+                            "content": "kibana <code>url.orig</code> <code>zeek.http.tags</code>",
                             "depth": 4
                         }
                     ]
@@ -839,15 +993,15 @@
             "depth": 2,
             "children": [
                 {
-                    "content": "script",
+                    "content": "<code>files.log</code>",
                     "depth": 3,
                     "children": [
                         {
-                            "content": "<code></code>",
+                            "content": "Zeek 主程序对每个解析出的文件都会生成一个 fuid 作为唯一标识",
                             "depth": 4
                         },
                         {
-                            "content": "<code></code>",
+                            "content": "日志中也会解析出每个文件的连接 uid,<br>可以通过 uid 在 <code>conn.log</code>, <code>http.log</code> 等日志中找到相应的连接信息",
                             "depth": 4
                         }
                     ]
