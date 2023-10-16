@@ -181,12 +181,34 @@
                             "depth": 4
                         },
                         {
+                            "content": "若启动失败, 可以复制 <code>filebeat.service</code> 中的命令单独执行以查找错误<br>一般为文件的权限问题, 比如 <code>chmod go-w</code>",
+                            "depth": 4
+                        },
+                        {
                             "content": "data: <code>/var/lib/filebeat</code><br> config: <code>/etc/filebeat</code><br> https 需要在 filebeat.yml 中加入 <code>ssl.certificate_authorities: [\"/etc/elasticsearch/certs/http_ca.crt\"]</code><br> model: <code>/etc/filebeat/modules.d</code> (e.g. zeek.yml)",
                             "depth": 4
                         },
                         {
-                            "content": "启动 zeek 模块 <code>sudo filebeat modules enable zeek</code><br> 修改 modules.d 下相应的 zeek.yml 设置后才能启动模块, e.g.<br><code>dns:<br>&nbsp;&nbsp; enabled: true<br>&nbsp;&nbsp; var.paths: [\"/usr/local/zeek/logs/dns.log\", \"/usr/local/zeek/logs/*.dns.json\"]</code> <br>启动 Filebeat <code>sudo filebeat modules enable zeek</code>",
+                            "content": "启动 zeek 模块 <code>sudo filebeat modules enable zeek</code><br> 修改 modules.d 下相应的 zeek.yml 设置后才能启动模块, e.g.<br><code>dns:<br>&nbsp;&nbsp; enabled: true<br>&nbsp;&nbsp; var.paths: [\"/usr/local/zeek/logs/dns.log\", \"/usr/local/zeek/logs/*.dns.json\"]</code> <br>启动 Filebeat <code>sudo filebeat setup</code>",
                             "depth": 4
+                        },
+                        {
+                            "content": "添加新的字段(TODO)",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "1. 在 <code>/etc/filebeat/fields.yml</code> 中定义字段",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "2. 在 <code>/etc/filebeat/modules.d/zeek.yml</code> 中定义采集路径",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "⚠️ 如果遇到 <code>creating module reloader failed</code>, 需要修改 <code>/etc/filebeat/filebeat.yml</code> 中的<br>(1) Filebeat modules 下的 reload.enable 字段为 true<br>(2) filebeat.inputs 下的 enabled 字段为 true?",
+                                    "depth": 5
+                                }
+                            ]
                         }
                     ]
                 },
