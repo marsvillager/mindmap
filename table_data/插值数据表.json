@@ -1,0 +1,16 @@
+{
+    "tr": [
+        "<pre>   x   </pre>",
+        "<pre>   x<sub>1</sub>   </pre>",
+        "<pre>   x<sub>2</sub>   </pre>",
+        "<pre>   …   </pre>",
+        "<pre>   x<sub>n</sub>   </pre>"
+    ],
+    "tr1": [
+        "<pre>   y   </pre>",
+        "<pre>   y<sub>1</sub>   </pre>",
+        "<pre>   y<sub>2</sub>   </pre>",
+        "<pre>   …   </pre>",
+        "<pre>   y<sub>n</sub>   </pre>"
+    ]
+}

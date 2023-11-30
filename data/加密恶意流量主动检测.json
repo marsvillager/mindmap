@@ -1,0 +1,226 @@
+{
+    "content": "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/detective.png' alt='detection' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 5px; text-align: center;'><font color='teal'><h3>加密恶意流量主动检测</h3></font></div>",
+    "depth": 1,
+    "children": [
+        {
+            "content": "<h4>可明文检测技术</h4>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "<b>可信执行环境</b>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "可信固件",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "SGX-Box",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "云环境部署",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "ShieldBox",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "分布式部署",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "ENDBOX",
+                                    "depth": 5
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "content": "<b>可控传输协议</b>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "接入控制",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "mcTLS",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "云环境部署",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "mbTLS",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "多 MB 部署",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "maTLS",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "兼容 TLS",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "ME-TLS",
+                                    "depth": 5
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "content": "<h4>可搜索加密技术</h4>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "<b>首个成熟方案</b>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "BlindBox",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "只能检测载荷数据",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "Embark",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "数据包头检测, 提升检测率",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "持久连接, 降低时间开销",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "云环境部署, 系统可扩展",
+                                    "depth": 5
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "content": "<b>云环境部署</b>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "首次采用云环境方案",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "高性能规则过滤",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "分布式云虚拟机部署",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "SplitBox",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "简化初始化提升效率",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "ES-DPI",
+                                    "depth": 5
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "content": "<b>提升检测效率</b>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "基于配对的公钥",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "BlindIDS",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "签名和机器学习",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "SPABox",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "可重用混淆规则",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "PrivDPl",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "预处理优化",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "Pine",
+                                    "depth": 5
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "content": "<font color=red><h4>零知识证明</h4></font>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "<b>证明者在不向验证者提供任何有效信息的前提下, 使验证者相信某个推断是正确的密码学技术</b>",
+                    "depth": 3,
+                    "children": [
+                    ]
+                }
+            ]
+        }
+    ]
+}

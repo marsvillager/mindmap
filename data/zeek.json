@@ -207,13 +207,17 @@
                                 {
                                     "content": "⚠️ 如果遇到 <code>creating module reloader failed</code>, 需要修改 <code>/etc/filebeat/filebeat.yml</code> 中的<br>(1) Filebeat modules 下的 reload.enable 字段为 true<br>(2) filebeat.inputs 下的 enabled 字段为 true?",
                                     "depth": 5
+                                },
+                                {
+                                    "content": "https://www.cnblogs.com/obitoma/p/14871444.html",
+                                    "depth": 5
                                 }
                             ]
                         }
                     ]
                 },
                 {
-                    "content": "<b>Logstash 8.X (Filebeat 8.X 直接传输到 ES, 难以改为通过 Logstash 再传输到 ES)</b>",
+                    "content": "<del><b>Logstash 8.X (Filebeat 8.X 直接传输到 ES, 难以改为通过 Logstash 再传输到 ES)</b></del>",
                     "depth": 3,
                     "children": [
                         {
