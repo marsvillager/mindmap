@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<title>加密恶意流量主动检测</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #mindmap {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+<link href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/style.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.8.0/styles/default.min.css" rel="stylesheet"/>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/index.js"></script>
+<script>(e => {
+    window.WebFontConfig = {
+        custom: {families: ["KaTeX_AMS", "KaTeX_Caligraphic:n4,n7", "KaTeX_Fraktur:n4,n7", "KaTeX_Main:n4,n7,i4,i7", "KaTeX_Math:i4,i7", "KaTeX_Script", "KaTeX_SansSerif:n4,n7,i4", "KaTeX_Size1", "KaTeX_Size2", "KaTeX_Size3", "KaTeX_Size4", "KaTeX_Typewriter"]},
+        active: () => {
+            e().refreshHook.call()
+        }
+    }
+})(() => window.markmap)</script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>(() => {
+    setTimeout(() => {
+        const {markmap: M, mm: ge} = window, me = new M.Toolbar;
+        me.attach(ge);
+        const fe = me.render();
+        fe.setAttribute("style", "position:absolute;bottom:20px;right:20px"), document.body.append(fe)
+    })
+})()</script>
+<script>
+    ((F, I, R, H) => {
+        const X = F();
+        window.mm = X.Markmap.create("svg#mindmap", (I || X.deriveOptions)(H), R)
+    })(() => window.markmap, null, {'content': "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/detective.png' alt='detection' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 5px; text-align: center;'><font color='teal'><h3>加密恶意流量主动检测</h3></font></div>", 'depth': 1, 'children': [{'content': '<h4>可明文检测技术</h4>', 'depth': 2, 'children': [{'content': '<b>可信执行环境</b>', 'depth': 3, 'children': [{'content': '可信固件', 'depth': 4, 'children': [{'content': 'SGX-Box', 'depth': 5}]}, {'content': '云环境部署', 'depth': 4, 'children': [{'content': 'ShieldBox', 'depth': 5}]}, {'content': '分布式部署', 'depth': 4, 'children': [{'content': 'ENDBOX', 'depth': 5}]}]}, {'content': '<b>可控传输协议</b>', 'depth': 3, 'children': [{'content': '接入控制', 'depth': 4, 'children': [{'content': 'mcTLS', 'depth': 5}]}, {'content': '云环境部署', 'depth': 4, 'children': [{'content': 'mbTLS', 'depth': 5}]}, {'content': '多 MB 部署', 'depth': 4, 'children': [{'content': 'maTLS', 'depth': 5}]}, {'content': '兼容 TLS', 'depth': 4, 'children': [{'content': 'ME-TLS', 'depth': 5}]}]}]}, {'content': '<h4>可搜索加密技术</h4>', 'depth': 2, 'children': [{'content': '<b>首个成熟方案</b>', 'depth': 3, 'children': [{'content': 'BlindBox', 'depth': 4, 'children': [{'content': '只能检测载荷数据', 'depth': 5}]}, {'content': 'Embark', 'depth': 4, 'children': [{'content': '数据包头检测, 提升检测率', 'depth': 5}, {'content': '持久连接, 降低时间开销', 'depth': 5}, {'content': '云环境部署, 系统可扩展', 'depth': 5}]}]}, {'content': '<b>云环境部署</b>', 'depth': 3, 'children': [{'content': '首次采用云环境方案', 'depth': 4, 'children': [{'content': '高性能规则过滤', 'depth': 5}]}, {'content': '分布式云虚拟机部署', 'depth': 4, 'children': [{'content': 'SplitBox', 'depth': 5}]}, {'content': '简化初始化提升效率', 'depth': 4, 'children': [{'content': 'ES-DPI', 'depth': 5}]}]}, {'content': '<b>提升检测效率</b>', 'depth': 3, 'children': [{'content': '基于配对的公钥', 'depth': 4, 'children': [{'content': 'BlindIDS', 'depth': 5}]}, {'content': '签名和机器学习', 'depth': 4, 'children': [{'content': 'SPABox', 'depth': 5}]}, {'content': '可重用混淆规则', 'depth': 4, 'children': [{'content': 'PrivDPl', 'depth': 5}, {'content': '预处理优化', 'depth': 5}, {'content': 'Pine', 'depth': 5}]}]}]}, {'content': '<font color=red><h4>零知识证明</h4></font>', 'depth': 2, 'children': [{'content': '<b>证明者在不向验证者提供任何有效信息的前提下, 使验证者相信某个推断是正确的密码学技术</b>', 'depth': 3, 'children': []}]}]},
+        {"colorFreezeLevel": 2, "initialExpandLevel": 3}
+    )
+</script>
+</body>
+</html>

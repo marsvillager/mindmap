@@ -775,6 +775,54 @@
                             "depth": 4
                         }
                     ]
+                },
+                {
+                    "content": "<b>pcap 转 log</b>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "zeek local -r xxx.pcap LogAscii::use_json=T",
+                            "depth": 4
+                        },
+                        {
+                            "content": "注：filebeat 默认传输的是文件流数据，需要修改 <code>/etc/filebeat/filebeat.yml</code> 中 filebeat.inputs 中的 enabled 为 true",
+                            "depth": 4
+                        }
+                    ]
+                },
+                {
+                    "content": "<b>工控协议插件</b>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "<a href='https://packages.zeek.org/packages'><b><i>官方包</i></b></a> <br>安装：<code>zkg install [pkg]</code> <br>包位于 <code>/usr/local/zeek/var/lib/zkg/clones/package/</code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>zkg install icsnpp-bacnet</code> <br>测试: <code>zeek -Cr icsnpp-bacnet/tests/traces/bacnet_example.pcap icsnpp/bacnet</code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>zkg install icsnpp-dnp3</code> <br>测试: <code>zeek -Cr icsnpp-dnp3/tests/traces/dnp3_example.pcap icsnpp-dnp3</code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>zkg install icsnpp-enip</code> <br>测试: <code>zeek -Cr icsnpp-enip/tests/traces/enip_cip_example.pcap icsnpp/enip</code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>zkg install icsnpp-profinet-io-cm</code> <br>测试: <code></code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>zkg install icsnpp-s7comm</code> <br>测试: <code>zeek -Cr icsnpp-s7comm/tests/traces/s7comm_plus_example.pcap icsnpp/s7comm</code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<a href='https://github.com/georgemakrakis/zeek-iec104'><b><i>iec104</i></b></a>",
+                            "depth": 4
+                        }
+                    ]
                 }
             ]
         },
@@ -801,7 +849,7 @@
                             ]
                         },
                         {
-                            "content": "-u，--udp: 表示采用UDP协议发送报文，不带该参数表示采用 TCP 协议",
+                            "content": "-u, --udp: 表示采用UDP协议发送报文，不带该参数表示采用 TCP 协议",
                             "depth": 4
                         },
                         {
@@ -817,7 +865,7 @@
             ]
         },
         {
-            "content": "<h4>发现网络资产(<code>[PREFIX]/share/zeek/policy/</code> 下以 <code>know</code> 开头的脚本) </h4>",
+            "content": "<h4>发现网络资产(<code>[PREFIX]/share/zeek/policy/</code> 下以 <code>known</code> 开头的脚本) </h4>",
             "depth": 2,
             "children": [
                 {

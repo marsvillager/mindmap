@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<title>Bug</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #mindmap {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+<link href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/style.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.8.0/styles/default.min.css" rel="stylesheet"/>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/index.js"></script>
+<script>(e => {
+    window.WebFontConfig = {
+        custom: {families: ["KaTeX_AMS", "KaTeX_Caligraphic:n4,n7", "KaTeX_Fraktur:n4,n7", "KaTeX_Main:n4,n7,i4,i7", "KaTeX_Math:i4,i7", "KaTeX_Script", "KaTeX_SansSerif:n4,n7,i4", "KaTeX_Size1", "KaTeX_Size2", "KaTeX_Size3", "KaTeX_Size4", "KaTeX_Typewriter"]},
+        active: () => {
+            e().refreshHook.call()
+        }
+    }
+})(() => window.markmap)</script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>(() => {
+    setTimeout(() => {
+        const {markmap: M, mm: ge} = window, me = new M.Toolbar;
+        me.attach(ge);
+        const fe = me.render();
+        fe.setAttribute("style", "position:absolute;bottom:20px;right:20px"), document.body.append(fe)
+    })
+})()</script>
+<script>
+    ((F, I, R, H) => {
+        const X = F();
+        window.mm = X.Markmap.create("svg#mindmap", (I || X.deriveOptions)(H), R)
+    })(() => window.markmap, null, {'content': "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/bug.png' alt='match' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 5px; text-align: center;'><font color='red'><h3>Bug</h3></font></div>", 'depth': 1, 'children': [{'content': "<h4><a href='https://cwe.mitre.org'>CWE(Common Weakness Enumeration)</a></h4>", 'depth': 2, 'children': [{'content': '<b>Navigate CWE</b>', 'depth': 3, 'children': [{'content': '<b>1000 - Research Concepts</b>', 'depth': 4, 'children': [{'content': 'Improper Access Control - (284)', 'depth': 5}, {'content': 'Improper Interaction Between Multiple Correctly-Behaving Entities - (435)', 'depth': 5}, {'content': 'Improper Control of a Resource Through its Lifetime - (664)', 'depth': 5}, {'content': 'Incorrect Calculation - (682)', 'depth': 5}, {'content': 'Insufficient Control Flow Management - (691)', 'depth': 5}, {'content': 'Protection Mechanism Failure - (693)', 'depth': 5}, {'content': 'Incorrect Comparison - (697)', 'depth': 5}, {'content': 'Improper Check or Handling of Exceptional Conditions - (703)', 'depth': 5}, {'content': 'Improper Neutralization - (707)', 'depth': 5}, {'content': 'Improper Adherence to Coding Standards - (710)', 'depth': 5}]}, {'content': '<b>699 - Software Development</b>', 'depth': 4, 'children': [{'content': 'API / Function Errors - (1228)', 'depth': 5}, {'content': 'Audit / Logging Errors - (1210)', 'depth': 5}, {'content': 'Authentication Errors - (1211)', 'depth': 5}, {'content': 'Authorization Errors - (1212)', 'depth': 5}, {'content': 'Bad Coding Practices - (1006)', 'depth': 5}, {'content': 'Behavioral Problems - (438)', 'depth': 5}, {'content': 'Business Logic Errors - (840)', 'depth': 5}, {'content': 'Communication Channel Errors - (417)', 'depth': 5}, {'content': 'Complexity Issues - (1226)', 'depth': 5}, {'content': 'Concurrency Issues - (557)', 'depth': 5}, {'content': 'Credentials Management Errors - (255)', 'depth': 5}, {'content': 'Cryptographic Issues - (310)', 'depth': 5}, {'content': 'Data Integrity Issues - (1214)', 'depth': 5}, {'content': 'Data Neutralization Issues - (137)', 'depth': 5}, {'content': 'Data Processing Errors - (19)', 'depth': 5}, {'content': 'Data Validation Issues - (1215)', 'depth': 5}, {'content': 'Documentation Issues - (1225)', 'depth': 5}, {'content': 'File Handling Issues - (1219)', 'depth': 5}, {'content': 'Encapsulation Issues - (1227)', 'depth': 5}, {'content': 'Error Conditions, Return Values, Status Codes - (389)', 'depth': 5}, {'content': 'Expression Issues - (569)', 'depth': 5}, {'content': 'Handler Errors - (429)', 'depth': 5}, {'content': 'Information Management Errors - (199)', 'depth': 5}, {'content': 'Initialization and Cleanup Errors - (452)', 'depth': 5}, {'content': 'Key Management Errors - (320)', 'depth': 5}, {'content': 'Lockout Mechanism Errors - (1216)', 'depth': 5}, {'content': 'Memory Buffer Errors - (1218)', 'depth': 5}, {'content': 'Numeric Errors - (189)', 'depth': 5}, {'content': 'Permission Issues - (275)', 'depth': 5}, {'content': 'Pointer Issues - (465)', 'depth': 5}, {'content': 'Privilege Issues - (265)', 'depth': 5}, {'content': 'Random Number Issues - (1213)', 'depth': 5}, {'content': 'Resource Locking Problems - (411)', 'depth': 5}, {'content': 'Resource Management Errors - (399)', 'depth': 5}, {'content': 'Signal Errors - (387)', 'depth': 5}, {'content': 'State Issues - (371)', 'depth': 5}, {'content': 'String Errors - (133)', 'depth': 5}, {'content': 'Type Errors - (136)', 'depth': 5}, {'content': 'User Interface Security Issues - (355)', 'depth': 5}, {'content': 'User Session Errors - (1217)', 'depth': 5}]}, {'content': '<b>1194 - Hardware Design</b>', 'depth': 4, 'children': [{'content': 'Manufacturing and Life Cycle Management Concerns - (1195)', 'depth': 5}, {'content': 'Security Flow Issues - (1196)', 'depth': 5}, {'content': 'Integration Issues - (1197)', 'depth': 5}, {'content': 'Privilege Separation and Access Control Issues - (1198)', 'depth': 5}, {'content': 'General Circuit and Logic Design Concerns - (1199)', 'depth': 5}, {'content': 'Core and Compute Issues - (1201)', 'depth': 5}, {'content': 'Memory and Storage Issues - (1202)', 'depth': 5}, {'content': 'Peripherals, On-chip Fabric, and Interface/IO Problems - (1203)', 'depth': 5}, {'content': 'Security Primitives and Cryptography Issues - (1205)', 'depth': 5}, {'content': 'Power, Clock, Thermal, and Reset Concerns - (1206)', 'depth': 5}, {'content': 'Debug and Test Problems - (1207)', 'depth': 5}, {'content': 'Cross-Cutting Problems - (1208)', 'depth': 5}, {'content': 'Physical Access Issues and Concerns - (1388)', 'depth': 5}]}]}, {'content': '<b>External Mappings</b>', 'depth': 3}, {'content': '<b>Helpful Views</b>', 'depth': 3}, {'content': '<b>Obsolete Views</b>', 'depth': 3}]}, {'content': "<h4><a href='https://owasp.org'>OWASP(Open Web Application Security Project)</a></h4>", 'depth': 2, 'children': [{'content': "<b><a href='https://github.com/OWASP'>Code</a></b>", 'depth': 3}, {'content': "<b><a href='https://owasp.org/www-project-top-ten/'>OWASP Top 10: 2021</a></b>", 'depth': 3, 'children': [{'content': '<b>组成</b>', 'depth': 4, 'children': [{'content': 'Factors', 'depth': 5}, {'content': 'Overview', 'depth': 5}, {'content': 'Description', 'depth': 5}, {'content': 'How to Prevent', 'depth': 5}, {'content': 'Example Attack Scenarios', 'depth': 5}, {'content': 'References', 'depth': 5}, {'content': 'List of Mapped CWEs', 'depth': 5}]}, {'content': '<b>清单</b>', 'depth': 4, 'children': [{'content': 'A01: Broken Access Control', 'depth': 5}, {'content': 'A02: Cryptographic Failures', 'depth': 5}, {'content': 'A03: Injection', 'depth': 5}, {'content': 'A04: Insecure Design', 'depth': 5}, {'content': 'A05: Security Misconfiguration', 'depth': 5}, {'content': 'A06: Vulnerable and Outdated Components', 'depth': 5}, {'content': 'A07: Identification and Authentication', 'depth': 5}, {'content': 'A08: Software and Data Integrity Failures', 'depth': 5}, {'content': 'A09: Security Logging and Monitoring Failures', 'depth': 5}, {'content': 'A10: Server-Side Request Forgery (SSRF)', 'depth': 5}]}]}]}, {'content': "<h4><a href='https://www.cve.org'>CVE(Common Vulnerabilities and Exposures)</a></h4>", 'depth': 2, 'children': [{'content': "<b><a href='https://github.com/CVEProject'>Code</a></b>", 'depth': 3}, {'content': '<b>编号格式: <code>CVE-年份-编号</code></b>', 'depth': 3}, {'content': "<b><a href='https://cveproject.github.io/cve-schema/schema/v5.0/docs/mindmap.html'>CVE JSON Record</a></b>", 'depth': 3}, {'content': '<b>CVE 是漏洞的字典库, 并不包含 CVSS 分值,<br>需要使用其它漏洞管理系统（e.g. https://www.cvedetails.com/）查阅 CVSS 分值</b>', 'depth': 3}]}, {'content': "<h4><a href='https://www.exploit-db.com'>Exploit-DB</a></h4>", 'depth': 2, 'children': [{'content': "<b><a href='https://gitlab.com/exploit-database'>离线版本</a></b>", 'depth': 3}, {'content': '<b><code>searchsploit [options] term1 [term2] ... [termN]</code></b>', 'depth': 3, 'children': [{'content': '基本搜索会同时匹配标题和路径中的内容', 'depth': 4, 'children': [{'content': 'e.g. <code>searchsploit afd windows local</code>', 'depth': 5}]}, {'content': 'Search Terms', 'depth': 4, 'children': [{'content': '<code>-t, --title [term]</code> 标题搜索只匹配标题, 不会对路径中的关键词进行匹配', 'depth': 5, 'children': [{'content': 'e.g. <code>searchsploit -t oracle windows</code>', 'depth': 6}]}, {'content': "<code>--exclude='term' or | grep [term]</code> 删除不想要的结果", 'depth': 5, 'children': [{'content': 'e.g. <code>searchsploit smb windows remote --exclude="(POC)|txt"</code>', 'depth': 6}, {'content': 'e.g. <code>searchsploit smb windows remote | grep rb</code>', 'depth': 6}]}, {'content': '<code>--cve [CVE]</code> 根据 cve id 查询', 'depth': 5, 'children': [{'content': 'e.g. <code>searchsploit --cve 2021-44228</code>', 'depth': 6}]}, {'content': '<code>-s, --strict</code> 严格搜索, 输入必须存在', 'depth': 5, 'children': [{'content': 'e.g. <code>searchsploit -s Apache Struts 2.0.0</code>', 'depth': 6}]}]}, {'content': 'Output', 'depth': 4, 'children': [{'content': '<code>-j, --json [term]</code> 以 json 格式展示', 'depth': 5, 'children': [{'content': 'e.g. <code>searchsploit -j 55555 | jq</code>', 'depth': 6}]}, {'content': '<code>-p, --path [EDB-ID]</code> 展示 exploit 的全路径并复制到剪贴板', 'depth': 5, 'children': [{'content': 'e.g. <code>searchsploit -p 39446</code>', 'depth': 6}]}, {'content': '<code>-w, --www [term]</code> 展示 URLs 而非本地路径', 'depth': 5, 'children': [{'content': 'e.g. <code>searchsploit WarFTP 1.65 -w</code>', 'depth': 6}]}]}, {'content': 'Non-Searching', 'depth': 4, 'children': [{'content': '<code>-u, --update</code> 展示 exploit 的全路径并复制到剪贴板', 'depth': 5, 'children': [{'content': 'e.g. <code>searchsploit -p 39446</code>', 'depth': 6}]}]}]}, {'content': '<code>wget https://www.exploit-db.com/download/</code> download 后面加网页搜索得到的 id', 'depth': 3}]}]},
+        {"colorFreezeLevel": 2, "initialExpandLevel": 3}
+    )
+</script>
+</body>
+</html>

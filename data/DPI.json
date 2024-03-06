@@ -1,0 +1,64 @@
+{
+    "content": "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/packet.png' alt='DPI' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 5px; text-align: center;'><font color='teal'><h3>DPI 方法</h3></font></div>",
+    "depth": 1,
+    "children": [
+        {
+            "content": "<h4>基于端口</h4>",
+            "depth": 2
+        },
+        {
+            "content": "<h4>协议编码</h4>",
+            "depth": 2
+        },
+        {
+            "content": "<h4>模式匹配</h4>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "字符串匹配",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "基于启发式",
+                            "depth": 4
+                        },
+                        {
+                            "content": "基于哈希",
+                            "depth": 4
+                        },
+                        {
+                            "content": "基于过滤",
+                            "depth": 4
+                        },
+                        {
+                            "content": "基于自动机",
+                            "depth": 4
+                        },
+                        {
+                            "content": "其它",
+                            "depth": 4
+                        }
+                    ]
+                },
+                {
+                    "content": "正则表达匹配",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "基于过滤",
+                            "depth": 4
+                        },
+                        {
+                            "content": "基于自动机",
+                            "depth": 4
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "content": "<h4>统计分析</h4>",
+            "depth": 2
+        }
+    ]
+}
