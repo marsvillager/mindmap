@@ -9,7 +9,7 @@ if __name__ == '__main__':
     # table_file: str = './table_data/NSLKDD_Content_Related.json'
     # table_file: str = './table_data/NSLKDD_Time_Related_Traffic.json'
     # table_file: str = './table_data/NSLKDD_Host_Based_Traffic.json'
-    table_file: str = './table_data/插值数据表.json'
+    table_file: str = './table_data/URI Search.json'
     output: str = './html_table.txt'
 
     # 代入模板中

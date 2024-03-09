@@ -143,6 +143,96 @@
                         {
                             "content": "查看索引: <code>https://ip:port/_cat/indices</code>",
                             "depth": 4
+                        },
+                        {
+                            "content": "<a href='https://www.elastic.co/guide/en/elasticsearch/reference/8.10/search-search.html'>Search API</a>",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "<b>URI Search (仅包含部分查询语法, Query URI)</b>",
+                                    "depth": 5,
+                                    "children": [
+                                        {
+                                            "content": "<div style='padding-bottom: 10px; text-align: center;'><table border=\"5\" cellpadding=\"1\" cellspacing=\"0\" id=\"Table\" style=\"border-collapse: collapse; border-color: lightgray;\"> <tbody>  <tr>   <td style=\"max-width: 300px; text-align: center; border: 1px dashed lightgray\">    <label style=\"font-family: Lucida Grande; font-size: medium; font-weight: bolder; color: slategray\">     参数    </label>   </td>   <td style=\"max-width: 300px; text-align: center; border: 1px dashed lightgray\">    <label style=\"font-family: Lucida Grande; font-size: medium; font-weight: bolder; color: slategray\">     含义    </label>   </td>  </tr>  <tr>   <td style=\"max-width: 300px; text-align: center; border: 1px dashed lightgray\">    <label style=\"font-family: Lucida Grande; font-size: medium; font-weight: bolder; color: slategray\">     q    </label>   </td>   <td style=\"max-width: 300px; text-align: center; border: 1px dashed lightgray\">    <label style=\"font-family: Lucida Grande; font-size: medium; font-weight: bolder; color: slategray\">     指定查询的语句, 语法为 Query String Syntax    </label>   </td>  </tr>  <tr>   <td style=\"max-width: 300px; text-align: center; border: 1px dashed lightgray\">    <label style=\"font-family: Lucida Grande; font-size: medium; font-weight: bolder; color: slategray\">     df    </label>   </td>   <td style=\"max-width: 300px; text-align: center; border: 1px dashed lightgray\">    <label style=\"font-family: Lucida Grande; font-size: medium; font-weight: bolder; color: slategray\">     q 中不指定字段时默认查询的字段, 如果不指定, es 会查询所有字段    </label>   </td>  </tr>  <tr>   <td style=\"max-width: 300px; text-align: center; border: 1px dashed lightgray\">    <label style=\"font-family: Lucida Grande; font-size: medium; font-weight: bolder; color: slategray\">     sort    </label>   </td>   <td style=\"max-width: 300px; text-align: center; border: 1px dashed lightgray\">    <label style=\"font-family: Lucida Grande; font-size: medium; font-weight: bolder; color: slategray\">     排序    </label>   </td>  </tr>  <tr>   <td style=\"max-width: 300px; text-align: center; border: 1px dashed lightgray\">    <label style=\"font-family: Lucida Grande; font-size: medium; font-weight: bolder; color: slategray\">     timeout    </label>   </td>   <td style=\"max-width: 300px; text-align: center; border: 1px dashed lightgray\">    <label style=\"font-family: Lucida Grande; font-size: medium; font-weight: bolder; color: slategray\">     指定超时时间, 默认不超时    </label>   </td>  </tr>  <tr>   <td style=\"max-width: 300px; text-align: center; border: 1px dashed lightgray\">    <label style=\"font-family: Lucida Grande; font-size: medium; font-weight: bolder; color: slategray\">     from,size    </label>   </td>   <td style=\"max-width: 300px; text-align: center; border: 1px dashed lightgray\">    <label style=\"font-family: Lucida Grande; font-size: medium; font-weight: bolder; color: slategray\">     用于分页    </label>   </td>  </tr> </tbody></table></div>",
+                                            "depth": 6
+                                        },
+                                        {
+                                            "content": "e.g.<br>字符匹配<code>GET /search_index/_search?q=name</code><br>词语匹配 <code>GET /search_index/_search?q='li wang'</code><br>字段:检索条件字符 <code>GET /search_index/_search?q=name:wang</code><br><code>GET /search_index/_search?q=wang&sort=age:desc&from=0&size=1</code>",
+                                            "depth": 6
+                                        }
+                                    ]
+                                },
+                                {
+                                    "content": "<b>Request Body Search (提供了完备查询语法, Query DSL)</b>",
+                                    "depth": 5,
+                                    "children": [
+                                        {
+                                            "content": "<code>GET /search_index/_search<br>{<br>&nbsp;&nbsp;'query': {}<br>}</code>",
+                                            "depth": 6,
+                                            "children": [
+                                                {
+                                                    "content": "全文匹配：全文搜索和自然语言搜索，对搜索文本进行分词处理",
+                                                    "depth": 7,
+                                                    "children": [
+                                                        {
+                                                            "content": "<code>GET /search_index/_search<br>{<br>&nbsp;&nbsp;'query': {<br>&nbsp;&nbsp;&nbsp;&nbsp;'match': {}<br>&nbsp;&nbsp;}<br>}</code>",
+                                                            "depth": 8
+                                                        },
+                                                        {
+                                                            "content": "match_phrase",
+                                                            "depth": 8
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "content": "单词匹配：精确匹配字段值，不进行分词处理",
+                                                    "depth": 7,
+                                                    "children": [
+                                                        {
+                                                            "content": "<code>GET /search_index/_search<br>{<br>&nbsp;&nbsp;'query': {<br>&nbsp;&nbsp;&nbsp;&nbsp;'term': {}<br>&nbsp;&nbsp;}<br>}</code>",
+                                                            "depth": 8
+                                                        },
+                                                        {
+                                                            "content": "terms",
+                                                            "depth": 8
+                                                        },
+                                                        {
+                                                            "content": "range",
+                                                            "depth": 8
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "content": "范围查询<br><code>GET /search_index/_search<br>{<br>&nbsp;&nbsp;'query': {<br>&nbsp;&nbsp;&nbsp;&nbsp;'range': {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'[Field]':{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'gte': 10,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'lte': 20<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}</code>",
+                                                    "depth": 7
+                                                },
+                                                {
+                                                    "content": "参数",
+                                                    "depth": 7,
+                                                    "children": [
+                                                        {
+                                                            "content": "显示真实 hit 数量（默认上限 10000）<code>'track_total_hits': True</code>",
+                                                            "depth": 8
+                                                        },
+                                                        {
+                                                            "content": "分页大小, 一次返回多少数据 <code>'size': 100000</code>",
+                                                            "depth": 8
+                                                        },
+                                                        {
+                                                            "content": "排序<br><code>'sort': {<br>&nbsp;&nbsp;'{Field}': {<br>&nbsp;&nbsp;&nbsp;&nbsp;'order': 'desc'/'asc'<br>&nbsp;&nbsp;}<br>}</code>",
+                                                            "depth": 8
+                                                        },
+                                                        {
+                                                            "content": "获取指定字段 <code>'_source': ['Field']</code>",
+                                                            "depth": 8
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 },
@@ -799,23 +889,23 @@
                             "depth": 4
                         },
                         {
-                            "content": "<code>zkg install icsnpp-bacnet</code> <br>测试: <code>zeek -Cr icsnpp-bacnet/tests/traces/bacnet_example.pcap icsnpp/bacnet</code>",
+                            "content": "<code>zkg install icsnpp-bacnet</code> <br>测试: <code>zeek -Cr icsnpp-bacnet/tests/traces/bacnet_example.pcap icsnpp/bacnet LogAscii::use_json=T</code>",
                             "depth": 4
                         },
                         {
-                            "content": "<code>zkg install icsnpp-dnp3</code> <br>测试: <code>zeek -Cr icsnpp-dnp3/tests/traces/dnp3_example.pcap icsnpp-dnp3</code>",
+                            "content": "<code>zkg install icsnpp-dnp3</code> <br>测试: <code>zeek -Cr icsnpp-dnp3/tests/traces/dnp3_example.pcap icsnpp-dnp3 LogAscii::use_json=T</code>",
                             "depth": 4
                         },
                         {
-                            "content": "<code>zkg install icsnpp-enip</code> <br>测试: <code>zeek -Cr icsnpp-enip/tests/traces/enip_cip_example.pcap icsnpp/enip</code>",
+                            "content": "<code>zkg install icsnpp-enip</code> <br>测试: <code>zeek -Cr icsnpp-enip/tests/traces/enip_cip_example.pcap icsnpp/enip LogAscii::use_json=T</code>",
                             "depth": 4
                         },
                         {
-                            "content": "<code>zkg install icsnpp-profinet-io-cm</code> <br>测试: <code></code>",
+                            "content": "<code>zkg install icsnpp-profinet-io-cm</code> <br>测试: <code>zeek -Cr icsnpp-profinet-io-cm/testing/Traces/profinet_io_cm.pcap icsnpp-profinet-io-cm LogAscii::use_json=T</code>",
                             "depth": 4
                         },
                         {
-                            "content": "<code>zkg install icsnpp-s7comm</code> <br>测试: <code>zeek -Cr icsnpp-s7comm/tests/traces/s7comm_plus_example.pcap icsnpp/s7comm</code>",
+                            "content": "<code>zkg install icsnpp-s7comm</code> <br>测试: <code>zeek -Cr icsnpp-s7comm/tests/traces/s7comm_plus_example.pcap icsnpp/s7comm LogAscii::use_json=T</code>",
                             "depth": 4
                         },
                         {
@@ -929,8 +1019,7 @@
                 {
                     "content": "Modbus 协议中 Master 节点及 Slave 节点 <code>[PREFIX]/share/zeek/policy/protocols/modbus/known-master-slaves.zeek</code>",
                     "depth": 3,
-                    "children": [
-                    ]
+                    "children": []
                 }
             ]
         },
@@ -1079,6 +1168,20 @@
                             "depth": 4
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "content": "<h4>Reference</h4>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "<a>https://www.cnblogs.com/moutory/p/17752779.html</a>",
+                    "depth": 3
+                },
+                {
+                    "content": "<a>https://blog.csdn.net/weixin_42039228/article/details/131513436</a>",
+                    "depth": 3
                 }
             ]
         }
