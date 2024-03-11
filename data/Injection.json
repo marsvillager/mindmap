@@ -95,12 +95,46 @@
                     "depth": 3
                 },
                 {
-                    "content": "<b>布尔盲注</b>",
-                    "depth": 3
-                },
-                {
-                    "content": "<b>时间盲注</b>",
-                    "depth": 3
+                    "content": "<b>盲注</b>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "攻击者无法获得任何错误回显消息, 此时需要利用一些方法进行判断或者尝试, 逐渐推断出数据库中的敏感信息",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<b>布尔盲注</b>",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "页面返回的结果只有两种: 正确和错误",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "通过构造 SQL 判断语句, 查看页面的返回结果来判断哪些 SQL 判断条件成立",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "<b>时间盲注</b>",
+                            "depth": 4,
+                            "children": [
+                                {
+                                    "content": "无论输入什么值, 只会回显一个界面",
+                                    "depth": 5
+                                },
+                                {
+                                    "content": "又称延时注入, 即通过具有延时功能的 sleep、benchmark 等时间函数, 查看页面返回的时间差来判断注入的语句是否正确",
+                                    "depth": 5
+                                }
+                            ]
+                        },
+                        {
+                            "content": "⚠️注:<br>可以进行布尔盲注的地方也可以进行时间盲注, 但可以进行时间盲注的地方不一定可以进行布尔盲注<br>在盲注测试时, 通常先测试是否可以布尔盲注, 若不行再尝试时间盲注",
+                            "depth": 4
+                        }
+                    ]
                 },
                 {
                     "content": "<b>SQL 结构</b>",
@@ -133,8 +167,14 @@
                     "depth": 3
                 },
                 {
-                    "content": "tools: <b><i>sqlmap</i></b>",
-                    "depth": 4
+                    "content": "tools",
+                    "depth": 4,
+                    "children": [
+                        {
+                            "content": "<b><i>sqlmap</i></b>",
+                            "depth": 5
+                        }
+                    ]
                 },
                 {
                     "content": "<b>……</b>",
@@ -316,6 +356,16 @@
                             ]
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "content": "<h4>Reference</h4>",
+            "depth": 2,
+            "children": [
+                {
+                    "content": "<a>https://ctf-wiki.org/web/sqli/</a>",
+                    "depth": 3
                 }
             ]
         }
