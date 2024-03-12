@@ -871,6 +871,10 @@
                     "depth": 3,
                     "children": [
                         {
+                            "content": "pcap: <a>https://wiki.wireshark.org/SampleCaptures</a>",
+                            "depth": 4
+                        },
+                        {
                             "content": "zeek local -r xxx.pcap LogAscii::use_json=T",
                             "depth": 4
                         },
@@ -893,11 +897,27 @@
                             "depth": 4
                         },
                         {
+                            "content": "<code>zkg install icsnpp-bsnap</code> <br>测试: <code>zeek -Cr icsnpp-bsap/tests/traces/bsap-ip_example.pcap icsnpp/bsap LogAscii::use_json=T<br>zeek -Cr icsnpp-bsap/tests/traces/bsap-serial_example.pcapng icsnpp/bsap LogAscii::use_json=T</code>",
+                            "depth": 4
+                        },
+                        {
                             "content": "<code>zkg install icsnpp-dnp3</code> <br>测试: <code>zeek -Cr icsnpp-dnp3/tests/traces/dnp3_example.pcap icsnpp-dnp3 LogAscii::use_json=T</code>",
                             "depth": 4
                         },
                         {
                             "content": "<code>zkg install icsnpp-enip</code> <br>测试: <code>zeek -Cr icsnpp-enip/tests/traces/enip_cip_example.pcap icsnpp/enip LogAscii::use_json=T</code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>zkg install icsnpp-ethercat</code> <br>测试: <code>zeek -Cr icsnpp-ethercat/tests/traces/ethercat.pcap icsnpp/ethercat LogAscii::use_json=T</code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>zkg install icsnpp-genisys</code> <br>测试: <code>zeek -Cr icsnpp-genisys/tests/traces/genisys.pcap icsnpp-genisys LogAscii::use_json=T</code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>zkg install icsnpp-opcua-binary</code> <br>测试: <code>zeek -Cr icsnpp-opcua-binary/tests/traces/xxx.pcap icsnpp/opcua-binary LogAscii::use_json=T</code>",
                             "depth": 4
                         },
                         {
@@ -909,9 +929,95 @@
                             "depth": 4
                         },
                         {
-                            "content": "<a href='https://github.com/georgemakrakis/zeek-iec104'><b><i>iec104</i></b></a>",
+                            "content": "<code>zkg install icsnpp-synchrophasor</code> <br>测试: <code>zeek -Cr icsnpp-synchrophasor/tests/traces/xxx.pcap icsnpp-synchrophasor LogAscii::use_json=T</code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<a href='https://github.com/georgemakrakis/zeek-iec104'><b><i>iec104</i></b></a><br><code>git clone https://github.com/georgemakrakis/zeek-iec104.git</code><br><code>cd zeek-iec104</code><br><code>cmake</code><br><code>sudo make install</code><br>测试: <code>zeek -Cr zeek-iec104/testing/Traces/first/iec104.pcap zeek-iec104/scripts/__load__.zeek LogAscii::use_json=T</code>",
                             "depth": 4
                         }
+                    ]
+                },
+                {
+                    "content": "<b>漏洞检测插件</b>",
+                    "depth": 3,
+                    "children": [
+                        {
+                            "content": "<a href='https://packages.zeek.org/packages'><b><i>官方包</i></b></a> <br>安装：<code>zkg install [pkg]</code> <br>包位于 <code>/usr/local/zeek/var/lib/zkg/clones/package/</code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<b><a href='https://docs.zeek.org/en/master/logs/weird-and-notice.html#notice-log'>notice.log</a></b> 字段: note、msg、sub",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>zkg install CVE-2022-3602</code> <br>测试: <br><code>zeek -Cr CVE-2022-3602/testing/Traces/sample_OpenSSLv3.0.5.pcap CVE-2022-3602/scripts/_load_.zeek LogAscii::use_json=T<br>zeek -Cr CVE-2022-3602/testing/Traces/spookyssl-merged.pcap CVE-2022-3602/scripts/_load_.zeek LogAscii::use_json=T</code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>zkg install CVE-2022-26937</code> <br>测试: <br><code>zeek -Cr CVE-2022-26937/testing/Traces/CVE-2022-26937-exploited.pcap CVE-2022-26937/scripts/_load_.zeek LogAscii::use_json=T",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>zkg install cve-2022-26809</code> <br>测试: <br><code>zeek -Cr cve-2022-26809/testing/Traces/cve-2022-26809-4.pcap cve-2022-26809/scripts/_load_.zeek LogAscii::use_json=T",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>zkg install CVE-2022-24497</code> <br>测试: <br><code>zeek -Cr CVE-2022-24497/testing/Traces/CVE-2022-24497.pcap CVE-2022-24497/scripts/_load_.zeek LogAscii::use_json=T",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>zkg install CVE-2022-24491</code> <br>测试: <br><code>zeek -Cr CVE-2022-24491/testing/Traces/CVE-2022-24491.pcap CVE-2022-24491/scripts/_load_.zeek LogAscii::use_json=T",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>zkg install CVE-2022-23270-PPTP</code> <br>测试: <br><code>zeek -Cr CVE-2022-23270-PPTP/testing/Traces/CVE-2022-23270-exploited.pcap CVE-2022-23270-PPTP/scripts/_load_.zeek LogAscii::use_json=T",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>zkg install cve-2021-44228</code> <br>测试: <br><code>zeek -Cr cve-2021-44228/testing/Traces/xxx.pcap cve-2021-44228/scripts/_load_.zeek LogAscii::use_json=T",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>zkg install CVE-2021-38647</code> <br>测试: <br><code>zeek -Cr CVE-2021-38647/testing/Traces/CVE-2021-38647-exploit-craigmunsw-omigod-lab.pcap CVE-2021-38647/scripts/_load_.zeek LogAscii::use_json=T",
+                            "depth": 4
+                        },          
+                        {
+                            "content": "<code>zkg install cve-2020-16898</code> <br>测试: <br><code>zeek -Cr cve-2020-16898/tests/Traces/scapy_malicious_rdnss.pcap cve-2020-16898/scripts/_load_.zeek LogAscii::use_json=T",
+                            "depth": 4
+                        },          
+                        {
+                            "content": "<code>zkg install cve-2020-13777</code> <br>测试: <br><code>zeek -Cr cve-2020-13777/testing/Traces/gnutils-tls1.2-vulnerable.pcap cve-2020-13777/scripts/_load_.zeek LogAscii::use_json=T",
+                            "depth": 4
+                        },        
+                        {
+                            "content": "<code>zkg install cve-2020-0601</code> <br>测试: <br><code>zeek -Cr cve-2020-0601/testing/Traces/xxx.pcap cve-2020-0601/scripts/_load_.zeek LogAscii::use_json=T",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>zkg install CVE-2017-5638_struts</code> 缺少 zkg.meta <code>git clone https://github.com/initconf/CVE-2017-5638_struts.git</code> 修改 bro-pkg.meta 为 zkg.meta <br>测试: <br><code>zeek -Cr CVE-2017-5638_struts/tests/Traces/HTTP-CVE-2017-5638_struts.pcap CVE-2017-5638_struts/scripts/_load_.bro LogAscii::use_json=T",
+                            "depth": 4
+                        },
+                        {
+                            "content": "<code>zkg install cve-2022-22954</code>",
+                            "depth": 4
+                        }, 
+                        {
+                            "content": "<code>zkg install cve-2022-21907</code>",
+                            "depth": 4
+                        }, 
+                        {
+                            "content": "<code>zkg install CVE-2021-42292</code>",
+                            "depth": 4
+                        }, 
+                        {
+                            "content": "<code>zkg install CVE-2020-5902-F5BigIP</code>",
+                            "depth": 4
+                        }, 
+                        {
+                            "content": "<code>zkg install cve-2020-16898</code>",
+                            "depth": 4
+                        }   
                     ]
                 }
             ]
