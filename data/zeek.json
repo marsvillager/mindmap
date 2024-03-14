@@ -171,7 +171,7 @@
                                             "depth": 6,
                                             "children": [
                                                 {
-                                                    "content": "全文匹配：全文搜索和自然语言搜索，对搜索文本进行分词处理",
+                                                    "content": "全文匹配: 全文搜索和自然语言搜索，对搜索文本进行分词处理",
                                                     "depth": 7,
                                                     "children": [
                                                         {
@@ -185,7 +185,7 @@
                                                     ]
                                                 },
                                                 {
-                                                    "content": "单词匹配：精确匹配字段值，不进行分词处理",
+                                                    "content": "单词匹配: 精确匹配字段值，不进行分词处理",
                                                     "depth": 7,
                                                     "children": [
                                                         {
@@ -871,6 +871,10 @@
                     "depth": 3,
                     "children": [
                         {
+                            "content": "抓包 <code>sudo tcpdump -i [interface] -w [output.pcap]</code>",
+                            "depth": 4
+                        },
+                        {
                             "content": "pcap: <a>https://wiki.wireshark.org/SampleCaptures</a>",
                             "depth": 4
                         },
@@ -879,7 +883,7 @@
                             "depth": 4
                         },
                         {
-                            "content": "注：filebeat 默认传输的是文件流数据，需要修改 <code>/etc/filebeat/filebeat.yml</code> 中 filebeat.inputs 中的 enabled 为 true",
+                            "content": "注: filebeat 默认传输的是文件流数据，需要修改 <code>/etc/filebeat/filebeat.yml</code> 中 filebeat.inputs 中的 enabled 为 true",
                             "depth": 4
                         }
                     ]
@@ -889,7 +893,11 @@
                     "depth": 3,
                     "children": [
                         {
-                            "content": "<a href='https://packages.zeek.org/packages'><b><i>官方包</i></b></a> <br>安装：<code>zkg install [pkg]</code> <br>包位于 <code>/usr/local/zeek/var/lib/zkg/clones/package/</code>",
+                            "content": "<a href='https://packages.zeek.org/packages'><b><i>官方包</i></b></a> <br>安装: <code>zkg install [pkg]</code> <br>包位于 <code>/usr/local/zeek/var/lib/zkg/clones/package/</code>",
+                            "depth": 4
+                        },
+                        {
+                            "content": "查看插件信息: <code>zeek -NN</code>",
                             "depth": 4
                         },
                         {
@@ -897,7 +905,7 @@
                             "depth": 4
                         },
                         {
-                            "content": "<code>zkg install icsnpp-bsnap</code> <br>测试: <code>zeek -Cr icsnpp-bsap/tests/traces/bsap-ip_example.pcap icsnpp/bsap LogAscii::use_json=T<br>zeek -Cr icsnpp-bsap/tests/traces/bsap-serial_example.pcapng icsnpp/bsap LogAscii::use_json=T</code>",
+                            "content": "<code>zkg install icsnpp-bsap</code> <br>测试: <code>zeek -Cr icsnpp-bsap/tests/traces/bsap-ip_example.pcap icsnpp/bsap LogAscii::use_json=T<br>zeek -Cr icsnpp-bsap/tests/traces/bsap-serial_example.pcapng icsnpp/bsap LogAscii::use_json=T</code>",
                             "depth": 4
                         },
                         {
@@ -943,7 +951,7 @@
                     "depth": 3,
                     "children": [
                         {
-                            "content": "<a href='https://packages.zeek.org/packages'><b><i>官方包</i></b></a> <br>安装：<code>zkg install [pkg]</code> <br>包位于 <code>/usr/local/zeek/var/lib/zkg/clones/package/</code>",
+                            "content": "<a href='https://packages.zeek.org/packages'><b><i>官方包</i></b></a> <br>安装: <code>zkg install [pkg]</code> <br>包位于 <code>/usr/local/zeek/var/lib/zkg/clones/package/</code>",
                             "depth": 4
                         },
                         {
@@ -1013,11 +1021,7 @@
                         {
                             "content": "<code>zkg install CVE-2020-5902-F5BigIP</code>",
                             "depth": 4
-                        }, 
-                        {
-                            "content": "<code>zkg install cve-2020-16898</code>",
-                            "depth": 4
-                        }   
+                        }
                     ]
                 }
             ]
