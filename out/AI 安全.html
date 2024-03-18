@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<title>AI 安全</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #mindmap {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+<link href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/style.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.8.0/styles/default.min.css" rel="stylesheet"/>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/index.js"></script>
+<script>(e => {
+    window.WebFontConfig = {
+        custom: {families: ["KaTeX_AMS", "KaTeX_Caligraphic:n4,n7", "KaTeX_Fraktur:n4,n7", "KaTeX_Main:n4,n7,i4,i7", "KaTeX_Math:i4,i7", "KaTeX_Script", "KaTeX_SansSerif:n4,n7,i4", "KaTeX_Size1", "KaTeX_Size2", "KaTeX_Size3", "KaTeX_Size4", "KaTeX_Typewriter"]},
+        active: () => {
+            e().refreshHook.call()
+        }
+    }
+})(() => window.markmap)</script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>(() => {
+    setTimeout(() => {
+        const {markmap: M, mm: ge} = window, me = new M.Toolbar;
+        me.attach(ge);
+        const fe = me.render();
+        fe.setAttribute("style", "position:absolute;bottom:20px;right:20px"), document.body.append(fe)
+    })
+})()</script>
+<script>
+    ((F, I, R, H) => {
+        const X = F();
+        window.mm = X.Markmap.create("svg#mindmap", (I || X.deriveOptions)(H), R)
+    })(() => window.markmap, null, {'content': "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/protection.png' alt='zeek' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 5px; text-align: center;'><font color='teal'><h3>AI 安全</h3></font></div>", 'depth': 1, 'children': [{'content': '<h4>一、按组成要素分类</h4>', 'depth': 2, 'children': [{'content': '<b>（1）数据的安全威胁</b>', 'depth': 3, 'children': [{'content': '数据投毒攻击：攻击者在训练数据中注入特定的毒化数据，污染训练数据，影响甚至干预模型的训练结果', 'depth': 4}, {'content': '模型逆向攻击：攻击者通过模型的预测结果尝试恢复该预测结果对应的输入数据', 'depth': 4}, {'content': '属性推断攻击：攻击者从模型的预测以及计算的中间信息恢复输入数据的部分敏感属性', 'depth': 4}]}, {'content': '<b>（2）模型的安全威胁</b>', 'depth': 3, 'children': [{'content': '对抗样本攻击：攻击者通过在图像中添加扰动，误导 AI 模型出错', 'depth': 4}, {'content': '模型窃取攻击：攻击者可以通过发送轮询数据并查看对应的响应结果，推测 AI 模型的参数或功能，复制一个功能相似甚至完全相同的 AI 模型', 'depth': 4}, {'content': '模型版权证明：数据的收集以及模型的训练都要耗费大量的资源，版权证明能够在模型被窃取后验证所属权，保护模型保密性', 'depth': 4}]}, {'content': '<b>（3）运行环境的安全威胁</b>', 'depth': 3, 'children': [{'content': '服务器、客户端、网络的安全威胁', 'depth': 4}]}]}, {'content': '<h4>二、按生命周期分类</h4>', 'depth': 2, 'children': [{'content': '<b>设计阶段</b>', 'depth': 3, 'children': [{'content': '数据的偏见：收集数据时未能从所有的群体中均匀采样，导致训练数据带有偏见', 'depth': 4}, {'content': '模型的偏见：人在设计算法时采取的准则是有偏见的，数据和算法中的偏见都可能威胁 AI 的公平性', 'depth': 4}]}, {'content': '<b>训练阶段</b>', 'depth': 3, 'children': [{'content': '数据投毒：攻击者将少量精心设计的中毒样本添加到模型的训练数据集中，利用训练或者微调过程使得模型中毒，从而破坏模型的可用性或完整性，最终使模型在测试阶段表现异常', 'depth': 4}, {'content': '后门攻击：普通的数据投毒很容易被发现，后门攻击更为隐蔽，在训练数据中加入少量的带触发器（Trigger）的毒化数据，破坏模型的训练完整性，面对正常输入模型预测结果无异常，一旦输入数据包含触发器，模型预测结果就被恶意篡改', 'depth': 4}]}, {'content': '<b>执行阶段</b>', 'depth': 3, 'children': [{'content': '对抗攻击：攻击者对输入加入精心设计的扰动，使模型得出错误的结果；而加入的扰动难以被辨识，隐蔽性强', 'depth': 4}, {'content': '成员推断攻击：攻击者根据模型执行的结果，推断输入样本是否属于模型的训练数据，破坏模型保密性；若模型本身的训练数据较为敏感，则会泄露用户的敏感信息，如患病情况、基因型等', 'depth': 4}]}]}, {'content': '<h4>三、按系统架构分类</h4>', 'depth': 2, 'children': [{'content': "<img src='https://pic2.zhimg.com/v2-26ba15a257235a801d081e21427c7351_r.jpg' width='240' height='108'/>", 'depth': 3}]}, {'content': '<h4>Reference</h4>', 'depth': 2, 'children': [{'content': '<a>https://zhuanlan.zhihu.com/p/618895420?utm_id=0</a>', 'depth': 3}]}]},
+        {"colorFreezeLevel": 2, "initialExpandLevel": 3}
+    )
+</script>
+</body>
+</html>
