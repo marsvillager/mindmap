@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<title>Metasploit</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #mindmap {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+<link href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/style.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.8.0/styles/default.min.css" rel="stylesheet"/>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/index.js"></script>
+<script>(e => {
+    window.WebFontConfig = {
+        custom: {families: ["KaTeX_AMS", "KaTeX_Caligraphic:n4,n7", "KaTeX_Fraktur:n4,n7", "KaTeX_Main:n4,n7,i4,i7", "KaTeX_Math:i4,i7", "KaTeX_Script", "KaTeX_SansSerif:n4,n7,i4", "KaTeX_Size1", "KaTeX_Size2", "KaTeX_Size3", "KaTeX_Size4", "KaTeX_Typewriter"]},
+        active: () => {
+            e().refreshHook.call()
+        }
+    }
+})(() => window.markmap)</script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>(() => {
+    setTimeout(() => {
+        const {markmap: M, mm: ge} = window, me = new M.Toolbar;
+        me.attach(ge);
+        const fe = me.render();
+        fe.setAttribute("style", "position:absolute;bottom:20px;right:20px"), document.body.append(fe)
+    })
+})()</script>
+<script>
+    ((F, I, R, H) => {
+        const X = F();
+        window.mm = X.Markmap.create("svg#mindmap", (I || X.deriveOptions)(H), R)
+    })(() => window.markmap, null, {'content': "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/zero-day.png' alt='zeek' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 5px; text-align: center;'><font color='teal'><h3>Metasploit</h3></font></div>", 'depth': 1, 'children': [{'content': '<h4>Modules</h4>', 'depth': 2, 'children': [{'content': '<i><b>Auxiliary</b></i>', 'depth': 3, 'children': [{'content': '修改、操作或操纵目标机器上的某些内容', 'depth': 4}, {'content': '分析工具，大多用于密码破解', 'depth': 4}, {'content': '从单个目标中收集证据', 'depth': 4}, {'content': '拒绝服务使目标机器或服务崩溃或变慢', 'depth': 4}, {'content': '扫描已知漏洞目标', 'depth': 4}, {'content': '运行常见协议的服务器，如 SMB、FTP 等', 'depth': 4}]}, {'content': '<i><b>Encoder</b></i>', 'depth': 3, 'children': [{'content': '获取有效负载的原始字节，并运行某种编码算法，如按位 XOR', 'depth': 4}]}, {'content': '<b>Evasion</b>', 'depth': 3, 'children': [{'content': '使用户能够生成旨在规避防病毒的有效负载', 'depth': 4}]}, {'content': '<b>Exploit</b>', 'depth': 3, 'children': [{'content': '使用户能够生成规避防病毒的有效负载', 'depth': 4}]}, {'content': '<b>Nop</b>', 'depth': 3, 'children': [{'content': '生成一系列不执行副作用的“无操作”指令，通常与堆栈缓冲区溢出一起使用', 'depth': 4}]}, {'content': '<b>Payloads</b>', 'depth': 3, 'children': [{'content': '有效负载', 'depth': 4}]}, {'content': '<b>Post</b>', 'depth': 3, 'children': [{'content': '后渗透', 'depth': 4}]}]}, {'content': '<i><b>Usage</b></i>', 'depth': 2, 'children': [{'content': '<b><code>msfconsole</code> - open Metasploit</b>', 'depth': 3}, {'content': '<b><code>search</code> - search for modules</b>', 'depth': 3}, {'content': '<b><code>use</code> - use a Metasploit module</b>', 'depth': 3}, {'content': '<b>Running Auxiliary/Exploit modules</b>', 'depth': 3, 'children': [{'content': '<code>show options</code>', 'depth': 4}, {'content': '<code>set [command]</code>', 'depth': 4}, {'content': '<code>run</code>', 'depth': 4}]}]}, {'content': '<h4>Reference</h4>', 'depth': 2, 'children': [{'content': '<a>https://docs.metasploit.com/docs/modules.html</a>', 'depth': 3}, {'content': '<a>https://www.offsec.com/metasploit-unleashed/msfconsole-commands/</a>', 'depth': 3}]}]},
+        {"colorFreezeLevel": 2, "initialExpandLevel": 3}
+    )
+</script>
+</body>
+</html>
