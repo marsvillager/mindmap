@@ -901,6 +901,10 @@
                             "depth": 4
                         },
                         {
+                            "content": "<code>zkg</code> 安装的软件包可以在 <code>[PREFIX]/share/zeek/site/local.zeek</code> 中添加 <code>@locad packages</code> 来启用",
+                            "depth": 4
+                        },
+                        {
                             "content": "<code>zkg install icsnpp-bacnet</code> <br>测试: <code>zeek -Cr icsnpp-bacnet/tests/traces/bacnet_example.pcap icsnpp/bacnet LogAscii::use_json=T</code>",
                             "depth": 4
                         },
