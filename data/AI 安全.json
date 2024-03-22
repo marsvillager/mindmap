@@ -1,5 +1,5 @@
 {
-    "content": "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/protection.png' alt='zeek' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 5px; text-align: center;'><font color='teal'><h3>AI 安全</h3></font></div>",
+    "content": "<div style='display: flex; justify-content: center; align-items: center;'><img src='../img/protection.png' alt='AI' style='width: 100px; height: 100px;'></div> <div style='padding-bottom: 5px; text-align: center;'><font color='teal'><h3>AI 安全</h3></font></div>",
     "depth": 1,
     "children": [
         {
